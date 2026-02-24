@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sittan (Bon) Charoensuwan — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #1a6e8e;
+    --teal-light: #e8f4f8;
+    --teal-mid: #2a8aae;
+    --dark: #111827;
+    --gray: #4b5563;
+    --light-gray: #9ca3af;
+    --bg: #fafaf8;
+    --white: #ffffff;
+    --border: #e5e7eb;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--dark);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(250,250,248,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    color: var(--teal);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--gray);
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--teal); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+    padding: 8rem 6rem 6rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(26,110,142,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+
+  .hero-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--teal);
+    background: var(--teal-light);
+    padding: 0.3rem 0.8rem;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.6s ease 0.2s forwards;
+  }
+
+  .hero-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--dark);
+    margin-bottom: 1.2rem;
+    opacity: 0;
+    animation: fadeUp 0.6s ease 0.35s forwards;
+  }
+
+  .hero-name span { color: var(--teal); font-style: italic; }
+
+  .hero-tagline {
+    font-size: 1.15rem;
+    color: var(--gray);
+    font-weight: 300;
+    line-height: 1.7;
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    animation: fadeUp 0.6s ease 0.5s forwards;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.6s ease 0.65s forwards;
+  }
+
+  .btn-primary {
+    background: var(--teal);
+    color: white;
+    padding: 0.75rem 1.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.01em;
+    transition: background 0.2s, transform 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { background: var(--teal-mid); transform: translateY(-1px); }
+
+  .btn-outline {
+    border: 1.5px solid var(--teal);
+    color: var(--teal);
+    padding: 0.75rem 1.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+
+  .btn-outline:hover { background: var(--teal-light); }
+
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    opacity: 0;
+    animation: fadeIn 0.8s ease 0.8s forwards;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+
+  .stat-card:hover { box-shadow: 0 4px 20px rgba(26,110,142,0.1); transform: translateY(-2px); }
+
+  .stat-number {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.2rem;
+    color: var(--teal);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    color: var(--light-gray);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .hero-quote {
+    background: var(--teal-light);
+    border-left: 3px solid var(--teal);
+    padding: 1.25rem 1.5rem;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    color: var(--teal);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* SECTION LAYOUT */
+  section {
+    padding: 6rem 6rem;
+    position: relative;
+  }
+
+  section:nth-child(even) { background: white; }
+
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 0.6rem;
+  }
+
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    letter-spacing: -0.02em;
+    color: var(--dark);
+    margin-bottom: 1rem;
+    line-height: 1.15;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    color: var(--gray);
+    max-width: 560px;
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 3.5rem;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about-text p {
+    color: var(--gray);
+    margin-bottom: 1.2rem;
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  .about-text p strong { color: var(--dark); font-weight: 600; }
+
+  .about-principles {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .principle {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1.2rem;
+    background: var(--bg);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    transition: border-color 0.2s;
+  }
+
+  .principle:hover { border-color: var(--teal); }
+
+  .principle-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--teal-light);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1rem;
+  }
+
+  .principle-text strong {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 0.2rem;
+  }
+
+  .principle-text span {
+    font-size: 0.8rem;
+    color: var(--light-gray);
+  }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .skill-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.75rem;
+    transition: all 0.2s;
+  }
+
+  .skill-card:hover {
+    border-color: var(--teal);
+    box-shadow: 0 4px 20px rgba(26,110,142,0.08);
+    transform: translateY(-2px);
+  }
+
+  .skill-card-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .skill-card h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--teal);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    background: var(--teal-light);
+    color: var(--teal);
+    padding: 0.25rem 0.65rem;
+    border-radius: 2rem;
+    font-weight: 500;
+  }
+
+  .tag.gray {
+    background: #f3f4f6;
+    color: var(--gray);
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .project-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.25s;
+    cursor: pointer;
+  }
+
+  .project-card:hover {
+    box-shadow: 0 8px 40px rgba(26,110,142,0.12);
+    transform: translateY(-3px);
+    border-color: var(--teal);
+  }
+
+  .project-card.featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-header {
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-mid) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+  }
+
+  .project-card.featured .project-header { min-height: 280px; }
+
+  .project-category {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0.5rem;
+  }
+
+  .project-title-card {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+    color: white;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  .project-card.featured .project-title-card { font-size: 2rem; }
+
+  .project-location {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.65);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .project-body {
+    padding: 1.75rem;
+  }
+
+  .project-card.featured .project-body { padding: 2.5rem; }
+
+  .project-desc {
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+    font-weight: 300;
+  }
+
+  .project-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.83rem;
+    color: var(--gray);
+    line-height: 1.5;
+  }
+
+  .highlight-item::before {
+    content: '→';
+    color: var(--teal);
+    flex-shrink: 0;
+    margin-top: 0.05rem;
+    font-weight: 600;
+  }
+
+  .project-roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  /* EXPERIENCE */
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--teal), transparent);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 1.5rem;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+
+  .timeline-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: -2.4rem;
+    top: 0.5rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--teal);
+    border: 2px solid var(--bg);
+    box-shadow: 0 0 0 2px var(--teal);
+  }
+
+  .timeline-dates {
+    font-size: 0.78rem;
+    color: var(--teal);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+  }
+
+  .timeline-role {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.3rem;
+    color: var(--dark);
+    margin-bottom: 0.2rem;
+    letter-spacing: -0.01em;
+  }
+
+  .timeline-company {
+    font-size: 0.875rem;
+    color: var(--light-gray);
+    margin-bottom: 0.8rem;
+    font-style: italic;
+  }
+
+  .timeline-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .timeline-bullets li {
+    font-size: 0.875rem;
+    color: var(--gray);
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  .timeline-bullets li::before {
+    content: '•';
+    color: var(--teal);
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+  }
+
+  .timeline-metric {
+    display: inline-block;
+    background: var(--teal-light);
+    color: var(--teal);
+    font-weight: 600;
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.85rem;
+  }
+
+  /* CONTACT */
+  .contact-section {
+    background: var(--dark);
+    color: white;
+  }
+
+  .contact-section .section-label { color: rgba(255,255,255,0.5); }
+  .contact-section .section-title { color: white; }
+  .contact-section .section-subtitle { color: rgba(255,255,255,0.5); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    text-decoration: none;
+    color: rgba(255,255,255,0.8);
+    font-size: 0.9rem;
+    transition: all 0.2s;
+  }
+
+  .contact-item:hover {
+    background: rgba(26,110,142,0.25);
+    border-color: var(--teal);
+    color: white;
+  }
+
+  .contact-item-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(26,110,142,0.3);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1rem;
+  }
+
+  .contact-info-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 2rem;
+  }
+
+  .contact-info-card h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  .contact-info-card p {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.875rem;
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+  }
+
+  .detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    font-size: 0.83rem;
+  }
+
+  .detail-row:last-child { border-bottom: none; }
+  .detail-label { color: rgba(255,255,255,0.35); }
+  .detail-value { color: rgba(255,255,255,0.8); font-weight: 500; }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 1.5rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255,255,255,0.3);
+    font-size: 0.78rem;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* DIVIDER */
+  .teal-divider {
+    width: 48px;
+    height: 3px;
+    background: var(--teal);
+    border-radius: 2px;
+    margin-bottom: 2rem;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero, .about-grid, .contact-grid {
+      grid-template-columns: 1fr;
+      padding: 5rem 2rem 3rem;
+    }
+    .skills-grid { grid-template-columns: 1fr 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .project-card.featured { grid-template-columns: 1fr; }
+    section { padding: 4rem 2rem; }
+    footer { padding: 1.5rem 2rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">Sittan (Bon)</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="hero-label">AI Product & Innovation Manager</div>
+    <h1 class="hero-name">Sittan <span>(Bon)</span><br>Charoensuwan</h1>
+    <p class="hero-tagline">I build AI-powered products that actually ship — bridging engineering and business to deliver systems that people genuinely trust.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-number">7+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">4</div>
+        <div class="stat-label">AI Products Launched</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Brands Managed</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">50%</div>
+        <div class="stat-label">Revenue Impact</div>
+      </div>
+    </div>
+    <div class="hero-quote">
+      "Creating intelligent technology with humanity at its core and responsibility by design."
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="fade-in-section">
+    <div class="section-label">About Me</div>
+    <h2 class="section-title">Where AI meets<br>human-centred design</h2>
+    <div class="teal-divider"></div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm an AI Product & Innovation Manager based in <strong>Munich, Germany</strong>, working at the intersection of LLM systems, automation, and go-to-market strategy. My background spans retail, MarTech, B2B SaaS, and fintech-adjacent platforms across Europe and Asia.</p>
+        <p>I specialise in taking complex technical systems — AI agents, workflow orchestration, automated pipelines — and making them <strong>understandable, trusted, and commercially viable</strong>. I care as much about the why as the how.</p>
+        <p>I hold an <strong>M.Sc. in Management & Innovation from TU Munich</strong>, with a thesis focused on Generative AI integration into business workflows. I'm fluent in Thai, English (C1), and German (B2, TelC certified).</p>
+        <p>I hold a <strong>Niederlassungserlaubnis (Permanent Residence)</strong> in Germany — no sponsorship required.</p>
+      </div>
+      <div class="about-principles">
+        <div class="principle">
+          <div class="principle-icon">🎯</div>
+          <div class="principle-text">
+            <strong>Clarity over complexity</strong>
+            <span>Reduce cognitive load. Design for how people actually behave.</span>
+          </div>
+        </div>
+        <div class="principle">
+          <div class="principle-icon">🤝</div>
+          <div class="principle-text">
+            <strong>AI assists, humans decide</strong>
+            <span>Trust is built through transparency and explainability.</span>
+          </div>
+        </div>
+        <div class="principle">
+          <div class="principle-icon">📊</div>
+          <div class="principle-text">
+            <strong>Insight over data</strong>
+            <span>Decisions matter more than dashboards. Make data actionable.</span>
+          </div>
+        </div>
+        <div class="principle">
+          <div class="principle-icon">🌏</div>
+          <div class="principle-text">
+            <strong>Cross-cultural by design</strong>
+            <span>Proven working across German, Thai, Chinese, and Indian markets.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" style="background: white;">
+  <div class="fade-in-section">
+    <div class="section-label">Skills & Tools</div>
+    <h2 class="section-title">What I bring to the table</h2>
+    <p class="section-subtitle">A rare combination of technical depth and product strategy — from LLM implementation to go-to-market execution.</p>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-card-icon">🤖</div>
+        <h3>AI & LLM</h3>
+        <div class="skill-tags">
+          <span class="tag">Prompt Engineering</span>
+          <span class="tag">LLM Implementation</span>
+          <span class="tag">AI Agents</span>
+          <span class="tag">Responsible AI</span>
+          <span class="tag">Generative AI</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">⚙️</div>
+        <h3>Automation</h3>
+        <div class="skill-tags">
+          <span class="tag">n8n</span>
+          <span class="tag">Make</span>
+          <span class="tag">Docker</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">Webhooks</span>
+          <span class="tag">Workflow Orchestration</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">💻</div>
+        <h3>Programming & Data</h3>
+        <div class="skill-tags">
+          <span class="tag">Python</span>
+          <span class="tag">C/C++</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">Data Science</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">🎨</div>
+        <h3>Product & Design</h3>
+        <div class="skill-tags">
+          <span class="tag">Figma</span>
+          <span class="tag">Agile/Scrum</span>
+          <span class="tag">Jira</span>
+          <span class="tag">User Journey Mapping</span>
+          <span class="tag">Design Thinking</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">🛡️</div>
+        <h3>Governance</h3>
+        <div class="skill-tags">
+          <span class="tag">GDPR / BaFin</span>
+          <span class="tag">AI Ethics</span>
+          <span class="tag">Risk Analysis</span>
+          <span class="tag">Data Integrity</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">📈</div>
+        <h3>GTM & CRM</h3>
+        <div class="skill-tags">
+          <span class="tag">Salesforce</span>
+          <span class="tag">HubSpot</span>
+          <span class="tag">Pipedrive</span>
+          <span class="tag">OKRs</span>
+          <span class="tag">Product Positioning</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="fade-in-section">
+    <div class="section-label">Selected Projects</div>
+    <h2 class="section-title">AI products built<br>from discovery to market</h2>
+    <p class="section-subtitle">Each project followed a full Design Thinking cycle — from user research and prototyping through to pilot launch and go-to-market execution.</p>
+    <div class="projects-grid">
+
+      <!-- Featured: Expense Intelligence -->
+      <div class="project-card featured">
+        <div class="project-header">
+          <div>
+            <div class="project-category">Fintech · AI · B2B SaaS · Thailand</div>
+            <div class="project-title-card">AI-Powered Receipt Detection & Expense Intelligence System</div>
+          </div>
+          <div class="project-location">📍 Marketing Agency, Thailand</div>
+        </div>
+        <div class="project-body">
+          <p class="project-desc">Turning receipts and QR payment screenshots into real-time budget visibility and accounting-ready data. An AI system that automatically captures, structures, and categorises expenses across departments and projects.</p>
+          <div class="project-highlights">
+            <div class="highlight-item">Interviewed finance managers, project leads, and employees to map real-world expense behaviour including QR/PromptPay flows</div>
+            <div class="highlight-item">Designed AI flows for automatic receipt detection, OCR extraction, and smart tagging by department and project</div>
+            <div class="highlight-item">Delivered a modular expense intelligence platform with real-time budget vs actual dashboards</div>
+            <div class="highlight-item">Aligned finance, operations, and project teams around a single unified expense workflow</div>
+          </div>
+          <div class="project-roles">
+            <span class="tag">Product Vision</span>
+            <span class="tag">UX Design</span>
+            <span class="tag">AI Engineering Liaison</span>
+            <span class="tag">Figma Prototyping</span>
+            <span class="tag">OCR</span>
+            <span class="tag">Fintech</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Chatbot -->
+      <div class="project-card">
+        <div class="project-header">
+          <div>
+            <div class="project-category">AI · Media Agency · Germany</div>
+            <div class="project-title-card">AI-Powered Client Requirement Chatbot</div>
+          </div>
+          <div class="project-location">📍 Germany</div>
+        </div>
+        <div class="project-body">
+          <p class="project-desc">Turning abstract client ideas into actionable creative briefs — an AI active learning system that solves communication problems between media agencies and clients.</p>
+          <div class="project-highlights">
+            <div class="highlight-item">Interviewed 10+ agency leads to uncover real briefing frustrations and language gaps</div>
+            <div class="highlight-item">Co-created chatbot flows simulating live client–agency interactions with GTM targeting 150+ agencies via LinkedIn Sales Navigator</div>
+            <div class="highlight-item">Integrated with Notion, ClickUp, and Monday.com for seamless workflow adoption</div>
+          </div>
+          <div class="project-roles">
+            <span class="tag">Active Learning</span>
+            <span class="tag">Design Thinking</span>
+            <span class="tag">B2B GTM</span>
+            <span class="tag">Prototyping</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Sports -->
+      <div class="project-card">
+        <div class="project-header">
+          <div>
+            <div class="project-category">AI · Sports · Live Broadcast · Europe</div>
+            <div class="project-title-card">AI-Powered Live/Video Mining System</div>
+          </div>
+          <div class="project-location">📍 Europe</div>
+        </div>
+        <div class="project-body">
+          <p class="project-desc">Turning live sports moments into real-time intelligence and post-match insights for broadcast teams, analysts, and editors under pressure.</p>
+          <div class="project-highlights">
+            <div class="highlight-item">Designed dashboards, timeline event views, instant clip tools, and momentum panels in Figma</div>
+            <div class="highlight-item">Collaborated with AI engineers to translate sports logic into explainable, real-time AI outputs</div>
+            <div class="highlight-item">Conducted usability tests during live and recorded matches with analysts and editors</div>
+          </div>
+          <div class="project-roles">
+            <span class="tag">Video AI</span>
+            <span class="tag">UX for Live Systems</span>
+            <span class="tag">Figma</span>
+            <span class="tag">Explainable AI</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- QR Event -->
+      <div class="project-card">
+        <div class="project-header" style="background: linear-gradient(135deg, #2d6a4f 0%, #40916c 100%);">
+          <div>
+            <div class="project-category">EventTech · FMCG · Thailand</div>
+            <div class="project-title-card">QR Camp — Event Management System</div>
+          </div>
+          <div class="project-location">📍 Thailand</div>
+        </div>
+        <div class="project-body">
+          <p class="project-desc">Digitising events for FMCG brands and agencies — from QR-based check-in and booth tracking to real-time engagement analytics. Achieved <strong>25% adoption</strong> in first cycle.</p>
+          <div class="project-highlights">
+            <div class="highlight-item">Designed end-to-end event flow from online registration to QR-based digital ID and prize claim</div>
+            <div class="highlight-item">Piloted at large-scale FMCG activations; scaled into multi-client SaaS platform</div>
+            <div class="highlight-item">Clients included Unilever Thailand, Nestlé Thailand, Airports of Thailand</div>
+          </div>
+          <div class="project-roles">
+            <span class="tag">Product Marketing</span>
+            <span class="tag">SaaS</span>
+            <span class="tag">FMCG</span>
+            <span class="tag">QR Systems</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- P2P Energy -->
+      <div class="project-card" style="grid-column: 1 / -1;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr;">
+          <div class="project-header" style="background: linear-gradient(135deg, #1d4e89 0%, #2e6db4 100%); min-height: 240px;">
+            <div>
+              <div class="project-category">CleanTech · PropTech · Thailand</div>
+              <div class="project-title-card" style="font-size: 1.7rem;">P2P Energy Management System</div>
+            </div>
+            <div class="project-location">📍 Community Village, Thailand</div>
+          </div>
+          <div class="project-body" style="padding: 2.5rem;">
+            <p class="project-desc">Empowering solar-powered communities to produce, share, and benefit from clean energy together — turning sustainability into a compelling property value proposition.</p>
+            <div class="project-highlights">
+              <div class="highlight-item">Designed household energy tracking, P2P sharing marketplace, and reward points system redeemable at local shops and community services</div>
+              <div class="highlight-item">Built developer dashboard showcasing sustainability impact and energy ROI for property marketing teams</div>
+              <div class="highlight-item">Translated real estate, energy, and community needs into a unified, scalable platform across multiple residential projects</div>
+            </div>
+            <div class="project-roles">
+              <span class="tag">CleanTech</span>
+              <span class="tag">Incentive Design</span>
+              <span class="tag">ESG</span>
+              <span class="tag">GTM Strategy</span>
+              <span class="tag">Community Platform</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" style="background: white;">
+  <div class="fade-in-section">
+    <div class="section-label">Experience</div>
+    <h2 class="section-title">Where I've built things</h2>
+    <p class="section-subtitle">7+ years across AI product development, marketing technology, and go-to-market strategy in Germany, Thailand, and beyond.</p>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-dates">May 2022 – Present</div>
+        <div class="timeline-role">Product Marketing Manager</div>
+        <div class="timeline-company">JK-Fashion Verwaltungs GmbH, Munich — Multibrands Fashion Retail</div>
+        <ul class="timeline-bullets">
+          <li>Implemented generative AI content workflows across <span class="timeline-metric">10+ brands</span>, reducing production time by <span class="timeline-metric">30%</span> while maintaining strict GDPR standards</li>
+          <li>Delivered a mobile app for customer relationship management and digital data analysis across the DACH market</li>
+          <li>Built a data-informed decision framework connecting ROI tracking to multi-brand product rollouts across Germany and Austria</li>
+          <li>Designed and deployed marketing automation for social media and cross-border campaigns, enabling consistent output without scaling headcount</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-dates">October 2018 – April 2022</div>
+        <div class="timeline-role">Founding Product Manager — Digital Expert Unit</div>
+        <div class="timeline-company">EventTech / MarTech Consultancy, Munich</div>
+        <ul class="timeline-bullets">
+          <li>Founded the 'Digital Expert' unit and launched <span class="timeline-metric">4 B2B digital products</span> from scratch — collectively generating <span class="timeline-metric">~50% of annual revenue</span> in their first year on market</li>
+          <li>QR-based Event Management tool achieved <span class="timeline-metric">25% adoption</span> in its first cycle — the company's first digital product</li>
+          <li>Led the company's full pivot from traditional marketing agency to EventTech/MarTech consultancy during COVID-19</li>
+          <li>Built end-to-end automation pipelines using Make and n8n, integrating CRM, lead scoring, and reporting dashboards</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-dates">August 2016 – August 2018</div>
+        <div class="timeline-role">Account & Creative Strategy Executive</div>
+        <div class="timeline-company">Merit Co., Ltd., Bangkok — Event & Marketing Agency</div>
+        <ul class="timeline-bullets">
+          <li>Delivered <span class="timeline-metric">30+ large-scale activations</span> for Unilever Thailand, Nestlé Thailand, and Airports of Thailand with budgets of <span class="timeline-metric">฿1M–฿20M</span></li>
+          <li>Led technical pitches, cross-functional delivery, and post-implementation reviews across enterprise accounts</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="fade-in-section">
+    <div class="section-label">Get in Touch</div>
+    <h2 class="section-title">Let's build something<br>worth trusting</h2>
+    <p class="section-subtitle">Open to product marketing and AI product roles in Germany and Europe. Always happy to talk about responsible AI, automation systems, and go-to-market strategy.</p>
+    <div class="contact-grid">
+      <div class="contact-items">
+        <a href="mailto:sittan.siri@gmail.com" class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          sittan.siri@gmail.com
+        </a>
+        <a href="tel:+4915206245215" class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          +49 152 06245215
+        </a>
+        <a href="https://linkedin.com/in/sittan-charoensuwan" target="_blank" class="contact-item">
+          <div class="contact-item-icon">💼</div>
+          LinkedIn: Sittan Charoensuwan
+        </a>
+        <a href="#" class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          Ruppertstr. 30, Munich 80337, Germany
+        </a>
+      </div>
+      <div class="contact-info-card">
+        <h3>Quick Facts</h3>
+        <p>Everything a recruiter usually needs to know upfront — so there are no surprises.</p>
+        <div class="detail-row">
+          <span class="detail-label">Date of Birth</span>
+          <span class="detail-value">24.06.1994</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Nationality</span>
+          <span class="detail-value">Thai</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Residence Status</span>
+          <span class="detail-value">Niederlassungserlaubnis (Germany)</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Languages</span>
+          <span class="detail-value">Thai · English C1 · German B2</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Availability</span>
+          <span class="detail-value">Open to new roles</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Work Preference</span>
+          <span class="detail-value">Munich / Hybrid / Remote</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 Sittan (Bon) Charoensuwan</span>
+  <span>Munich, Germany · AI Product & Innovation Manager</span>
+</footer>
+
+<script>
+  // Intersection Observer for fade-in animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in-section, .timeline-item').forEach(el => {
+    observer.observe(el);
+  });
+
+  // Stagger timeline items
+  document.querySelectorAll('.timeline-item').forEach((item, i) => {
+    item.style.transitionDelay = `${i * 0.15}s`;
+  });
+
+  // Active nav link highlighting
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 80;
+      if (window.scrollY >= sectionTop) current = section.getAttribute('id');
+    });
+    navLinks.forEach(link => {
+      link.style.color = link.getAttribute('href') === `#${current}` ? 'var(--teal)' : '';
+    });
+  });
+</script>
+</body>
+</html>
