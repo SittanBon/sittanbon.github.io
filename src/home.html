@@ -38,7 +38,8 @@
     #bon-parallax-homepage [id^="bon-"]{scroll-margin-top:78px}
 
     #bon-parallax-homepage .bon-hero{position:relative;min-height:630px;overflow:hidden;background:#faf7ef}
-    #bon-parallax-homepage .bon-hero-art{position:absolute;inset:0;transform:translate3d(var(--hero-x,0px),calc(var(--hero-shift,0px) + var(--hero-y,0px)),0) scale(var(--hero-scale,1.025))}
+    #bon-parallax-homepage .bon-hero-stage{position:relative;min-height:630px;overflow:hidden;background:#faf7ef}
+    #bon-parallax-homepage .bon-hero-art{position:absolute;inset:0;transform:translate3d(calc(var(--hero-scroll-x,0px) + var(--hero-x,0px)),calc(var(--hero-shift,0px) + var(--hero-y,0px)),0) scale(var(--hero-scale,1.025))}
     #bon-parallax-homepage .bon-hero-art img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
     #bon-parallax-homepage .bon-hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(250,247,239,.9) 0%,rgba(250,247,239,.05) 27%,rgba(250,247,239,0) 64%,rgba(250,247,239,.52) 100%)}
     #bon-parallax-homepage .bon-hero-copy{position:relative;z-index:3;max-width:1180px;margin:0 auto;padding:58px 34px 0}
@@ -49,11 +50,26 @@
     #bon-parallax-homepage .bon-hero-action{display:inline-flex;min-height:44px;gap:12px;align-items:center;padding:12px 17px;border:1px solid var(--bon-ink);background:rgba(255,253,249,.82);font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
     #bon-parallax-homepage .bon-hero-action span{color:var(--bon-coral);font-size:17px}
     #bon-parallax-homepage .bon-hero-action.primary{color:#fff;background:var(--bon-ink)}
+    #bon-parallax-homepage .bon-hero-exit{display:none;position:absolute;right:0;bottom:0;left:0;z-index:2;height:var(--hero-exit-height,0px);background:var(--bon-ink);clip-path:polygon(0 16%,100% 0,100% 100%,0 100%);pointer-events:none}
+    #bon-parallax-homepage .bon-hero-steps{display:none;position:absolute;right:34px;bottom:24px;left:34px;z-index:4;max-width:660px;margin:0 auto;padding:13px 18px 16px;border:1px solid var(--bon-ink);background:rgba(255,253,249,.94);box-shadow:5px 5px 0 var(--bon-ink);opacity:var(--hero-steps-opacity,0);transform:translateY(var(--hero-steps-y,18px));pointer-events:none}
+    #bon-parallax-homepage .bon-hero-steps::before,#bon-parallax-homepage .bon-hero-steps::after{content:"";position:absolute;right:18px;bottom:10px;left:18px;height:2px}
+    #bon-parallax-homepage .bon-hero-steps::before{background:var(--bon-line)}
+    #bon-parallax-homepage .bon-hero-steps::after{background:var(--bon-coral);transform:scaleX(var(--hero-story-progress,0));transform-origin:left center}
+    #bon-parallax-homepage .bon-hero-steps span{color:var(--bon-muted);font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:color .25s ease}
+    #bon-parallax-homepage .bon-hero-steps span.is-active{color:var(--bon-ink)}
+    #bon-parallax-homepage .bon-hero-steps b{color:var(--bon-coral);font-weight:700}
     @media(min-width:901px){
       #bon-parallax-homepage .bon-hero{min-height:680px}
+      #bon-parallax-homepage .bon-hero-stage{min-height:680px}
       #bon-parallax-homepage .bon-hero-copy{width:min(610px,58vw);max-width:none;margin:0 5vw 0 auto;padding:36px 38px 38px;top:42px;border:1px solid var(--bon-ink);background:rgba(250,247,239,.97);box-shadow:10px 10px 0 rgba(17,17,19,.9)}
       #bon-parallax-homepage .bon-hero h1{font-size:clamp(39px,4.1vw,59px)}
       #bon-parallax-homepage .bon-hero-lead{font-size:15px}
+    }
+    @media(min-width:901px) and (min-height:700px) and (prefers-reduced-motion:no-preference) and (pointer:fine){
+      #bon-parallax-homepage.bon-js .bon-hero{height:140vh;min-height:0;overflow:visible}
+      #bon-parallax-homepage.bon-js .bon-hero-stage{position:sticky;top:66px;height:calc(100vh - 66px);height:calc(100svh - 66px);min-height:0}
+      #bon-parallax-homepage.bon-js .bon-hero-exit{display:block}
+      #bon-parallax-homepage.bon-js .bon-hero-steps{display:flex;justify-content:space-between;gap:12px}
     }
     #bon-parallax-homepage .bon-proof{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--bon-ink);border-bottom:1px solid var(--bon-ink);background:var(--bon-white)}
     #bon-parallax-homepage .bon-proof a{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;min-height:112px;padding:22px 34px;border-right:1px solid var(--bon-line)}
@@ -246,6 +262,7 @@
     }
     @media(min-width:651px) and (max-width:900px){
       #bon-parallax-homepage .bon-hero{min-height:680px}
+      #bon-parallax-homepage .bon-hero-stage{min-height:680px}
       #bon-parallax-homepage .bon-hero-copy{width:min(540px,62vw);max-width:none;margin:0 4vw 0 auto;padding:32px;top:38px;border:1px solid var(--bon-ink);background:rgba(250,247,239,.97);box-shadow:8px 8px 0 rgba(17,17,19,.9)}
       #bon-parallax-homepage .bon-hero h1{font-size:clamp(37px,4.5vw,48px)}
       #bon-parallax-homepage .bon-hero-lead{font-size:14px}
@@ -272,6 +289,7 @@
     @media(max-width:650px){
       #bon-parallax-homepage .bon-nav{padding:0 18px}
       #bon-parallax-homepage .bon-hero{min-height:700px}
+      #bon-parallax-homepage .bon-hero-stage{min-height:700px}
       #bon-parallax-homepage .bon-hero-art img{object-position:5% center}
       #bon-parallax-homepage .bon-hero-shade{background:linear-gradient(180deg,#faf7ef 0%,rgba(250,247,239,.98) 45%,rgba(250,247,239,.78) 68%,rgba(250,247,239,.12) 100%)}
       #bon-parallax-homepage .bon-hero-copy{padding:38px 18px 0}
@@ -317,11 +335,15 @@
 
     <main id="main-content">
     <header class="bon-hero" id="bon-top">
-      <div class="bon-hero-art" data-parallax="18"><img src="hero-guide-journey-man.png" alt="A stylized male guide leading viewers through strategy, product, AI and adoption platforms"></div>
-      <div class="bon-hero-shade"></div>
-      <span class="bon-orb one" data-parallax="-32"></span><span class="bon-orb two" data-parallax="46"></span><span class="bon-orb three" data-parallax="-58"></span>
-      <div class="bon-hero-copy"><p class="bon-kicker">Sittan (Bon) Charoensuwan · AI Implementation &amp; Solutions · Creative Strategy</p><h1>Turning emerging technology into creative solutions people use.</h1><p class="bon-hero-lead">I bring together AI, strategy, branding, marketing and product thinking to take ideas from discovery through delivery and adoption.</p><div class="bon-hero-actions"><a class="bon-hero-action primary" href="#bon-work">Explore selected work <span>→</span></a><a class="bon-hero-action" href="#bon-intro">Follow the journey <span>↓</span></a></div></div>
-      <div class="bon-scroll-note">Scroll with me</div>
+      <div class="bon-hero-stage">
+        <div class="bon-hero-art" data-parallax="18"><img src="hero-guide-journey-man.png" alt="A stylized male guide leading viewers through strategy, product, AI and adoption platforms"></div>
+        <div class="bon-hero-shade"></div>
+        <span class="bon-orb one" data-parallax="-32"></span><span class="bon-orb two" data-parallax="46"></span><span class="bon-orb three" data-parallax="-58"></span>
+        <div class="bon-hero-exit" aria-hidden="true"></div>
+        <div class="bon-hero-copy"><p class="bon-kicker">Sittan (Bon) Charoensuwan · AI Implementation &amp; Solutions · Creative Strategy</p><h1>Turning emerging technology into creative solutions people use.</h1><p class="bon-hero-lead">I bring together AI, strategy, branding, marketing and product thinking to take ideas from discovery through delivery and adoption.</p><div class="bon-hero-actions"><a class="bon-hero-action primary" href="#bon-work">Explore selected work <span>→</span></a><a class="bon-hero-action" href="#bon-intro">Follow the journey <span>↓</span></a></div></div>
+        <div class="bon-hero-steps" aria-hidden="true"><span><b>01</b> Human need</span><span><b>02</b> Creative idea</span><span><b>03</b> Pilot</span><span><b>04</b> Adoption</span></div>
+        <div class="bon-scroll-note">Scroll with me</div>
+      </div>
     </header>
 
     <div class="bon-proof" aria-label="Selected outcomes"><a href="#bon-case-ai"><strong>2 → 1 week</strong><span>Standard campaign production cycle after a GenAI rollout across four DACH locations.</span></a><a href="#bon-role-jk"><strong>3,000</strong><span>Users in eight weeks for the G-fashion mobile CRM launch.</span></a><a href="#bon-role-tohklom"><strong>4 B2B</strong><span>AI and digital solutions shaped while leading a five-person unit.</span></a></div>
@@ -375,7 +397,9 @@
       const root=document.getElementById('bon-parallax-homepage');
       root.classList.add('bon-js');
       const hero=root.querySelector('.bon-hero');
+      const heroStage=root.querySelector('.bon-hero-stage');
       const art=root.querySelector('.bon-hero-art');
+      const heroSteps=[...root.querySelectorAll('.bon-hero-steps span')];
       const layers=[...root.querySelectorAll('[data-parallax]')];
       const sceneLayers=[...root.querySelectorAll('[data-scene-speed]')];
       const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -436,13 +460,21 @@
         progressLine(careerList,'--career-progress');
 
         const desktop=window.innerWidth>650&&window.matchMedia('(pointer:fine)').matches;
+        const heroStory=window.matchMedia('(min-width:901px) and (min-height:700px) and (pointer:fine)').matches;
         const heroRect=hero.getBoundingClientRect();
-        const heroProgress=clamp(-heroRect.top/Math.max(heroRect.height,1));
-        art.style.setProperty('--hero-shift',`${desktop?heroProgress*70:0}px`);
-        art.style.setProperty('--hero-scale',String(desktop?1.025+heroProgress*.055:1.025));
+        const heroProgress=heroStory?clamp((66-heroRect.top)/Math.max(heroRect.height-heroStage.getBoundingClientRect().height,1)):clamp(-heroRect.top/Math.max(heroRect.height,1));
+        art.style.setProperty('--hero-shift',`${desktop?(heroStory?heroProgress*22:heroProgress*70):0}px`);
+        art.style.setProperty('--hero-scroll-x',`${heroStory?heroProgress*24:0}px`);
+        art.style.setProperty('--hero-scale',String(desktop?1.025+heroProgress*(heroStory ? .045 : .055):1.025));
+        heroStage.style.setProperty('--hero-story-progress',String(heroProgress));
+        const stepsOpacity=heroStory?clamp((heroProgress-.06)/.14):0;
+        heroStage.style.setProperty('--hero-steps-opacity',String(stepsOpacity));
+        heroStage.style.setProperty('--hero-steps-y',`${(1-stepsOpacity)*18}px`);
+        heroStage.style.setProperty('--hero-exit-height',`${heroStory?clamp((heroProgress-.76)/.24)*Math.min(heroStage.clientHeight*.3,280):0}px`);
+        heroSteps.forEach((step,index)=>step.classList.toggle('is-active',heroProgress>=index/3-.02));
         layers.forEach(layer=>{
           if(layer===art)return;
-          layer.style.transform=desktop?`translate3d(0,${heroProgress*Number(layer.dataset.parallax||0)*1.6}px,0)`:'';
+          layer.style.transform=desktop?`translate3d(0,${heroProgress*Number(layer.dataset.parallax||0)*(heroStory?2.2:1.6)}px,0)`:'';
         });
         sceneLayers.forEach(layer=>{
           if(!desktop){layer.style.transform='';return;}
