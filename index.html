@@ -429,7 +429,8 @@
       const hero=root.querySelector('.bon-hero');
       const heroStage=root.querySelector('.bon-hero-stage');
       const art=root.querySelector('.bon-hero-art');
-      const heroSteps=[...root.querySelectorAll('.bon-hero-steps span')];
+      const heroStepBar=root.querySelector('.bon-hero-steps');
+      const heroSteps=[...heroStepBar.querySelectorAll('span')];
       const layers=[...root.querySelectorAll('[data-parallax]')];
       const sceneLayers=[...root.querySelectorAll('[data-scene-speed]')];
       const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -500,7 +501,7 @@
         const stepsOpacity=heroStory?clamp((heroProgress-.06)/.14):0;
         heroStage.style.setProperty('--hero-steps-opacity',String(stepsOpacity));
         heroStage.style.setProperty('--hero-steps-y',`${(1-stepsOpacity)*18}px`);
-        heroStage.style.setProperty('--hero-exit-height',`${heroStory?clamp((heroProgress-.76)/.24)*Math.min(heroStage.clientHeight*.3,280):0}px`);
+        heroStage.style.setProperty('--hero-exit-height',`${heroStory?clamp((heroProgress-.76)/.24)*(heroStepBar.offsetHeight+48):0}px`);
         heroSteps.forEach((step,index)=>step.classList.toggle('is-active',heroProgress>=index/3-.02));
         layers.forEach(layer=>{
           if(layer===art)return;
