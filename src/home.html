@@ -123,7 +123,7 @@
     #bon-parallax-homepage .bon-route-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
     #bon-parallax-homepage .bon-route-track{fill:none;stroke:#d8d3ca;stroke-width:3}
     #bon-parallax-homepage .bon-route-path{fill:none;stroke:var(--bon-coral);stroke-width:4;stroke-linecap:round}
-    #bon-parallax-homepage .bon-route-dot{fill:var(--bon-coral);stroke:var(--bon-paper);stroke-width:5}
+    #bon-parallax-homepage .bon-route-dot{position:absolute;z-index:1;top:20%;left:4%;width:20px;height:20px;border:3px solid var(--bon-paper);border-radius:50%;background:var(--bon-coral);transform:translate(-50%,-50%);pointer-events:none}
     #bon-parallax-homepage .bon-route-transition span{position:relative;z-index:1;padding:7px 10px;color:var(--bon-coral-text);background:var(--bon-paper);font-family:"IBM Plex Mono",monospace;font-size:9px;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
 
     #bon-parallax-homepage .bon-work-wrap{padding:72px 0 90px;background:#e9e5dc}
@@ -397,7 +397,7 @@
       <div class="bon-method"><article class="bon-reveal"><span class="bon-method-num">01</span><i class="bon-method-line"></i><h3>Imagine</h3><p>Listen to users, connect their needs to a business goal and reframe the brief.</p></article><article class="bon-reveal"><span class="bon-method-num">02</span><i class="bon-method-line"></i><h3>Shape</h3><p>Give the idea a journey, value proposition, product concept and delivery plan.</p></article><article class="bon-reveal"><span class="bon-method-num">03</span><i class="bon-method-line"></i><h3>Prove</h3><p>Prototype, compare options and let measured feedback reshape the solution.</p></article><article class="bon-reveal"><span class="bon-method-num">04</span><h3>Adopt</h3><p>Align owners, approval rules, communication and training before scaling.</p></article></div>
     </section>
 
-    <div class="bon-route-transition" aria-hidden="true"><svg class="bon-route-svg" viewBox="0 0 1000 190" preserveAspectRatio="none"><path class="bon-route-track" d="M 40 38 C 255 38 240 155 495 150 S 785 38 960 92"/><path class="bon-route-path" d="M 40 38 C 255 38 240 155 495 150 S 785 38 960 92"/><circle class="bon-route-dot" cx="40" cy="38" r="10"/></svg><span>Follow the idea into the work</span></div>
+    <div class="bon-route-transition" aria-hidden="true"><svg class="bon-route-svg" viewBox="0 0 1000 190" preserveAspectRatio="none"><path class="bon-route-track" d="M 40 38 C 255 38 240 155 495 150 S 785 38 960 92"/><path class="bon-route-path" d="M 40 38 C 255 38 240 155 495 150 S 785 38 960 92"/></svg><i class="bon-route-dot"></i><span>Follow the idea into the work</span></div>
 
     <section class="bon-work-wrap" id="bon-work">
       <div class="bon-work-head bon-reveal"><span class="bon-chapter">02 · Selected solutions</span><h2>Three ways I turn complexity into action.</h2><p>Explore a delivered AI rollout, a tested finance pilot and a QR product licensed for market learning.</p></div>
@@ -451,6 +451,7 @@
       const routePath=root.querySelector('.bon-route-path');
       const routeDot=root.querySelector('.bon-route-dot');
       const routeLength=routePath.getTotalLength();
+      const routeViewBox=routePath.ownerSVGElement.viewBox.baseVal;
       const caseStack=root.querySelector('.bon-work-stack');
       const careerList=root.querySelector('.bon-career-list');
       const navSections=[...root.querySelectorAll('.bon-links a[href^="#bon-"]')].map(link=>({link,target:root.querySelector(link.getAttribute('href'))})).filter(item=>item.target);
@@ -492,8 +493,8 @@
         const routeProgress=clamp((viewport*.85-routeRect.top)/(viewport*.7+routeRect.height));
         routePath.style.strokeDashoffset=String(routeLength*(1-routeProgress));
         const point=routePath.getPointAtLength(routeLength*routeProgress);
-        routeDot.setAttribute('cx',String(point.x));
-        routeDot.setAttribute('cy',String(point.y));
+        routeDot.style.left=`${((point.x-routeViewBox.x)/routeViewBox.width)*100}%`;
+        routeDot.style.top=`${((point.y-routeViewBox.y)/routeViewBox.height)*100}%`;
 
         const progressLine=(element,property)=>{
           const rect=element.getBoundingClientRect();
@@ -547,7 +548,10 @@
       }
 
       if('IntersectionObserver' in window && !reduce){
-        const observer=new IntersectionObserver((entries)=>entries.forEach((entry)=>{if(entry.isIntersecting)entry.target.classList.add('is-visible')}),{threshold:.08,rootMargin:'0px 0px -25px 0px'});
+        const observer=new IntersectionObserver((entries)=>entries.forEach((entry)=>{
+          if(entry.isIntersecting)entry.target.classList.add('is-visible');
+          else if(entry.boundingClientRect.top>=window.innerHeight-25)entry.target.classList.remove('is-visible');
+        }),{threshold:.08,rootMargin:'0px 0px -25px 0px'});
         root.querySelectorAll('.bon-reveal').forEach((item)=>observer.observe(item));
       }else{
         root.querySelectorAll('.bon-reveal').forEach(item=>item.classList.add('is-visible'));
