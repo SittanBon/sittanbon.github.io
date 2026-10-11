@@ -126,6 +126,24 @@
 
     #genai-workflow-case-study .gw-metric span { color: var(--gw-muted); font-size: 11px; }
 
+    #genai-workflow-case-study .gw-pilot-evidence{margin:28px 54px;padding:26px;border:1px solid #514952;border-radius:18px;background:linear-gradient(130deg,rgba(242,108,79,.08),transparent 46%),var(--gw-panel)}
+    #genai-workflow-case-study .gw-pilot-head{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;margin-bottom:21px}
+    #genai-workflow-case-study .gw-pilot-head h2{font-size:clamp(23px,3vw,32px);line-height:1.1}
+    #genai-workflow-case-study .gw-pilot-head > p{margin:0;color:#d0cbc5;font-size:13px;line-height:1.55}
+    #genai-workflow-case-study .gw-pilot-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(220px,.65fr);gap:18px}
+    #genai-workflow-case-study .gw-pilot-bars,#genai-workflow-case-study .gw-pilot-response{min-width:0;padding:20px;border:1px solid var(--gw-line);border-radius:13px;background:#101014}
+    #genai-workflow-case-study .gw-pilot-lane + .gw-pilot-lane{margin-top:18px}
+    #genai-workflow-case-study .gw-pilot-lane-head{display:flex;justify-content:space-between;gap:14px;align-items:baseline;margin-bottom:9px}
+    #genai-workflow-case-study .gw-pilot-lane-head span{color:#d0cbc5;font-size:12px}
+    #genai-workflow-case-study .gw-pilot-lane-head strong{white-space:nowrap;color:var(--gw-ink);font-size:18px}
+    #genai-workflow-case-study .gw-pilot-track{height:10px;overflow:hidden;border-radius:10px;background:#302e35}
+    #genai-workflow-case-study .gw-pilot-fill{display:block;width:100%;height:100%;border-radius:10px;background:#77737c}
+    #genai-workflow-case-study .gw-pilot-lane.is-ai .gw-pilot-fill{width:50%;background:var(--gw-green)}
+    #genai-workflow-case-study .gw-pilot-response span{display:block;margin-bottom:8px;color:var(--gw-teal);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+    #genai-workflow-case-study .gw-pilot-response strong{display:block;margin-bottom:9px;color:var(--gw-ink);font-size:23px;line-height:1.15}
+    #genai-workflow-case-study .gw-pilot-response p{margin:0;color:var(--gw-muted);font-size:12px;line-height:1.5}
+    #genai-workflow-case-study .gw-pilot-note{margin:17px 0 0;color:var(--gw-muted);font-size:12px;line-height:1.5}
+
     #genai-workflow-case-study .gw-section {
       padding: 54px;
       border-bottom: 1px solid var(--gw-line);
@@ -388,10 +406,13 @@
     @media (max-width: 700px) {
       #genai-workflow-case-study .gw-hero,
       #genai-workflow-case-study .gw-section-head,
-      #genai-workflow-case-study .gw-responsibility { grid-template-columns: 1fr; }
+      #genai-workflow-case-study .gw-responsibility,
+      #genai-workflow-case-study .gw-pilot-head,
+      #genai-workflow-case-study .gw-pilot-grid { grid-template-columns: 1fr; }
       #genai-workflow-case-study .gw-hero,
       #genai-workflow-case-study .gw-section { padding: 36px 20px; }
       #genai-workflow-case-study .gw-back{margin:18px 20px 0}
+      #genai-workflow-case-study .gw-pilot-evidence{margin:20px;padding:20px}
       #genai-workflow-case-study .gw-case-note{margin:0 20px 24px}
       #genai-workflow-case-study .gw-delivered{grid-template-columns:1fr;margin:0 20px 8px;gap:20px}
       #genai-workflow-case-study .gw-flow { grid-template-columns: 1fr; }
@@ -425,7 +446,18 @@
         <div class="gw-metric"><strong>4 locations</strong><span>DACH rollout after controlled pilot</span></div>
       </div>
     </section>
-    <p class="gw-case-note"><strong>What was delivered:</strong> an n8n proof of concept, a controlled pilot at two AI-enabled and two comparison locations, a seven-person adoption workshop, human approval and GDPR data minimization, then rollout across four DACH locations. The standard campaign cycle moved from two weeks to one. <strong>What the diagram adds:</strong> Bon’s extended PDF → Perplexity → six directions → two selected concepts → final pack design. The individual steps of that extended route have not been confirmed as production steps. <a href="Sittan_Charoensuwan_AI_Implementation_Solutions_Master_CV.pdf#page=1" target="_blank" rel="noopener">See CV evidence ↗</a></p>
+    <section class="gw-pilot-evidence" aria-labelledby="gw-pilot-title">
+      <div class="gw-pilot-head"><div><p class="gw-kicker">Controlled pilot · reconstructed summary</p><h2 id="gw-pilot-title">What the pilot showed.</h2></div><p>During one pilot period, two first-adopter locations used the AI-assisted workflow and two used the traditional process for campaigns with comparable setups.</p></div>
+      <div class="gw-pilot-grid">
+        <div class="gw-pilot-bars" aria-label="Standard campaign production time: approximately two weeks with the traditional process, one week with AI assistance">
+          <div class="gw-pilot-lane"><div class="gw-pilot-lane-head"><span>Traditional process · 2 locations</span><strong>~2 weeks</strong></div><div class="gw-pilot-track"><span class="gw-pilot-fill"></span></div></div>
+          <div class="gw-pilot-lane is-ai"><div class="gw-pilot-lane-head"><span>AI-assisted workflow · 2 locations</span><strong>~1 week</strong></div><div class="gw-pilot-track"><span class="gw-pilot-fill"></span></div></div>
+        </div>
+        <div class="gw-pilot-response"><span>After publication</span><strong>Roughly similar audience response</strong><p>Views, comments and likes were compared across the two groups during the pilot.</p></div>
+      </div>
+      <p class="gw-pilot-note">Approximate internal pilot observations based on Bon’s account. This visual reconstructs the comparison; it is not an original pilot dashboard or a statistical equivalence claim.</p>
+    </section>
+    <p class="gw-case-note"><strong>What was delivered:</strong> an n8n proof of concept, a controlled pilot, a seven-person adoption workshop, human approval and GDPR data minimization, then rollout across four DACH locations. <strong>What the diagram adds:</strong> Bon’s extended PDF → Perplexity → six directions → two selected concepts → final pack design. The individual steps of that extended route have not been confirmed as production steps. <a href="Sittan_Charoensuwan_AI_Implementation_Solutions_Master_CV.pdf#page=1" target="_blank" rel="noopener">See CV evidence ↗</a></p>
     <div class="gw-delivered" aria-label="Delivered implementation summary"><article><span>01 · Use case</span><strong>Start with standard campaigns</strong><p>Identified a repeatable preparation workflow and built an n8n proof of concept.</p></article><article><span>02 · Pilot &amp; controls</span><strong>Compare before scaling</strong><p>Ran two AI-enabled and two comparison locations, with human approval and data minimization.</p></article><article><span>03 · Adoption &amp; result</span><strong>Make the change operational</strong><p>Held a seven-person workshop, rolled out to four DACH locations and reduced the standard cycle from two weeks to one.</p></article></div>
 
     <section class="gw-section">
