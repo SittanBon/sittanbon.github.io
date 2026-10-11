@@ -65,6 +65,7 @@ for (const page of pages) {
   <meta property="og:url" content="${canonical}">
   <meta property="og:image" content="${siteOrigin}/hero-guide-journey-man.png">
   <link rel="canonical" href="${canonical}">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <title>${page.title}</title>
