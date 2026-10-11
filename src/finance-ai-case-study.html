@@ -1,0 +1,387 @@
+<div id="finance-ai-case-study">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;700&display=swap');
+    #finance-ai-case-study {
+      --fin-ink: #202027;
+      --fin-muted: #6f6e78;
+      --fin-line: #d8d3ca;
+      --fin-paper: #f7f4ed;
+      --fin-panel: #f2eee7;
+      --fin-white: #ffffff;
+      --fin-violet: #6a55d8;
+      --fin-violet-soft: #ebe8fb;
+      --fin-green: #31956e;
+      --fin-green-soft: #e2f4ec;
+      --fin-amber: #cf861e;
+      --fin-amber-soft: #fff0d7;
+      --fin-red: #dd4f6f;
+      --fin-red-soft: #fde7ed;
+      --fin-coral: #f26c4f;
+      width: 100%;
+      overflow: hidden;
+      color: var(--fin-ink);
+      background: var(--fin-paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    #finance-ai-case-study * { box-sizing: border-box; }
+    #finance-ai-case-study h1,
+    #finance-ai-case-study h2,
+    #finance-ai-case-study h3,
+    #finance-ai-case-study p { margin-top: 0; }
+    #finance-ai-case-study h1,#finance-ai-case-study h2,#finance-ai-case-study h3{font-family:"Archivo Black",Inter,sans-serif;font-weight:400}
+
+    #finance-ai-case-study .fin-shell { max-width: 1180px; margin: 0 auto; padding: 56px 34px 70px; }
+    #finance-ai-case-study .fin-back{display:inline-block;margin-bottom:30px;padding-bottom:5px;border-bottom:1px solid var(--fin-coral);color:var(--fin-ink);font-size:12px;font-weight:800;text-decoration:none;text-transform:uppercase;letter-spacing:.07em}
+    #finance-ai-case-study .fin-evidence-note{margin:25px 0 0;padding:18px 22px;border-left:5px solid var(--fin-coral);background:#f3f0eb;color:var(--fin-ink);font-size:14px;line-height:1.6}
+    #finance-ai-case-study .fin-evidence-note a{color:inherit;text-decoration-color:var(--fin-coral);text-underline-offset:3px}
+    #finance-ai-case-study .fin-eyebrow { margin-bottom: 12px; color: var(--fin-coral); font-family:"IBM Plex Mono",monospace; font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    #finance-ai-case-study .fin-hero { display: grid; grid-template-columns: 1.4fr .8fr; gap: 60px; align-items: end; padding-bottom: 44px; border-bottom: 1px solid var(--fin-line); }
+    #finance-ai-case-study .fin-hero h1 { max-width: 760px; margin-bottom: 20px; font-size: clamp(40px, 6vw, 72px); line-height: .98; letter-spacing: -.055em; }
+    #finance-ai-case-study .fin-hero-copy { max-width: 650px; margin-bottom: 0; color: var(--fin-muted); font-size: 16px; line-height: 1.65; }
+    #finance-ai-case-study .fin-meta { display: grid; gap: 10px; }
+    #finance-ai-case-study .fin-meta-row { display: grid; grid-template-columns: 90px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--fin-line); }
+    #finance-ai-case-study .fin-meta-row span { color: var(--fin-muted); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
+    #finance-ai-case-study .fin-meta-row strong { font-size: 13px; }
+
+    #finance-ai-case-study .fin-section { padding: 58px 0; border-bottom: 1px solid var(--fin-line); }
+    #finance-ai-case-study .fin-section-head { display: grid; grid-template-columns: .72fr 1.28fr; gap: 44px; margin-bottom: 32px; }
+    #finance-ai-case-study .fin-section-head h2 { margin-bottom: 0; font-size: clamp(28px, 4vw, 46px); line-height: 1.04; letter-spacing: -.04em; }
+    #finance-ai-case-study .fin-section-head > p { max-width: 620px; margin: 25px 0 0; color: var(--fin-muted); font-size: 14px; line-height: 1.65; }
+
+    #finance-ai-case-study .fin-flow {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 28px;
+      padding: 34px;
+      border-radius: 22px;
+      background-color: #f5f4f7;
+      background-image: radial-gradient(#c9c6cf 1.4px, transparent 1.4px);
+      background-size: 22px 22px;
+    }
+    #finance-ai-case-study .fin-node { position: relative; z-index: 1; min-height: 150px; padding: 18px; border: 1px solid #cfccd6; border-radius: 14px; background: var(--fin-white); box-shadow: 0 8px 22px rgba(35, 29, 53, .08); }
+    #finance-ai-case-study .fin-node:not(:last-child)::after { content: "→"; position: absolute; top: 50%; right: -24px; color: var(--fin-violet); font-size: 24px; font-weight: 800; transform: translateY(-50%); }
+    #finance-ai-case-study .fin-node-top { display: flex; gap: 9px; align-items: center; margin-bottom: 19px; color: var(--node-color); font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    #finance-ai-case-study .fin-node-icon { display: grid; width: 32px; height: 32px; place-items: center; border-radius: 9px; color: #fff; background: var(--node-color); font-size: 12px; }
+    #finance-ai-case-study .fin-node strong { display: block; margin-bottom: 8px; font-size: 16px; line-height: 1.25; }
+    #finance-ai-case-study .fin-node p { margin-bottom: 0; color: var(--fin-muted); font-size: 12px; line-height: 1.5; }
+
+    #finance-ai-case-study .fin-score-model { margin-top: 20px; padding: 26px; border: 1px solid var(--fin-line); border-radius: 18px; background: var(--fin-white); }
+    #finance-ai-case-study .fin-score-head { display: grid; grid-template-columns: .8fr 1.2fr; gap: 32px; align-items: end; margin-bottom: 22px; }
+    #finance-ai-case-study .fin-score-head h3 { margin-bottom: 0; font-size: 22px; }
+    #finance-ai-case-study .fin-score-head p { margin-bottom: 0; color: var(--fin-muted); font-size: 12px; line-height: 1.55; }
+    #finance-ai-case-study .fin-factor-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; overflow: hidden; border-radius: 12px; background: var(--fin-line); }
+    #finance-ai-case-study .fin-factor { min-height: 142px; padding: 18px; background: var(--fin-panel); }
+    #finance-ai-case-study .fin-factor-top { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; margin-bottom: 10px; }
+    #finance-ai-case-study .fin-factor-top strong { font-size: 12px; }
+    #finance-ai-case-study .fin-factor-top span { color: var(--fin-violet); font-size: 18px; font-weight: 900; }
+    #finance-ai-case-study .fin-factor p { min-height: 46px; margin-bottom: 12px; color: var(--fin-muted); font-size: 10px; line-height: 1.45; }
+    #finance-ai-case-study .fin-factor-meter { height: 6px; overflow: hidden; border-radius: 99px; background: #ddd9e4; }
+    #finance-ai-case-study .fin-factor-meter::before { content: ""; display: block; width: var(--weight); height: 100%; border-radius: inherit; background: var(--fin-violet); }
+    #finance-ai-case-study .fin-hard-stops { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: start; margin-top: 14px; padding: 15px 17px; border-radius: 10px; color: #6d1730; background: var(--fin-red-soft); }
+    #finance-ai-case-study .fin-hard-stops strong { font-size: 11px; text-transform: uppercase; letter-spacing: .07em; }
+    #finance-ai-case-study .fin-hard-stops p { margin-bottom: 0; font-size: 11px; line-height: 1.5; }
+
+    #finance-ai-case-study .fin-router { margin-top: 20px; padding: 26px; border-radius: 18px; color: #fff; background: #26252d; }
+    #finance-ai-case-study .fin-router-head { display: flex; justify-content: space-between; gap: 20px; align-items: end; margin-bottom: 22px; }
+    #finance-ai-case-study .fin-router h3 { margin-bottom: 0; font-size: 22px; }
+    #finance-ai-case-study .fin-router-head p { max-width: 510px; margin-bottom: 0; color: #b8b5c1; font-size: 12px; line-height: 1.5; }
+    #finance-ai-case-study .fin-routes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+    #finance-ai-case-study .fin-route { min-height: 108px; padding: 17px; border-radius: 12px; opacity: .72; transition: opacity .2s ease, transform .2s ease, box-shadow .2s ease; }
+    #finance-ai-case-study .fin-route.is-active { opacity: 1; transform: translateY(-3px); box-shadow: inset 0 0 0 3px currentColor; }
+    #finance-ai-case-study .fin-route strong { display: block; margin-bottom: 4px; font-size: 20px; }
+    #finance-ai-case-study .fin-route span { display: block; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .07em; }
+    #finance-ai-case-study .fin-route p { margin: 8px 0 0; font-size: 11px; line-height: 1.4; }
+    #finance-ai-case-study .fin-route.is-reject { color: #6d1730; background: var(--fin-red-soft); }
+    #finance-ai-case-study .fin-route.is-review { color: #69470e; background: var(--fin-amber-soft); }
+    #finance-ai-case-study .fin-route.is-pass { color: #175b43; background: var(--fin-green-soft); }
+
+    #finance-ai-case-study .fin-tester { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; margin-top: 16px; padding: 20px 22px; border-radius: 14px; background: var(--fin-white); }
+    #finance-ai-case-study .fin-tester-controls { display: grid; grid-template-columns: minmax(0, 2fr) minmax(150px, 1fr); gap: 18px; align-items: end; }
+    #finance-ai-case-study .fin-tester label { display: flex; justify-content: space-between; gap: 20px; margin-bottom: 10px; color: var(--fin-ink); font-size: 12px; font-weight: 800; }
+    #finance-ai-case-study .fin-tester output { color: var(--fin-violet); }
+    #finance-ai-case-study .fin-tester input[type="range"] { width: 100%; accent-color: var(--fin-violet); }
+    #finance-ai-case-study .fin-tester input[type="number"] { width: 100%; min-height: 44px; padding: 9px 11px; border: 1px solid var(--fin-line); border-radius: 8px; color: var(--fin-ink); background: #fff; font: inherit; font-size: 14px; }
+    #finance-ai-case-study .fin-tester-result { min-width: 178px; padding-left: 22px; border-left: 1px solid var(--fin-line); }
+    #finance-ai-case-study .fin-tester-result span { display: block; margin-bottom: 4px; color: var(--fin-muted); font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: .09em; }
+    #finance-ai-case-study .fin-tester-result strong { font-size: 15px; }
+    #finance-ai-case-study .fin-tester-result p { max-width: 260px; margin: 7px 0 0; color: var(--fin-muted); font-size: 11px; line-height: 1.45; }
+    #finance-ai-case-study .fin-policy-note { margin: 12px 0 0; color: #cdc9d3; font-size: 11px; line-height: 1.5; }
+
+    #finance-ai-case-study .fin-wireframe-grid { display: grid; grid-template-columns: .7fr 1.3fr; gap: 26px; align-items: stretch; }
+    #finance-ai-case-study .fin-board { padding: 22px; border: 1px solid var(--fin-line); border-radius: 18px; background: var(--fin-white); }
+    #finance-ai-case-study .fin-board-label { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 18px; color: var(--fin-muted); font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .09em; }
+    #finance-ai-case-study .fin-board-label span:last-child { color: var(--fin-violet); }
+
+    #finance-ai-case-study .fin-phone { width: min(250px, 100%); margin: 0 auto; padding: 9px; border: 2px solid #b9b6c1; border-radius: 30px; background: #e6e4e9; }
+    #finance-ai-case-study .fin-phone-screen { overflow: hidden; min-height: 440px; border-radius: 22px; background: #faf9fb; }
+    #finance-ai-case-study .fin-phone-top { display: flex; justify-content: space-between; padding: 12px 15px 8px; color: var(--fin-muted); font-size: 8px; }
+    #finance-ai-case-study .fin-appbar { display: flex; justify-content: space-between; padding: 12px 14px; border-top: 1px solid var(--fin-line); border-bottom: 1px solid var(--fin-line); font-size: 11px; font-weight: 800; }
+    #finance-ai-case-study .fin-phone-tabs { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--fin-line); color: var(--fin-muted); font-size: 8px; text-align: center; }
+    #finance-ai-case-study .fin-phone-tabs span { padding: 8px 2px; }
+    #finance-ai-case-study .fin-phone-tabs .is-active { color: var(--fin-ink); background: var(--fin-amber-soft); }
+    #finance-ai-case-study .fin-phone-content { padding: 14px; }
+    #finance-ai-case-study .fin-receipt-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin: 10px 0 14px; }
+    #finance-ai-case-study .fin-receipt { position: relative; height: 67px; border: 1px solid var(--fin-line); border-radius: 6px; background: repeating-linear-gradient(0deg, #fff, #fff 6px, #ebe9ee 7px); }
+    #finance-ai-case-study .fin-receipt.is-selected { border: 3px solid #efbd44; }
+    #finance-ai-case-study .fin-receipt.is-selected::after { content: "✓"; position: absolute; top: -7px; right: -6px; display: grid; width: 18px; height: 18px; place-items: center; border-radius: 50%; color: #fff; background: var(--fin-green); font-size: 10px; }
+    #finance-ai-case-study .fin-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+    #finance-ai-case-study .fin-chip { padding: 6px 8px; border-radius: 7px; color: var(--fin-muted); background: var(--fin-panel); font-size: 8px; }
+    #finance-ai-case-study .fin-field { padding: 9px; border: 1px solid var(--fin-line); border-radius: 7px; color: #9a98a1; background: #fff; font-size: 8px; }
+    #finance-ai-case-study .fin-primary { margin-top: 14px; padding: 11px; border-radius: 8px; color: #503b05; background: #efc95d; font-size: 10px; font-weight: 800; text-align: center; }
+
+    #finance-ai-case-study .fin-window { overflow: hidden; min-height: 440px; border: 1px solid var(--fin-line); border-radius: 12px; background: #f7f6f9; box-shadow: 0 10px 25px rgba(35, 29, 53, .06); }
+    #finance-ai-case-study .fin-windowbar { display: flex; justify-content: space-between; gap: 18px; padding: 12px 15px; border-bottom: 1px solid var(--fin-line); background: #eceaf0; font-size: 9px; }
+    #finance-ai-case-study .fin-dashboard { padding: 18px; }
+    #finance-ai-case-study .fin-dash-head { display: flex; justify-content: space-between; gap: 20px; margin-bottom: 14px; font-size: 10px; }
+    #finance-ai-case-study .fin-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin-bottom: 12px; }
+    #finance-ai-case-study .fin-stat { padding: 12px; border-radius: 8px; background: #fff; }
+    #finance-ai-case-study .fin-stat span { display: block; color: var(--fin-muted); font-size: 7px; }
+    #finance-ai-case-study .fin-stat strong { display: block; margin: 4px 0; font-size: 16px; }
+    #finance-ai-case-study .fin-chart-area { display: grid; grid-template-columns: 1fr 145px; gap: 10px; }
+    #finance-ai-case-study .fin-chart,
+    #finance-ai-case-study .fin-side { padding: 12px; border-radius: 8px; background: #fff; }
+    #finance-ai-case-study .fin-bars { display: flex; height: 110px; gap: 6px; align-items: end; margin-top: 13px; border-bottom: 1px solid var(--fin-line); }
+    #finance-ai-case-study .fin-bars span { flex: 1; height: var(--bar); border-radius: 3px 3px 0 0; background: #d6d1eb; }
+    #finance-ai-case-study .fin-bars span:nth-child(3n) { background: #efc95d; }
+    #finance-ai-case-study .fin-side p { padding: 8px 0; margin: 0; border-bottom: 1px solid var(--fin-line); color: var(--fin-muted); font-size: 8px; line-height: 1.4; }
+    #finance-ai-case-study .fin-table { margin-top: 10px; padding: 12px; border-radius: 8px; background: #fff; }
+    #finance-ai-case-study .fin-table-row { display: grid; grid-template-columns: 100px 80px 1fr; gap: 10px; align-items: center; padding: 7px 0; border-bottom: 1px solid #eeecf1; font-size: 8px; }
+    #finance-ai-case-study .fin-mini-track { height: 7px; border-radius: 4px; background: #eeecf1; }
+    #finance-ai-case-study .fin-mini-track::before { content: ""; display: block; width: var(--fill); height: 100%; border-radius: inherit; background: #b9afd8; }
+
+    #finance-ai-case-study .fin-ux { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; overflow: hidden; margin-top: 26px; border-radius: 16px; background: var(--fin-line); }
+    #finance-ai-case-study .fin-ux article { min-height: 165px; padding: 22px; background: var(--fin-white); }
+    #finance-ai-case-study .fin-ux span { display: grid; width: 28px; height: 28px; margin-bottom: 24px; place-items: center; border-radius: 50%; color: #fff; background: var(--fin-violet); font-size: 10px; font-weight: 800; }
+    #finance-ai-case-study .fin-ux strong { display: block; margin-bottom: 8px; font-size: 13px; }
+    #finance-ai-case-study .fin-ux p { margin-bottom: 0; color: var(--fin-muted); font-size: 11px; line-height: 1.5; }
+
+    #finance-ai-case-study .fin-bottom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    #finance-ai-case-study .fin-bottom-panel { padding: 28px; border-radius: 18px; background: var(--fin-panel); }
+    #finance-ai-case-study .fin-bottom-panel.is-dark { color: #fff; background: #26252d; }
+    #finance-ai-case-study .fin-bottom-panel h3 { margin-bottom: 12px; font-size: 24px; line-height: 1.15; }
+    #finance-ai-case-study .fin-bottom-panel > p { color: var(--fin-muted); font-size: 13px; line-height: 1.6; }
+    #finance-ai-case-study .fin-bottom-panel.is-dark > p { color: #b8b5c1; }
+    #finance-ai-case-study .fin-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    #finance-ai-case-study .fin-tags span { padding: 7px 10px; border: 1px solid #cfccd6; border-radius: 999px; background: var(--fin-white); font-size: 10px; }
+    #finance-ai-case-study .fin-checks { display: grid; gap: 12px; margin-top: 18px; }
+    #finance-ai-case-study .fin-check { display: grid; grid-template-columns: 24px 1fr; gap: 10px; align-items: start; color: #ddd9e4; font-size: 11px; line-height: 1.45; }
+    #finance-ai-case-study .fin-check::before { content: "✓"; display: grid; width: 22px; height: 22px; place-items: center; border-radius: 50%; color: #fff; background: var(--fin-green); font-weight: 800; }
+    #finance-ai-case-study .fin-note { margin-top: 20px; padding: 20px 24px; border-left: 4px solid var(--fin-amber); color: var(--fin-muted); background: var(--fin-amber-soft); font-size: 12px; line-height: 1.55; }
+    #finance-ai-case-study .fin-note strong { color: var(--fin-ink); }
+
+    @media (max-width: 820px) {
+      #finance-ai-case-study .fin-shell { padding: 38px 18px 50px; }
+      #finance-ai-case-study .fin-hero,
+      #finance-ai-case-study .fin-section-head,
+      #finance-ai-case-study .fin-wireframe-grid,
+      #finance-ai-case-study .fin-bottom-grid { grid-template-columns: 1fr; gap: 26px; }
+      #finance-ai-case-study .fin-flow { grid-template-columns: 1fr; }
+      #finance-ai-case-study .fin-node:not(:last-child)::after { top: auto; right: 50%; bottom: -28px; transform: translateX(50%) rotate(90deg); }
+      #finance-ai-case-study .fin-routes,
+      #finance-ai-case-study .fin-ux,
+      #finance-ai-case-study .fin-score-head,
+      #finance-ai-case-study .fin-factor-grid { grid-template-columns: 1fr; }
+      #finance-ai-case-study .fin-hard-stops { grid-template-columns: 1fr; gap: 6px; }
+      #finance-ai-case-study .fin-tester { grid-template-columns: 1fr; }
+      #finance-ai-case-study .fin-tester-result { padding: 15px 0 0; border-top: 1px solid var(--fin-line); border-left: 0; }
+      #finance-ai-case-study .fin-chart-area { grid-template-columns: 1fr; }
+      #finance-ai-case-study .fin-window { min-height: auto; }
+    }
+    @media (max-width: 560px) { #finance-ai-case-study .fin-tester-controls { grid-template-columns: 1fr; } }
+  </style>
+
+  <main class="fin-shell">
+    <a class="fin-back" href="index.html#bon-work">← Back to selected work</a>
+    <header class="fin-hero">
+      <div>
+        <p class="fin-eyebrow">AI finance operations · Internal pilot + product concept</p>
+        <h1>Turn scattered expense evidence into trusted financial decisions.</h1>
+        <p class="fin-hero-copy">At Tohklom, I interviewed more than 30 SME finance users, tested OCR extraction on more than 500 receipts and designed confidence-based human review. The wider interface below explores how those pilot findings could become a finance product.</p>
+      </div>
+      <div class="fin-meta" aria-label="Case study overview">
+        <div class="fin-meta-row"><span>Audience</span><strong>SME financial teams in agencies</strong></div>
+        <div class="fin-meta-row"><span>Focus</span><strong>Capture, matching, confidence and control</strong></div>
+        <div class="fin-meta-row"><span>Status</span><strong>Internal pilot; broader dashboard is a product concept</strong></div>
+      </div>
+    </header>
+    <p class="fin-evidence-note"><strong>Observed in the pilot:</strong> SME user interviews, OCR receipt testing and confidence-based routing with human review. <strong>Decision policy described by Bon:</strong> a green high-confidence route notifies a human and keeps an audit log; bills above ฿20,000 require human approval regardless of score. <strong>Illustrative product design:</strong> the wireframes, example amounts, confidence factors and other hard-stop controls below. Exact confidence-factor weights are not claimed as pilot settings. <a href="Sittan_Charoensuwan_AI_Implementation_Solutions_Master_CV.pdf#page=1" target="_blank" rel="noopener">See CV evidence ↗</a></p>
+
+    <section class="fin-section">
+      <div class="fin-section-head">
+        <div><p class="fin-eyebrow">01 · Decision workflow</p><h2>Automation with a visible escape route.</h2></div>
+        <p>The system does not treat every prediction equally. It extracts evidence, proposes a match and then routes the transaction by confidence and bill value—giving a green route only to clear cases that do not require value-based approval.</p>
+      </div>
+
+      <div class="fin-flow" aria-label="Expense intelligence workflow">
+        <article class="fin-node" style="--node-color: var(--fin-violet)"><div class="fin-node-top"><span class="fin-node-icon">1</span>Human input</div><strong>Capture evidence</strong><p>Upload a receipt, QR confirmation or bank-app screenshot.</p></article>
+        <article class="fin-node" style="--node-color: var(--fin-green)"><div class="fin-node-top"><span class="fin-node-icon">AI</span>Extraction</div><strong>Structure the data</strong><p>Read merchant, date, amount, tax, currency and project references.</p></article>
+        <article class="fin-node" style="--node-color: var(--fin-green)"><div class="fin-node-top"><span class="fin-node-icon">AI</span>Matching</div><strong>Find the transaction</strong><p>Compare the evidence with bank activity and expense context.</p></article>
+        <article class="fin-node" style="--node-color: var(--fin-green)"><div class="fin-node-top"><span class="fin-node-icon">AI</span>Validation</div><strong>Score confidence</strong><p>Assess the evidence quality, match strength and missing information.</p></article>
+        <article class="fin-node" style="--node-color: var(--fin-amber)"><div class="fin-node-top"><span class="fin-node-icon">IF</span>Decision</div><strong>Which route and value rule?</strong><p>Apply the confidence band, then check whether the bill amount requires human approval.</p></article>
+      </div>
+
+      <div class="fin-score-model">
+        <div class="fin-score-head">
+          <div><p class="fin-eyebrow">Illustrative decision factors</p><h3>What should a confidence rating consider?</h3></div>
+          <p>The pilot tested confidence routing. These six factors explain a transparent design approach; their exact weights are not being claimed as pilot settings.</p>
+        </div>
+        <div class="fin-factor-grid" aria-label="Confidence rating factors">
+          <article class="fin-factor"><div class="fin-factor-top"><strong>Transaction match</strong></div><p>Is there one strong bank transaction candidate rather than several possible matches?</p></article>
+          <article class="fin-factor"><div class="fin-factor-top"><strong>Field agreement</strong></div><p>Do amount, date, currency and merchant agree across receipt and bank evidence?</p></article>
+          <article class="fin-factor"><div class="fin-factor-top"><strong>Extraction quality</strong></div><p>How reliably were the required fields read from the uploaded evidence?</p></article>
+          <article class="fin-factor"><div class="fin-factor-top"><strong>Evidence completeness</strong></div><p>Are the receipt, mandatory fields and supporting information present and readable?</p></article>
+          <article class="fin-factor"><div class="fin-factor-top"><strong>Policy &amp; context fit</strong></div><p>Are the project, category, tax treatment and vendor plausible for this expense?</p></article>
+          <article class="fin-factor"><div class="fin-factor-top"><strong>Anomaly checks</strong></div><p>Is the item free from duplicate, tampering, outlier and prior-claim signals?</p></article>
+        </div>
+        <div class="fin-hard-stops"><strong>Proposed evidence controls</strong><p>Additional product checks could flag suspected duplicates, unreadable evidence, critical mismatches or policy exceptions for human handling.</p></div>
+      </div>
+
+      <div class="fin-router">
+        <div class="fin-router-head"><h3>Confidence and value routing</h3><p>These bands were tested in the pilot. At exactly 75%, a person reviews the item. A bill above ฿20,000 needs human approval regardless of confidence.</p></div>
+        <div class="fin-routes">
+          <article class="fin-route is-reject" data-route="reject"><strong>&lt;75%</strong><span>Reject / recapture</span><p>Evidence is insufficient or the match is unreliable.</p></article>
+          <article class="fin-route is-review" data-route="review"><strong>75–95%</strong><span>Human review</span><p>A finance specialist confirms or corrects the match.</p></article>
+          <article class="fin-route is-pass" data-route="pass"><strong>&gt;95%</strong><span>Green + notify</span><p>Notify the owner and keep a log for later audit; the value rule still applies.</p></article>
+        </div>
+        <div class="fin-tester">
+          <div class="fin-tester-controls">
+            <div>
+              <label for="fin-confidence"><span>Confidence score</span><output id="fin-confidence-value">88%</output></label>
+              <input id="fin-confidence" type="range" min="0" max="100" value="88" aria-label="Confidence score">
+            </div>
+            <div><label for="fin-bill-amount">Bill amount (THB)</label><input id="fin-bill-amount" type="number" min="0" step="500" value="8500" inputmode="decimal"></div>
+          </div>
+          <div class="fin-tester-result" aria-live="polite"><span>Final route after value rule</span><strong id="fin-route-result">Human review</strong><p id="fin-route-detail">A finance specialist confirms or corrects the match.</p></div>
+        </div>
+        <p class="fin-policy-note">Try 75%, 96% and a bill above ฿20,000. This illustrates Bon’s stated routing policy; confidence and value thresholds can be configured differently for each project.</p>
+      </div>
+    </section>
+
+    <section class="fin-section">
+      <div class="fin-section-head">
+        <div><p class="fin-eyebrow">02 · Product experience</p><h2>Capture once. Understand the budget continuously.</h2></div>
+        <p>The mobile flow removes friction at the moment evidence is created. The dashboard turns those records into an operational view of spending—not only a report at month end.</p>
+      </div>
+
+      <div class="fin-wireframe-grid">
+        <article class="fin-board">
+          <div class="fin-board-label"><span>Wireframe A</span><span>Mobile capture</span></div>
+          <div class="fin-phone">
+            <div class="fin-phone-screen">
+              <div class="fin-phone-top"><span>9:41</span><span>● ● ●</span></div>
+              <div class="fin-appbar"><span>‹</span><span>Upload receipt</span><span>•••</span></div>
+              <div class="fin-phone-tabs"><span>Phone</span><span class="is-active">Gallery</span><span>Camera</span><span>Manual</span></div>
+              <div class="fin-phone-content">
+                <strong style="font-size:9px">Recent photos</strong>
+                <div class="fin-receipt-grid"><span class="fin-receipt is-selected"></span><span class="fin-receipt"></span><span class="fin-receipt"></span><span class="fin-receipt"></span><span class="fin-receipt"></span><span class="fin-receipt"></span></div>
+                <div class="fin-chips"><span class="fin-chip">Marketing dept</span><span class="fin-chip">Event booth</span></div>
+                <div style="margin:10px 0 5px;color:var(--fin-muted);font-size:8px">AI-suggested tags</div>
+                <div class="fin-field">Search or add a tag…</div>
+                <div class="fin-chips"><span class="fin-chip">Trade Show Bangkok</span><span class="fin-chip">+ Add</span></div>
+                <div class="fin-primary">Confirm &amp; tag</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="fin-board">
+          <div class="fin-board-label"><span>Wireframe B</span><span>Budget intelligence</span></div>
+          <div class="fin-window">
+            <div class="fin-windowbar"><strong>Budget Dashboard · All departments</strong><span>● ● ●</span></div>
+            <div class="fin-dashboard">
+              <div class="fin-dash-head"><strong>Budget dashboard</strong><span>All departments · Apr 1–30</span></div>
+              <div class="fin-stats">
+                <div class="fin-stat"><span>Total expenses</span><strong>฿1,245,200</strong></div>
+                <div class="fin-stat"><span>Monthly budget</span><strong>฿1,500,000</strong></div>
+                <div class="fin-stat"><span>Actual vs budget</span><strong>−7%</strong><span style="color:var(--fin-green)">Under budget</span></div>
+              </div>
+              <div class="fin-chart-area">
+                <div class="fin-chart"><strong style="font-size:9px">Company expenses · This month</strong><div class="fin-bars"><span style="--bar:28%"></span><span style="--bar:42%"></span><span style="--bar:62%"></span><span style="--bar:49%"></span><span style="--bar:76%"></span><span style="--bar:57%"></span><span style="--bar:84%"></span><span style="--bar:66%"></span><span style="--bar:72%"></span><span style="--bar:91%"></span></div></div>
+                <aside class="fin-side"><strong style="font-size:9px">Top categories</strong><p>Client hospitality<br><b>฿300,000</b></p><p>Advertising<br><b>฿100,000</b></p><p>Equipment &amp; supplies<br><b>฿86,600</b></p></aside>
+              </div>
+              <div class="fin-table">
+                <strong style="font-size:9px">Department spend</strong>
+                <div class="fin-table-row"><span>Marketing</span><strong>฿696,000</strong><span class="fin-mini-track" style="--fill:74%"></span></div>
+                <div class="fin-table-row"><span>Operations</span><strong>฿382,000</strong><span class="fin-mini-track" style="--fill:52%"></span></div>
+                <div class="fin-table-row"><span>HR</span><strong>฿166,800</strong><span class="fin-mini-track" style="--fill:31%"></span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="fin-ux" aria-label="Key user experience decisions">
+        <article><span>1</span><strong>Evidence first</strong><p>Select the receipt before adding metadata, so the flow mirrors the user’s real starting point.</p></article>
+        <article><span>2</span><strong>AI suggests; people correct</strong><p>Tags and matches remain editable before they enter the financial record.</p></article>
+        <article><span>3</span><strong>Uncertainty is visible</strong><p>Confidence routing makes review effort proportionate to risk.</p></article>
+        <article><span>4</span><strong>Insight stays current</strong><p>Teams see company, department and project spending before month end.</p></article>
+      </div>
+    </section>
+
+    <section class="fin-section" style="border-bottom:0">
+      <div class="fin-bottom-grid">
+        <article class="fin-bottom-panel">
+          <p class="fin-eyebrow">My contribution</p>
+          <h3>Connecting operational pain to a usable AI product.</h3>
+          <p>The concept demonstrates how I would move from SME interviews and process mapping to a testable journey, controlled automation logic and a clear product interface.</p>
+          <div class="fin-tags"><span>Design thinking</span><span>SME discovery</span><span>User journey</span><span>AI workflow design</span><span>Project management</span><span>Agile prototyping</span><span>Financial controls</span></div>
+        </article>
+
+        <article class="fin-bottom-panel is-dark">
+          <p class="fin-eyebrow" style="color:#a99cf0">Responsible AI</p>
+          <h3>Control is part of the experience.</h3>
+          <p>The design treats confidence as a decision signal—not proof that the AI is correct.</p>
+          <div class="fin-checks"><div class="fin-check">Named human ownership for uncertain transactions</div><div class="fin-check">Editable extracted data and proposed categories</div><div class="fin-check">Audit trail for automated and reviewed decisions</div><div class="fin-check">Minimum necessary financial and personal data</div></div>
+        </article>
+      </div>
+
+      <div class="fin-note"><strong>What was tested, and what remains:</strong> SME discovery, OCR receipt testing and confidence routing were part of an internal pilot. The dashboard and wider product experience are concept wireframes. Faster reconciliation, fewer missing receipts and earlier budget visibility remain outcomes to measure in a future product pilot.</div>
+    </section>
+  </main>
+
+  <script>
+    (() => {
+      const root = document.getElementById('finance-ai-case-study');
+      const slider = root.querySelector('#fin-confidence');
+      const value = root.querySelector('#fin-confidence-value');
+      const amountInput = root.querySelector('#fin-bill-amount');
+      const result = root.querySelector('#fin-route-result');
+      const detail = root.querySelector('#fin-route-detail');
+      const routes = [...root.querySelectorAll('[data-route]')];
+      const update = () => {
+        const score = Number(slider.value);
+        const amount = Math.max(0, Number(amountInput.value) || 0);
+        const route = score < 75 ? 'reject' : score <= 95 ? 'review' : 'pass';
+        const needsValueApproval = amount > 20000;
+        value.textContent = `${score}%`;
+        if (needsValueApproval) {
+          result.textContent = route === 'reject' ? 'Recapture, then human approval' : 'Human approval required';
+          detail.textContent = route === 'reject'
+            ? 'Correct the evidence first; a person must approve this high-value bill before any green result.'
+            : 'Above ฿20,000, a person approves before the bill receives a green result.';
+        } else if (route === 'reject') {
+          result.textContent = 'Reject / recapture';
+          detail.textContent = 'The evidence or match needs correction before it can proceed.';
+        } else if (route === 'review') {
+          result.textContent = 'Human review';
+          detail.textContent = 'A finance specialist confirms or corrects the match.';
+        } else {
+          result.textContent = 'Green route + notification';
+          detail.textContent = 'Notify the human owner and keep a log available for audit.';
+        }
+        result.style.color = needsValueApproval || route === 'review' ? 'var(--fin-amber)' : route === 'reject' ? 'var(--fin-red)' : 'var(--fin-green)';
+        routes.forEach((item) => {
+          const active = item.dataset.route === route;
+          item.classList.toggle('is-active', active);
+          if (active) item.setAttribute('aria-current', 'true');
+          else item.removeAttribute('aria-current');
+        });
+      };
+      slider.addEventListener('input', update);
+      amountInput.addEventListener('input', update);
+      update();
+    })();
+  </script>
+</div>

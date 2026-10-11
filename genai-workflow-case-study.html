@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="description" content="A controlled GenAI campaign pilot, four-location rollout and a human-guided creative workflow design.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GenAI Campaign Workflow | Sittan (Bon) Charoensuwan">
+  <meta property="og:description" content="A controlled GenAI campaign pilot, four-location rollout and a human-guided creative workflow design.">
+  <meta property="og:url" content="https://sittanbon.github.io/genai-workflow-case-study.html">
+  <meta property="og:image" content="https://sittanbon.github.io/hero-guide-journey-man.png">
+  <link rel="canonical" href="https://sittanbon.github.io/genai-workflow-case-study.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>GenAI Campaign Workflow | Sittan (Bon) Charoensuwan</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #f7f4ed; }
+    .site-skip { position: absolute; top: -60px; left: 12px; z-index: 1000; padding: 10px 14px; background: #111113; color: #fff; font: 600 14px system-ui, sans-serif; }
+    .site-skip:focus { top: 12px; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;700&display=swap');
+    #genai-workflow-case-study {
+      --gw-bg: #0d0d10;
+      --gw-panel: #15151a;
+      --gw-panel-2: #1d1d23;
+      --gw-ink: #f5f1ec;
+      --gw-muted: #aaa5a0;
+      --gw-line: #35333b;
+      --gw-pink: #f26c4f;
+      --gw-purple: #9b85ff;
+      --gw-green: #78d2a2;
+      --gw-teal: #6fc8d2;
+      --gw-yellow: #ffc760;
+      width: 100%;
+      color: var(--gw-ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    #genai-workflow-case-study * { box-sizing: border-box; }
+    #genai-workflow-case-study h1,
+    #genai-workflow-case-study h2,
+    #genai-workflow-case-study h3,
+    #genai-workflow-case-study p { margin-top: 0; }
+    #genai-workflow-case-study h1,#genai-workflow-case-study h2,#genai-workflow-case-study h3{font-family:"Archivo Black",Inter,sans-serif;font-weight:400}
+
+    #genai-workflow-case-study .gw-page {
+      overflow: hidden;
+      border: 1px solid var(--gw-line);
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at 90% 8%, rgba(155,133,255,.15), transparent 24%),
+        var(--gw-bg);
+      box-shadow: 0 28px 80px rgba(0,0,0,.28);
+    }
+    #genai-workflow-case-study .gw-back{display:inline-block;margin:22px 54px 0;padding-bottom:5px;border-bottom:1px solid var(--gw-pink);color:var(--gw-ink);font-size:12px;font-weight:800;text-decoration:none;text-transform:uppercase;letter-spacing:.07em}
+    #genai-workflow-case-study .gw-case-note{margin:0 54px 28px;padding:18px 22px;border-left:5px solid var(--gw-pink);background:#242127;color:#e4dfd7;font-size:14px;line-height:1.6}
+    #genai-workflow-case-study .gw-case-note strong{color:#fff}
+    #genai-workflow-case-study .gw-case-note a{color:#fff;text-decoration-color:var(--gw-pink);text-underline-offset:3px}
+    #genai-workflow-case-study .gw-delivered{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:0 54px 20px;padding:8px 0 30px;border-bottom:1px solid var(--gw-line)}
+    #genai-workflow-case-study .gw-delivered article{min-width:0}
+    #genai-workflow-case-study .gw-delivered span{display:block;margin-bottom:10px;color:var(--gw-pink);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+    #genai-workflow-case-study .gw-delivered strong{display:block;margin-bottom:7px;color:var(--gw-ink);font-size:17px;line-height:1.25}
+    #genai-workflow-case-study .gw-delivered p{margin:0;color:var(--gw-muted);font-size:12px;line-height:1.55}
+
+    #genai-workflow-case-study .gw-hero {
+      display: grid;
+      grid-template-columns: minmax(0,1.35fr) minmax(260px,.65fr);
+      gap: 40px;
+      align-items: end;
+      padding: 56px 54px 44px;
+      border-bottom: 1px solid var(--gw-line);
+    }
+
+    #genai-workflow-case-study .gw-kicker {
+      margin-bottom: 11px;
+      color: var(--gw-pink);
+      font-family:"IBM Plex Mono",monospace;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    #genai-workflow-case-study h1 {
+      max-width: 760px;
+      margin-bottom: 17px;
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: .98;
+      letter-spacing: -.05em;
+    }
+
+    #genai-workflow-case-study .gw-lead {
+      max-width: 760px;
+      margin-bottom: 0;
+      color: #d0cbc5;
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    #genai-workflow-case-study .gw-metrics {
+      display: grid;
+      gap: 1px;
+      overflow: hidden;
+      border: 1px solid var(--gw-line);
+      border-radius: 17px;
+      background: var(--gw-line);
+    }
+
+    #genai-workflow-case-study .gw-metric {
+      padding: 17px;
+      background: var(--gw-panel);
+    }
+
+    #genai-workflow-case-study .gw-metric strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--gw-yellow);
+      font-size: 23px;
+      letter-spacing: -.03em;
+    }
+
+    #genai-workflow-case-study .gw-metric span { color: var(--gw-muted); font-size: 11px; }
+
+    #genai-workflow-case-study .gw-section {
+      padding: 54px;
+      border-bottom: 1px solid var(--gw-line);
+    }
+
+    #genai-workflow-case-study .gw-section-head {
+      display: grid;
+      grid-template-columns: 1fr .8fr;
+      gap: 36px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    #genai-workflow-case-study h2 {
+      margin-bottom: 0;
+      font-size: clamp(27px, 4vw, 42px);
+      line-height: 1.05;
+      letter-spacing: -.035em;
+    }
+
+    #genai-workflow-case-study .gw-section-head > p {
+      margin-bottom: 0;
+      color: var(--gw-muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    #genai-workflow-case-study .gw-overview {
+      padding: 24px;
+      border: 1px solid var(--gw-line);
+      border-radius: 20px;
+      background:
+        radial-gradient(circle, #3a3741 1px, transparent 1.2px) 0 0 / 19px 19px,
+        #121217;
+    }
+
+    #genai-workflow-case-study .gw-toolbar {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 22px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--gw-line);
+      color: var(--gw-muted);
+      font-size: 10px;
+    }
+
+    #genai-workflow-case-study .gw-toolbar strong { color: var(--gw-ink); }
+    #genai-workflow-case-study .gw-active { color: var(--gw-green); font-weight: 800; }
+
+    #genai-workflow-case-study .gw-flow {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0,1fr));
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    #genai-workflow-case-study .gw-node {
+      position: relative;
+      min-height: 188px;
+      padding: 15px;
+      border: 1px solid #46434d;
+      border-radius: 13px;
+      background: var(--gw-panel-2);
+      box-shadow: 0 10px 18px rgba(0,0,0,.18);
+    }
+
+    #genai-workflow-case-study .gw-node:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      top: 50%;
+      right: -20px;
+      transform: translateY(-50%);
+      color: var(--gw-pink);
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    #genai-workflow-case-study .gw-node-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    #genai-workflow-case-study .gw-node-icon {
+      display: grid;
+      width: 32px;
+      height: 32px;
+      place-items: center;
+      border-radius: 8px;
+      color: #111;
+      background: var(--node-color);
+      font-size: 9px;
+      font-weight: 900;
+    }
+
+    #genai-workflow-case-study .gw-step {
+      color: #77727e;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    #genai-workflow-case-study .gw-node h3 {
+      min-height: 42px;
+      margin-bottom: 7px;
+      font-size: 15px;
+      line-height: 1.2;
+    }
+
+    #genai-workflow-case-study .gw-node p {
+      margin-bottom: 11px;
+      color: var(--gw-muted);
+      font-size: 10px;
+      line-height: 1.45;
+    }
+
+    #genai-workflow-case-study .gw-output {
+      padding-top: 9px;
+      border-top: 1px solid var(--gw-line);
+      color: var(--node-color);
+      font-size: 9px;
+      font-weight: 800;
+    }
+
+    #genai-workflow-case-study .gw-human-gate {
+      position: absolute;
+      left: 13px;
+      right: 13px;
+      bottom: -13px;
+      padding: 6px 8px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--gw-purple);
+      text-align: center;
+      font-size: 8px;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    #genai-workflow-case-study .gw-loop {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 12px;
+      align-items: center;
+      margin: 28px auto 0;
+      max-width: 620px;
+      padding: 10px 14px;
+      border: 1px dashed rgba(155,133,255,.58);
+      border-radius: 10px;
+      color: #cfc6ff;
+      background: rgba(155,133,255,.08);
+      font-size: 10px;
+      text-align: center;
+    }
+
+    #genai-workflow-case-study .gw-loop strong { display: block; color: var(--gw-ink); }
+    #genai-workflow-case-study .gw-loop .gw-loop-arrow { color: var(--gw-pink); font-size: 18px; }
+
+    #genai-workflow-case-study .gw-deep-dive {
+      display: grid;
+      gap: 12px;
+    }
+
+    #genai-workflow-case-study details {
+      overflow: hidden;
+      border: 1px solid var(--gw-line);
+      border-radius: 15px;
+      background: var(--gw-panel);
+    }
+
+    #genai-workflow-case-study summary {
+      display: grid;
+      grid-template-columns: 46px 1fr auto;
+      gap: 15px;
+      align-items: center;
+      min-height: 70px;
+      padding: 15px 18px;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    #genai-workflow-case-study summary::-webkit-details-marker { display: none; }
+
+    #genai-workflow-case-study .gw-detail-num {
+      display: grid;
+      width: 40px;
+      height: 40px;
+      place-items: center;
+      border-radius: 50%;
+      color: #151116;
+      background: var(--gw-yellow);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    #genai-workflow-case-study summary strong { display: block; margin-bottom: 3px; font-size: 14px; }
+    #genai-workflow-case-study summary span:not(.gw-detail-num) { color: var(--gw-muted); font-size: 10px; }
+    #genai-workflow-case-study .gw-chevron { color: var(--gw-pink); font-size: 20px; transition: transform .2s ease; }
+    #genai-workflow-case-study details[open] .gw-chevron { transform: rotate(45deg); }
+
+    #genai-workflow-case-study .gw-detail-body {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 1px;
+      border-top: 1px solid var(--gw-line);
+      background: var(--gw-line);
+    }
+
+    #genai-workflow-case-study .gw-detail-body > div {
+      padding: 18px;
+      background: var(--gw-panel-2);
+    }
+
+    #genai-workflow-case-study .gw-detail-body strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gw-yellow);
+      font-size: 9px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    #genai-workflow-case-study .gw-detail-body p,
+    #genai-workflow-case-study .gw-detail-body li {
+      color: var(--gw-muted);
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    #genai-workflow-case-study .gw-detail-body p { margin-bottom: 0; }
+    #genai-workflow-case-study .gw-detail-body ul { margin: 0; padding-left: 17px; }
+
+    #genai-workflow-case-study .gw-responsibility {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    #genai-workflow-case-study .gw-responsibility article {
+      padding: 22px;
+      border: 1px solid var(--gw-line);
+      border-radius: 16px;
+      background: var(--gw-panel);
+    }
+
+    #genai-workflow-case-study .gw-responsibility h3 { margin-bottom: 14px; font-size: 18px; }
+    #genai-workflow-case-study .gw-responsibility ul { display: grid; gap: 9px; margin: 0; padding-left: 18px; color: var(--gw-muted); font-size: 11px; }
+    #genai-workflow-case-study .gw-ai h3 { color: var(--gw-green); }
+    #genai-workflow-case-study .gw-human h3 { color: var(--gw-purple); }
+
+    @media (max-width: 1000px) {
+      #genai-workflow-case-study .gw-flow { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 28px 20px; }
+      #genai-workflow-case-study .gw-node:nth-child(3)::after { content: "↓"; top: auto; right: 50%; bottom: -25px; transform: none; }
+    }
+
+    @media (max-width: 700px) {
+      #genai-workflow-case-study .gw-hero,
+      #genai-workflow-case-study .gw-section-head,
+      #genai-workflow-case-study .gw-responsibility { grid-template-columns: 1fr; }
+      #genai-workflow-case-study .gw-hero,
+      #genai-workflow-case-study .gw-section { padding: 36px 20px; }
+      #genai-workflow-case-study .gw-back{margin:18px 20px 0}
+      #genai-workflow-case-study .gw-case-note{margin:0 20px 24px}
+      #genai-workflow-case-study .gw-delivered{grid-template-columns:1fr;margin:0 20px 8px;gap:20px}
+      #genai-workflow-case-study .gw-flow { grid-template-columns: 1fr; }
+      #genai-workflow-case-study .gw-node { min-height: auto; }
+      #genai-workflow-case-study .gw-node h3 { min-height: auto; }
+      #genai-workflow-case-study .gw-node:not(:last-child)::after,
+      #genai-workflow-case-study .gw-node:nth-child(3)::after { content: "↓"; top: auto; right: 50%; bottom: -25px; transform: none; }
+      #genai-workflow-case-study .gw-loop,
+      #genai-workflow-case-study .gw-detail-body { grid-template-columns: 1fr; }
+      #genai-workflow-case-study .gw-loop-arrow { transform: rotate(90deg); }
+      #genai-workflow-case-study summary { grid-template-columns: 40px 1fr auto; padding: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="site-skip" href="#main-content">Skip to content</a>
+<div id="genai-workflow-case-study">
+
+
+  <main id="main-content" class="gw-page" aria-label="GenAI workflow case study page structure">
+    <a class="gw-back" href="index.html#bon-work">← Back to selected work</a>
+    <section class="gw-hero">
+      <div>
+        <p class="gw-kicker">Case study · GenAI content operations</p>
+        <h1>From campaign brief to approved creative direction.</h1>
+        <p class="gw-lead">A measured GenAI rollout for standard campaign production, followed by an extended workflow design showing how research, creative exploration and human approvals could connect.</p>
+      </div>
+      <div class="gw-metrics" aria-label="Case study outcomes">
+        <div class="gw-metric"><strong>−50%</strong><span>standard campaign cycle time</span></div>
+        <div class="gw-metric"><strong>2→1 week</strong><span>standard campaign workflow</span></div>
+        <div class="gw-metric"><strong>4 locations</strong><span>DACH rollout after controlled pilot</span></div>
+      </div>
+    </section>
+    <p class="gw-case-note"><strong>What was delivered:</strong> an n8n proof of concept, a controlled pilot at two AI-enabled and two comparison locations, a seven-person adoption workshop, human approval and GDPR data minimization, then rollout across four DACH locations. The standard campaign cycle moved from two weeks to one. <strong>What the diagram adds:</strong> Bon’s extended PDF → Perplexity → six directions → two selected concepts → final pack design. The individual steps of that extended route have not been confirmed as production steps. <a href="Sittan_Charoensuwan_AI_Implementation_Solutions_Master_CV.pdf#page=1" target="_blank" rel="noopener">See CV evidence ↗</a></p>
+    <div class="gw-delivered" aria-label="Delivered implementation summary"><article><span>01 · Use case</span><strong>Start with standard campaigns</strong><p>Identified a repeatable preparation workflow and built an n8n proof of concept.</p></article><article><span>02 · Pilot &amp; controls</span><strong>Compare before scaling</strong><p>Ran two AI-enabled and two comparison locations, with human approval and data minimization.</p></article><article><span>03 · Adoption &amp; result</span><strong>Make the change operational</strong><p>Held a seven-person workshop, rolled out to four DACH locations and reduced the standard cycle from two weeks to one.</p></article></div>
+
+    <section class="gw-section">
+      <div class="gw-section-head">
+        <div><p class="gw-kicker">Extended workflow design</p><h2>Six stages. Three human decisions.</h2></div>
+        <p>This diagram explains a proposed creative route. It should be read alongside the delivered pilot and rollout evidence above.</p>
+      </div>
+
+      <div class="gw-overview">
+        <div class="gw-toolbar"><strong>Campaign concept workflow design</strong><span>Human-guided · n8n-style overview</span></div>
+        <div class="gw-flow">
+          <article class="gw-node" style="--node-color:var(--gw-purple)">
+            <div class="gw-node-top"><span class="gw-node-icon">H</span><span class="gw-step">01</span></div>
+            <h3>Upload campaign information</h3>
+            <p>PDF brief, typed context, audience, channels and constraints.</p>
+            <div class="gw-output">Human-owned input</div>
+            <span class="gw-human-gate">Human confirms brief</span>
+          </article>
+
+          <article class="gw-node" style="--node-color:var(--gw-teal)">
+            <div class="gw-node-top"><span class="gw-node-icon">AI</span><span class="gw-step">02</span></div>
+            <h3>Structure and research</h3>
+            <p>OpenAI structures the brief; Perplexity analyses current trends.</p>
+            <div class="gw-output">Brief + sourced signals</div>
+          </article>
+
+          <article class="gw-node" style="--node-color:var(--gw-green)">
+            <div class="gw-node-top"><span class="gw-node-icon">6</span><span class="gw-step">03</span></div>
+            <h3>Generate six directions</h3>
+            <p>Six distinct visual concepts with rationale and audience fit.</p>
+            <div class="gw-output">Six idea routes</div>
+          </article>
+
+          <article class="gw-node" style="--node-color:var(--gw-purple)">
+            <div class="gw-node-top"><span class="gw-node-icon">H</span><span class="gw-step">04</span></div>
+            <h3>Select two ideas</h3>
+            <p>A person chooses two directions and adds detailed comments.</p>
+            <div class="gw-output">Two selected routes</div>
+            <span class="gw-human-gate">Human creative decision</span>
+          </article>
+
+          <article class="gw-node" style="--node-color:var(--gw-pink)">
+            <div class="gw-node-top"><span class="gw-node-icon">↻</span><span class="gw-step">05</span></div>
+            <h3>Develop, check and revise</h3>
+            <p>GPT builds both concepts; risks are flagged and feedback loops back.</p>
+            <div class="gw-output">Full concepts + risk flags</div>
+          </article>
+
+          <article class="gw-node" style="--node-color:var(--gw-yellow)">
+            <div class="gw-node-top"><span class="gw-node-icon">✓</span><span class="gw-step">06</span></div>
+            <h3>Create final campaign pack</h3>
+            <p>Mood board, design concept, captions and handoff materials.</p>
+            <div class="gw-output">Approved production pack</div>
+            <span class="gw-human-gate">Final human approval</span>
+          </article>
+        </div>
+
+        <div class="gw-loop"><span><strong>Human feedback</strong>Specific changes and risk decisions</span><span class="gw-loop-arrow">↔</span><span><strong>GPT revision</strong>Updates only the affected material</span></div>
+      </div>
+    </section>
+
+    <section class="gw-section">
+      <div class="gw-section-head">
+        <div><p class="gw-kicker">Deep dive</p><h2>The detail appears later—not inside the overview.</h2></div>
+        <p>Each phase can open independently, allowing hiring managers to skim while product and AI specialists can inspect the operating logic.</p>
+      </div>
+
+      <div class="gw-deep-dive">
+        <details open>
+          <summary><span class="gw-detail-num">01</span><span><strong>Input and brief validation</strong><span>Campaign PDF, human context and missing-information loop</span></span><span class="gw-chevron">+</span></summary>
+          <div class="gw-detail-body">
+            <div><strong>Human action</strong><p>Upload the campaign PDF and provide the objective, audience, market, channels, mandatory messages and constraints.</p></div>
+            <div><strong>Automation</strong><p>OpenAI extracts the document, structures the brief and returns questions when information is incomplete or conflicting.</p></div>
+            <div><strong>Output</strong><p>A validated, structured brief that the campaign owner has confirmed.</p></div>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="gw-detail-num">02</span><span><strong>Trend research and six visual directions</strong><span>Perplexity signals combined with campaign strategy</span></span><span class="gw-chevron">+</span></summary>
+          <div class="gw-detail-body">
+            <div><strong>Human action</strong><p>Define what must remain true to the brand and which markets or social channels matter.</p></div>
+            <div><strong>Automation</strong><p>Perplexity returns dated, sourced social and visual signals. GPT turns the approved brief and relevant signals into six distinct creative directions.</p></div>
+            <div><strong>Output</strong><p>Six idea cards with concept, visual language, tone, audience relevance and rationale.</p></div>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="gw-detail-num">03</span><span><strong>Human selection and concept development</strong><span>Two selected ideas become complete creative routes</span></span><span class="gw-chevron">+</span></summary>
+          <div class="gw-detail-body">
+            <div><strong>Human action</strong><p>Compare the six directions, select two and explain what to retain, change, remove or combine.</p></div>
+            <div><strong>Automation</strong><p>GPT develops both directions into campaign concepts, visual systems, design materials, content structures and captions.</p></div>
+            <div><strong>Output</strong><p>Two complete concept routes prepared for creative, brand and compliance review.</p></div>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="gw-detail-num">04</span><span><strong>Risk review, iteration and final delivery</strong><span>Visible flags, detailed feedback and final approval</span></span><span class="gw-chevron">+</span></summary>
+          <div class="gw-detail-body">
+            <div><strong>Human action</strong><ul><li>Resolve claims, privacy, rights and brand risks</li><li>Give detailed creative feedback</li><li>Approve the final production pack</li></ul></div>
+            <div><strong>Automation</strong><p>Flag potential risks, revise only the affected elements and assemble the final mood board, design concept, captions and handoff materials.</p></div>
+            <div><strong>Output</strong><p>An approved campaign package with documented human ownership and a clear revision history.</p></div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="gw-section">
+      <div class="gw-section-head">
+        <div><p class="gw-kicker">Responsibility model in the extended design</p><h2>AI accelerates. People decide.</h2></div>
+        <p>The split below describes ownership in the proposed creative route. Human approval was also part of the delivered rollout.</p>
+      </div>
+      <div class="gw-responsibility">
+        <article class="gw-ai"><h3>AI and automation</h3><ul><li>Extract and structure the campaign brief</li><li>Research and summarise current trend signals</li><li>Generate six creative directions</li><li>Develop two complete concepts and captions</li><li>Flag risks and apply requested revisions</li><li>Assemble the final campaign package</li></ul></article>
+        <article class="gw-human"><h3>Human ownership</h3><ul><li>Define the campaign objective and constraints</li><li>Confirm the brief and approved source material</li><li>Select two of the six creative directions</li><li>Direct detailed creative changes</li><li>Resolve compliance, rights and brand decisions</li><li>Give final approval before production or publishing</li></ul></article>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>
