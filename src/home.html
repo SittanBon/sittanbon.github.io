@@ -83,7 +83,17 @@
     #bon-parallax-homepage .bon-scroll-note::after{content:"";width:1px;height:52px;background:var(--bon-ink)}
 
     #bon-parallax-homepage .bon-manifesto{display:grid;grid-template-columns:1fr 1.25fr;gap:70px;align-items:center;min-height:410px;padding:70px max(34px,calc((100% - 1112px)/2));color:#fff;background:var(--bon-ink)}
+    #bon-parallax-homepage .bon-manifesto-guide{display:flex;min-width:0;height:100%;flex-direction:column;justify-content:space-between}
     #bon-parallax-homepage .bon-manifesto-index{align-self:start;color:var(--bon-coral);font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+    #bon-parallax-homepage .bon-manifesto-map{width:min(100%,450px);margin:48px 0 0;aspect-ratio:460/350}
+    #bon-parallax-homepage .bon-manifesto-map svg{display:block;width:100%;height:100%;overflow:visible}
+    #bon-parallax-homepage .bon-manifesto-map .bon-map-mobile{display:none}
+    #bon-parallax-homepage .bon-map-track,#bon-parallax-homepage .bon-map-route{fill:none;stroke-linecap:round;stroke-linejoin:round}
+    #bon-parallax-homepage .bon-map-track{stroke:#37343a;stroke-width:10}
+    #bon-parallax-homepage .bon-map-route{stroke:var(--bon-coral);stroke-width:3}
+    #bon-parallax-homepage .bon-map-stop{fill:var(--bon-ink);stroke:#f7f4ed;stroke-width:3}
+    #bon-parallax-homepage .bon-map-stop.is-coral{stroke:var(--bon-coral)}
+    #bon-parallax-homepage .bon-map-arrow{fill:none;stroke:var(--bon-coral);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
     #bon-parallax-homepage .bon-manifesto h2{max-width:760px;margin-bottom:26px;font-size:clamp(38px,5.5vw,70px);line-height:.98;letter-spacing:-.055em}
     #bon-parallax-homepage .bon-manifesto p{max-width:610px;margin-bottom:0;color:#b8b5b0;font-size:16px;line-height:1.65}
 
@@ -252,6 +262,8 @@
     #bon-parallax-homepage.bon-js .bon-case.bon-reveal.is-visible .bon-preview,#bon-parallax-homepage.bon-js .bon-case.bon-reveal:focus-within .bon-preview{opacity:1;translate:0 0}
     #bon-parallax-homepage.bon-js .bon-section-head::after{transform:scaleX(0);transform-origin:left center;transition:transform 1s cubic-bezier(.16,1,.3,1) .2s}
     #bon-parallax-homepage.bon-js .bon-section-head.is-visible::after{transform:scaleX(1)}
+    #bon-parallax-homepage.bon-js .bon-map-route{stroke-dasharray:100;stroke-dashoffset:100;transition:stroke-dashoffset 1.6s cubic-bezier(.16,1,.3,1) .25s}
+    #bon-parallax-homepage.bon-js .bon-manifesto-map.is-visible .bon-map-route{stroke-dashoffset:0}
     @media(prefers-reduced-motion:reduce){
       #bon-parallax-homepage.bon-js .bon-reveal{opacity:1;transform:none;transition:none}
       #bon-parallax-homepage .bon-hero-art,#bon-parallax-homepage .bon-orb,#bon-parallax-homepage [data-scene-speed]{transform:none!important}
@@ -259,6 +271,7 @@
       #bon-parallax-homepage.bon-js .bon-section-head::after{transform:none;transition:none}
       #bon-parallax-homepage .bon-method article::after{transform:scaleX(1);transition:none}
       #bon-parallax-homepage .bon-work-stack::after,#bon-parallax-homepage .bon-career-list::after{transform:scaleY(1)}
+      #bon-parallax-homepage.bon-js .bon-map-route{stroke-dashoffset:0;transition:none}
     }
     @media(min-width:651px) and (max-width:900px){
       #bon-parallax-homepage .bon-hero{min-height:680px}
@@ -300,6 +313,10 @@
       #bon-parallax-homepage .bon-proof a:last-child{border-bottom:0}
       #bon-parallax-homepage .bon-manifesto,#bon-parallax-homepage .bon-section-head,#bon-parallax-homepage .bon-focus-head,#bon-parallax-homepage .bon-footer{grid-template-columns:1fr;gap:26px}
       #bon-parallax-homepage .bon-manifesto{padding:64px 18px;min-height:auto}
+      #bon-parallax-homepage .bon-manifesto-guide{height:auto}
+      #bon-parallax-homepage .bon-manifesto-map{width:100%;height:84px;margin:18px 0 0;aspect-ratio:auto}
+      #bon-parallax-homepage .bon-manifesto-map .bon-map-desktop{display:none}
+      #bon-parallax-homepage .bon-manifesto-map .bon-map-mobile{display:block}
       #bon-parallax-homepage .bon-section{padding:70px 18px}
       #bon-parallax-homepage .bon-method{grid-template-columns:1fr}
       #bon-parallax-homepage .bon-method article{min-height:220px}
@@ -348,7 +365,7 @@
 
     <div class="bon-proof" aria-label="Selected outcomes"><a href="#bon-case-ai"><strong>2 → 1 week</strong><span>Standard campaign production cycle after a GenAI rollout across four DACH locations.</span></a><a href="#bon-role-jk"><strong>3,000</strong><span>Users in eight weeks for the G-fashion mobile CRM launch.</span></a><a href="#bon-role-tohklom"><strong>4 B2B</strong><span>AI and digital solutions shaped while leading a five-person unit.</span></a></div>
 
-    <section class="bon-manifesto" id="bon-intro"><span class="bon-manifesto-index">00 · Your guide</span><div class="bon-reveal"><h2>Come with me. We’ll follow an idea from a human need to a solution people adopt.</h2><p>Each stop shows the choices, experiments and people behind the outcome. The route continues through selected work, the experience that shaped it and the ideas I’m exploring now.</p></div></section>
+    <section class="bon-manifesto" id="bon-intro"><div class="bon-manifesto-guide"><span class="bon-manifesto-index">00 · Your guide</span><div class="bon-manifesto-map bon-reveal" aria-hidden="true"><svg class="bon-map-desktop" viewBox="0 0 460 350"><path class="bon-map-track" d="M 36 24 C 140 18 150 84 125 113 C 89 155 65 146 82 198 C 103 260 198 209 250 232 C 316 261 313 310 434 320"/><path class="bon-map-route" pathLength="100" d="M 36 24 C 140 18 150 84 125 113 C 89 155 65 146 82 198 C 103 260 198 209 250 232 C 316 261 313 310 434 320"/><circle class="bon-map-stop is-coral" cx="36" cy="24" r="10"/><circle class="bon-map-stop" cx="125" cy="113" r="7"/><circle class="bon-map-stop" cx="82" cy="198" r="7"/><circle class="bon-map-stop" cx="250" cy="232" r="7"/><circle class="bon-map-stop is-coral" cx="434" cy="320" r="10"/><path class="bon-map-arrow" d="M 417 306 L 434 320 L 414 330"/></svg><svg class="bon-map-mobile" viewBox="0 0 450 90"><path class="bon-map-track" d="M 20 46 C 105 10 147 70 225 44 S 362 17 430 46"/><path class="bon-map-route" pathLength="100" d="M 20 46 C 105 10 147 70 225 44 S 362 17 430 46"/><circle class="bon-map-stop is-coral" cx="20" cy="46" r="8"/><circle class="bon-map-stop" cx="225" cy="44" r="7"/><circle class="bon-map-stop is-coral" cx="430" cy="46" r="8"/><path class="bon-map-arrow" d="M 414 32 L 430 46 L 411 57"/></svg></div></div><div class="bon-reveal"><h2>Come with me. We’ll follow an idea from a human need to a solution people adopt.</h2><p>Each stop shows the choices, experiments and people behind the outcome. The route continues through selected work, the experience that shaped it and the ideas I’m exploring now.</p></div></section>
 
     <section class="bon-section" id="bon-approach">
       <div class="bon-section-head bon-reveal"><div><span class="bon-chapter">01 · How I work</span><h2>Ideas become useful through a clear journey.</h2></div><p>Design thinking, project management and agile delivery help me connect communication, branding, product strategy and AI implementation.</p></div>
