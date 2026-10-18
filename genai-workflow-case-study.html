@@ -12,6 +12,7 @@
   <meta property="og:image" content="https://sittanbon.github.io/hero-guide-journey-man.png">
   <link rel="canonical" href="https://sittanbon.github.io/genai-workflow-case-study.html">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="site.css?v=2148e03c6f">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <title>GenAI Campaign Workflow | Sittan (Bon) Charoensuwan</title>
@@ -25,17 +26,17 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;700&display=swap');
     #genai-workflow-case-study {
-      --gw-bg: #0d0d10;
-      --gw-panel: #15151a;
-      --gw-panel-2: #1d1d23;
-      --gw-ink: #f5f1ec;
-      --gw-muted: #aaa5a0;
-      --gw-line: #35333b;
-      --gw-pink: #f26c4f;
-      --gw-purple: #9b85ff;
-      --gw-green: #78d2a2;
-      --gw-teal: #6fc8d2;
-      --gw-yellow: #ffc760;
+      --gw-bg: #f7f4ed;
+      --gw-panel: #ffffff;
+      --gw-panel-2: #f2eee7;
+      --gw-ink: #202027;
+      --gw-muted: #5a5962;
+      --gw-line: #d8d3ca;
+      --gw-pink: #a83e29;
+      --gw-purple: #6954d8;
+      --gw-green: #237651;
+      --gw-teal: #126e75;
+      --gw-yellow: #97600f;
       width: 100%;
       color: var(--gw-ink);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -49,21 +50,19 @@
     #genai-workflow-case-study h1,#genai-workflow-case-study h2,#genai-workflow-case-study h3{font-family:"Archivo Black",Inter,sans-serif;font-weight:400}
 
     #genai-workflow-case-study .gw-page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 56px 34px 72px;
       overflow: hidden;
-      border: 1px solid var(--gw-line);
-      border-radius: 24px;
-      background:
-        radial-gradient(circle at 90% 8%, rgba(155,133,255,.15), transparent 24%),
-        var(--gw-bg);
-      box-shadow: 0 28px 80px rgba(0,0,0,.28);
+      background: var(--gw-bg);
     }
     #genai-workflow-case-study .gw-back{display:inline-block;margin:22px 54px 0;padding-bottom:5px;border-bottom:1px solid var(--gw-pink);color:var(--gw-ink);font-size:12px;font-weight:800;text-decoration:none;text-transform:uppercase;letter-spacing:.07em}
-    #genai-workflow-case-study .gw-case-note{margin:0 54px 28px;padding:18px 22px;border-left:5px solid var(--gw-pink);background:#242127;color:#e4dfd7;font-size:14px;line-height:1.6}
-    #genai-workflow-case-study .gw-case-note strong{color:#fff}
-    #genai-workflow-case-study .gw-case-note a{color:#fff;text-decoration-color:var(--gw-pink);text-underline-offset:3px}
-    #genai-workflow-case-study .gw-delivered{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:0 54px 20px;padding:8px 0 30px;border-bottom:1px solid var(--gw-line)}
+    #genai-workflow-case-study .gw-case-note{margin:25px 0 28px;padding:18px 22px;border-left:5px solid var(--gw-pink);background:#f3f0eb;color:var(--gw-ink);font-size:14px;line-height:1.6}
+    #genai-workflow-case-study .gw-case-note strong{color:var(--gw-ink)}
+    #genai-workflow-case-study .gw-case-note a{color:inherit;text-decoration-color:var(--gw-pink);text-underline-offset:3px}
+    #genai-workflow-case-study .gw-delivered{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:0 0 20px;padding:8px 0 30px;border-bottom:1px solid var(--gw-line)}
     #genai-workflow-case-study .gw-delivered article{min-width:0}
-    #genai-workflow-case-study .gw-delivered span{display:block;margin-bottom:10px;color:var(--gw-pink);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+    #genai-workflow-case-study .gw-delivered span{display:block;margin-bottom:10px;color:var(--gw-pink);font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
     #genai-workflow-case-study .gw-delivered strong{display:block;margin-bottom:7px;color:var(--gw-ink);font-size:17px;line-height:1.25}
     #genai-workflow-case-study .gw-delivered p{margin:0;color:var(--gw-muted);font-size:12px;line-height:1.55}
 
@@ -72,7 +71,7 @@
       grid-template-columns: minmax(0,1.35fr) minmax(260px,.65fr);
       gap: 40px;
       align-items: end;
-      padding: 56px 54px 44px;
+      padding: 0 0 44px;
       border-bottom: 1px solid var(--gw-line);
     }
 
@@ -89,77 +88,77 @@
     #genai-workflow-case-study h1 {
       max-width: 760px;
       margin-bottom: 17px;
-      font-size: clamp(38px, 6vw, 68px);
+      font-size: clamp(40px, 6vw, 72px);
       line-height: .98;
-      letter-spacing: -.05em;
+      letter-spacing: -.04em;
     }
 
     #genai-workflow-case-study .gw-lead {
       max-width: 760px;
       margin-bottom: 0;
-      color: #d0cbc5;
-      font-size: 17px;
-      line-height: 1.55;
+      color: var(--gw-muted);
+      font-size: 16px;
+      line-height: 1.65;
     }
 
     #genai-workflow-case-study .gw-metrics {
       display: grid;
-      gap: 1px;
-      overflow: hidden;
-      border: 1px solid var(--gw-line);
-      border-radius: 17px;
-      background: var(--gw-line);
+      gap: 10px;
     }
 
     #genai-workflow-case-study .gw-metric {
-      padding: 17px;
-      background: var(--gw-panel);
+      display: grid;
+      grid-template-columns: 112px 1fr;
+      gap: 13px;
+      align-items: baseline;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--gw-line);
     }
 
     #genai-workflow-case-study .gw-metric strong {
       display: block;
-      margin-bottom: 3px;
+      margin-bottom: 0;
       color: var(--gw-yellow);
-      font-size: 23px;
+      font-size: 20px;
       letter-spacing: -.03em;
     }
 
-    #genai-workflow-case-study .gw-metric span { color: var(--gw-muted); font-size: 11px; }
+    #genai-workflow-case-study .gw-metric span { color: var(--gw-muted); font-size: 12px; line-height: 1.45; }
 
-    #genai-workflow-case-study .gw-pilot-evidence{margin:28px 54px;padding:26px;border:1px solid #514952;border-radius:18px;background:linear-gradient(130deg,rgba(242,108,79,.08),transparent 46%),var(--gw-panel)}
+    #genai-workflow-case-study .gw-pilot-evidence{margin:25px 0 0;padding:26px;border:1px solid var(--gw-line);border-radius:18px;background:var(--gw-panel)}
     #genai-workflow-case-study .gw-pilot-head{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;margin-bottom:21px}
     #genai-workflow-case-study .gw-pilot-head h2{font-size:clamp(23px,3vw,32px);line-height:1.1}
-    #genai-workflow-case-study .gw-pilot-head > p{margin:0;color:#d0cbc5;font-size:13px;line-height:1.55}
+    #genai-workflow-case-study .gw-pilot-head > p{margin:0;color:var(--gw-muted);font-size:13px;line-height:1.55}
     #genai-workflow-case-study .gw-pilot-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(220px,.65fr);gap:18px}
-    #genai-workflow-case-study .gw-pilot-bars,#genai-workflow-case-study .gw-pilot-response{min-width:0;padding:20px;border:1px solid var(--gw-line);border-radius:13px;background:#101014}
+    #genai-workflow-case-study .gw-pilot-bars,#genai-workflow-case-study .gw-pilot-response{min-width:0;padding:20px;border:1px solid var(--gw-line);border-radius:13px;background:#faf9f7}
     #genai-workflow-case-study .gw-pilot-lane + .gw-pilot-lane{margin-top:18px}
     #genai-workflow-case-study .gw-pilot-lane-head{display:flex;justify-content:space-between;gap:14px;align-items:baseline;margin-bottom:9px}
-    #genai-workflow-case-study .gw-pilot-lane-head span{color:#d0cbc5;font-size:12px}
+    #genai-workflow-case-study .gw-pilot-lane-head span{color:var(--gw-muted);font-size:12px}
     #genai-workflow-case-study .gw-pilot-lane-head strong{white-space:nowrap;color:var(--gw-ink);font-size:18px}
-    #genai-workflow-case-study .gw-pilot-track{height:10px;overflow:hidden;border-radius:10px;background:#302e35}
-    #genai-workflow-case-study .gw-pilot-fill{display:block;width:100%;height:100%;border-radius:10px;background:#77737c}
+    #genai-workflow-case-study .gw-pilot-track{height:10px;overflow:hidden;border-radius:10px;background:#e3dfe5}
+    #genai-workflow-case-study .gw-pilot-fill{display:block;width:100%;height:100%;border-radius:10px;background:#85808a}
     #genai-workflow-case-study .gw-pilot-lane.is-ai .gw-pilot-fill{width:50%;background:var(--gw-green)}
-    #genai-workflow-case-study .gw-pilot-response span{display:block;margin-bottom:8px;color:var(--gw-teal);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+    #genai-workflow-case-study .gw-pilot-response span{display:block;margin-bottom:8px;color:var(--gw-teal);font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
     #genai-workflow-case-study .gw-pilot-response strong{display:block;margin-bottom:9px;color:var(--gw-ink);font-size:23px;line-height:1.15}
     #genai-workflow-case-study .gw-pilot-response p{margin:0;color:var(--gw-muted);font-size:12px;line-height:1.5}
     #genai-workflow-case-study .gw-pilot-note{margin:17px 0 0;color:var(--gw-muted);font-size:12px;line-height:1.5}
 
     #genai-workflow-case-study .gw-section {
-      padding: 54px;
+      padding: 58px 0;
       border-bottom: 1px solid var(--gw-line);
     }
 
     #genai-workflow-case-study .gw-section-head {
       display: grid;
-      grid-template-columns: 1fr .8fr;
-      gap: 36px;
+      grid-template-columns: .72fr 1.28fr;
+      gap: 44px;
       align-items: end;
-      margin-bottom: 28px;
+      margin-bottom: 32px;
     }
 
     #genai-workflow-case-study h2 {
       margin-bottom: 0;
-      font-size: clamp(27px, 4vw, 42px);
+      font-size: clamp(28px, 4vw, 46px);
       line-height: 1.05;
       letter-spacing: -.035em;
     }
@@ -167,8 +166,8 @@
     #genai-workflow-case-study .gw-section-head > p {
       margin-bottom: 0;
       color: var(--gw-muted);
-      font-size: 13px;
-      line-height: 1.55;
+      font-size: 14px;
+      line-height: 1.65;
     }
 
     #genai-workflow-case-study .gw-overview {
@@ -176,8 +175,8 @@
       border: 1px solid var(--gw-line);
       border-radius: 20px;
       background:
-        radial-gradient(circle, #3a3741 1px, transparent 1.2px) 0 0 / 19px 19px,
-        #121217;
+        radial-gradient(circle, #dedbe3 1px, transparent 1.2px) 0 0 / 19px 19px,
+        #f5f4f7;
     }
 
     #genai-workflow-case-study .gw-toolbar {
@@ -189,7 +188,7 @@
       padding-bottom: 14px;
       border-bottom: 1px solid var(--gw-line);
       color: var(--gw-muted);
-      font-size: 10px;
+      font-size: 12px;
     }
 
     #genai-workflow-case-study .gw-toolbar strong { color: var(--gw-ink); }
@@ -204,12 +203,14 @@
 
     #genai-workflow-case-study .gw-node {
       position: relative;
-      min-height: 188px;
-      padding: 15px;
-      border: 1px solid #46434d;
+      display: flex;
+      flex-direction: column;
+      min-height: 270px;
+      padding: 15px 15px 70px;
+      border: 1px solid #cfccd6;
       border-radius: 13px;
-      background: var(--gw-panel-2);
-      box-shadow: 0 10px 18px rgba(0,0,0,.18);
+      background: var(--gw-panel);
+      box-shadow: 0 8px 22px rgba(35,29,53,.08);
     }
 
     #genai-workflow-case-study .gw-node:not(:last-child)::after {
@@ -237,17 +238,19 @@
       height: 32px;
       place-items: center;
       border-radius: 8px;
-      color: #111;
+      color: #fff;
       background: var(--node-color);
-      font-size: 9px;
+      font-size: 11px;
       font-weight: 900;
     }
 
     #genai-workflow-case-study .gw-step {
-      color: #77727e;
-      font-size: 10px;
+      color: var(--gw-muted);
+      font-size: 11px;
       font-weight: 800;
     }
+
+    #genai-workflow-case-study .gw-node:last-child .gw-node-icon { color: #202027; }
 
     #genai-workflow-case-study .gw-node h3 {
       min-height: 42px;
@@ -259,29 +262,30 @@
     #genai-workflow-case-study .gw-node p {
       margin-bottom: 11px;
       color: var(--gw-muted);
-      font-size: 10px;
+      font-size: 12px;
       line-height: 1.45;
     }
 
     #genai-workflow-case-study .gw-output {
+      margin-top: auto;
       padding-top: 9px;
       border-top: 1px solid var(--gw-line);
       color: var(--node-color);
-      font-size: 9px;
+      font-size: 12px;
       font-weight: 800;
     }
 
     #genai-workflow-case-study .gw-human-gate {
       position: absolute;
-      left: 13px;
-      right: 13px;
-      bottom: -13px;
+      left: 15px;
+      right: 15px;
+      bottom: 12px;
       padding: 6px 8px;
       border-radius: 999px;
       color: #fff;
       background: var(--gw-purple);
       text-align: center;
-      font-size: 8px;
+      font-size: 12px;
       font-weight: 900;
       letter-spacing: .04em;
       text-transform: uppercase;
@@ -295,11 +299,11 @@
       margin: 28px auto 0;
       max-width: 620px;
       padding: 10px 14px;
-      border: 1px dashed rgba(155,133,255,.58);
+      border: 1px dashed #a99bd8;
       border-radius: 10px;
-      color: #cfc6ff;
-      background: rgba(155,133,255,.08);
-      font-size: 10px;
+      color: var(--gw-muted);
+      background: #ebe8fb;
+      font-size: 12px;
       text-align: center;
     }
 
@@ -337,14 +341,14 @@
       height: 40px;
       place-items: center;
       border-radius: 50%;
-      color: #151116;
+      color: #fff;
       background: var(--gw-yellow);
       font-size: 11px;
       font-weight: 900;
     }
 
     #genai-workflow-case-study summary strong { display: block; margin-bottom: 3px; font-size: 14px; }
-    #genai-workflow-case-study summary span:not(.gw-detail-num) { color: var(--gw-muted); font-size: 10px; }
+    #genai-workflow-case-study summary span:not(.gw-detail-num) { color: var(--gw-muted); font-size: 12px; }
     #genai-workflow-case-study .gw-chevron { color: var(--gw-pink); font-size: 20px; transition: transform .2s ease; }
     #genai-workflow-case-study details[open] .gw-chevron { transform: rotate(45deg); }
 
@@ -365,7 +369,7 @@
       display: block;
       margin-bottom: 8px;
       color: var(--gw-yellow);
-      font-size: 9px;
+      font-size: 12px;
       letter-spacing: .08em;
       text-transform: uppercase;
     }
@@ -373,7 +377,7 @@
     #genai-workflow-case-study .gw-detail-body p,
     #genai-workflow-case-study .gw-detail-body li {
       color: var(--gw-muted);
-      font-size: 11px;
+      font-size: 12px;
       line-height: 1.5;
     }
 
@@ -394,7 +398,7 @@
     }
 
     #genai-workflow-case-study .gw-responsibility h3 { margin-bottom: 14px; font-size: 18px; }
-    #genai-workflow-case-study .gw-responsibility ul { display: grid; gap: 9px; margin: 0; padding-left: 18px; color: var(--gw-muted); font-size: 11px; }
+    #genai-workflow-case-study .gw-responsibility ul { display: grid; gap: 9px; margin: 0; padding-left: 18px; color: var(--gw-muted); font-size: 13px; }
     #genai-workflow-case-study .gw-ai h3 { color: var(--gw-green); }
     #genai-workflow-case-study .gw-human h3 { color: var(--gw-purple); }
 
@@ -404,17 +408,17 @@
     }
 
     @media (max-width: 700px) {
+      #genai-workflow-case-study .gw-page { padding: 38px 18px 50px; }
       #genai-workflow-case-study .gw-hero,
       #genai-workflow-case-study .gw-section-head,
       #genai-workflow-case-study .gw-responsibility,
       #genai-workflow-case-study .gw-pilot-head,
       #genai-workflow-case-study .gw-pilot-grid { grid-template-columns: 1fr; }
-      #genai-workflow-case-study .gw-hero,
-      #genai-workflow-case-study .gw-section { padding: 36px 20px; }
-      #genai-workflow-case-study .gw-back{margin:18px 20px 0}
-      #genai-workflow-case-study .gw-pilot-evidence{margin:20px;padding:20px}
-      #genai-workflow-case-study .gw-case-note{margin:0 20px 24px}
-      #genai-workflow-case-study .gw-delivered{grid-template-columns:1fr;margin:0 20px 8px;gap:20px}
+      #genai-workflow-case-study .gw-hero { padding: 0 0 36px; }
+      #genai-workflow-case-study .gw-section { padding: 38px 0; }
+      #genai-workflow-case-study .gw-pilot-evidence{margin:20px 0 0;padding:20px}
+      #genai-workflow-case-study .gw-case-note{margin:20px 0 24px}
+      #genai-workflow-case-study .gw-delivered{grid-template-columns:1fr;margin:0 0 8px;gap:20px}
       #genai-workflow-case-study .gw-flow { grid-template-columns: 1fr; }
       #genai-workflow-case-study .gw-node { min-height: auto; }
       #genai-workflow-case-study .gw-node h3 { min-height: auto; }
@@ -429,11 +433,12 @@
 </head>
 <body>
   <a class="site-skip" href="#main-content">Skip to content</a>
+  <header class="site-header"><a class="site-brand" href="index.html?v=2148e03c6f" aria-label="Bon — portfolio home"><span class="site-brand-mark">B</span><span>BON</span></a><button class="site-menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">Menu</button><nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="ai-product-solutions.html" aria-current="page">AI & Product</a><a href="technology-experience.html">Technology</a><a href="creative-experiences.html">Creative</a><a href="ai-knowledge.html">AI Knowledge</a><a href="journey.html">Journey</a><a href="Sittan_Charoensuwan_AI_Implementation_Solutions_Master_CV.pdf" target="_blank" rel="noopener">CV ↗</a><a class="site-nav-contact" href="#site-contact">Contact</a></nav></header><div class="site-progress" aria-hidden="true"><span></span></div>
 <div id="genai-workflow-case-study">
 
 
   <main id="main-content" class="gw-page" aria-label="GenAI workflow case study page structure">
-    <a class="gw-back" href="index.html#bon-work">← Back to selected work</a>
+    <nav class="site-case-crumbs" aria-label="Breadcrumb"><a href="index.html?v=2148e03c6f">Home</a><span>/</span><a href="ai-product-solutions.html">AI &amp; Product Solutions</a><span>/</span><b>GenAI campaign workflow</b></nav>
     <section class="gw-hero">
       <div>
         <p class="gw-kicker">Case study · GenAI content operations</p>
@@ -462,12 +467,12 @@
 
     <section class="gw-section">
       <div class="gw-section-head">
-        <div><p class="gw-kicker">Extended workflow design</p><h2>Six stages. Three human decisions.</h2></div>
-        <p>This diagram explains a proposed creative route. It should be read alongside the delivered pilot and rollout evidence above.</p>
+        <div><p class="gw-kicker">Proposed extension · not production workflow</p><h2>Six stages. Three human decisions.</h2></div>
+        <p>This diagram is a design for a possible creative route. Its individual steps are not claimed as delivered in the pilot or rollout above.</p>
       </div>
 
       <div class="gw-overview">
-        <div class="gw-toolbar"><strong>Campaign concept workflow design</strong><span>Human-guided · n8n-style overview</span></div>
+        <div class="gw-toolbar"><strong>Proposed extension · not production workflow</strong><span>Human-guided · n8n-style overview</span></div>
         <div class="gw-flow">
           <article class="gw-node" style="--node-color:var(--gw-purple)">
             <div class="gw-node-top"><span class="gw-node-icon">H</span><span class="gw-step">01</span></div>
@@ -521,12 +526,12 @@
 
     <section class="gw-section">
       <div class="gw-section-head">
-        <div><p class="gw-kicker">Deep dive</p><h2>The detail appears later—not inside the overview.</h2></div>
-        <p>Each phase can open independently, allowing hiring managers to skim while product and AI specialists can inspect the operating logic.</p>
+        <div><p class="gw-kicker">Proposed extension · design deep dive</p><h2>Explore the decisions behind the concept.</h2></div>
+        <p>These expandable phases describe a proposed route, not the production steps of the four-location rollout.</p>
       </div>
 
       <div class="gw-deep-dive">
-        <details open>
+        <details>
           <summary><span class="gw-detail-num">01</span><span><strong>Input and brief validation</strong><span>Campaign PDF, human context and missing-information loop</span></span><span class="gw-chevron">+</span></summary>
           <div class="gw-detail-body">
             <div><strong>Human action</strong><p>Upload the campaign PDF and provide the objective, audience, market, channels, mandatory messages and constraints.</p></div>
@@ -576,5 +581,7 @@
     </section>
   </main>
 </div>
+  <footer class="site-footer" id="site-contact"><div><p class="site-footer-lead">Have a problem worth rethinking?</p><p>Let’s find the human need, shape the right solution and make it useful in practice.</p></div><div class="site-footer-links"><a href="mailto:sittan.siri@gmail.com">Email Bon ↗</a><a href="https://www.linkedin.com/in/sittan-charoensuwan/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="Sittan_Charoensuwan_AI_Implementation_Solutions_Master_CV.pdf" target="_blank" rel="noopener">Open CV ↗</a></div></footer>
+  <script src="site.js?v=2148e03c6f" defer></script>
 </body>
 </html>

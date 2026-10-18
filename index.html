@@ -4,14 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f4ed">
-  <meta name="description" content="Explore Bon’s work across AI implementation, digital products, communication and branding—through real cases, a guided career journey and practical AI resources.">
+  <meta name="description" content="Explore Bon’s AI implementation, technology research, creative experiences and practical AI knowledge through a clear portfolio overview.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Sittan (Bon) Charoensuwan | AI Implementation &amp; Creative Solutions">
-  <meta property="og:description" content="Explore Bon’s work across AI implementation, digital products, communication and branding—through real cases, a guided career journey and practical AI resources.">
+  <meta property="og:description" content="Explore Bon’s AI implementation, technology research, creative experiences and practical AI knowledge through a clear portfolio overview.">
   <meta property="og:url" content="https://sittanbon.github.io/">
   <meta property="og:image" content="https://sittanbon.github.io/hero-guide-journey-man.png">
   <link rel="canonical" href="https://sittanbon.github.io/">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="site.css?v=2148e03c6f">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <title>Sittan (Bon) Charoensuwan | AI Implementation & Creative Solutions</title>
@@ -22,648 +23,54 @@
     .site-skip:focus { top: 12px; }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap');
-    #bon-parallax-homepage{
-      --bon-paper:#f7f4ed;
-      --bon-white:#fffdf9;
-      --bon-ink:#111113;
-      --bon-muted:#6d6a65;
-      --bon-line:#d8d3ca;
-      --bon-coral:#f26c4f;
-      --bon-coral-text:#a83e29;
-      --bon-coral-deep:#bd482f;
-      --bon-coral-soft:#fde6dd;
-      --bon-violet:#6954d8;
-      width:100%;
-      overflow:clip;
-      color:var(--bon-ink);
-      background:var(--bon-paper);
-      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    }
-    #bon-parallax-homepage *{box-sizing:border-box}
-    #bon-parallax-homepage h1,#bon-parallax-homepage h2,#bon-parallax-homepage h3,#bon-parallax-homepage p{margin-top:0}
-    #bon-parallax-homepage h1,#bon-parallax-homepage h2,#bon-parallax-homepage h3{font-family:"Archivo Black",Inter,sans-serif;font-weight:400}
-    #bon-parallax-homepage .bon-kicker,#bon-parallax-homepage .bon-chapter,#bon-parallax-homepage .bon-case-label,#bon-parallax-homepage .bon-lab-card>span,#bon-parallax-homepage .bon-focus-main>span{font-family:"IBM Plex Mono",monospace}
-    #bon-parallax-homepage a{color:inherit;text-decoration:none}
-    #bon-parallax-homepage .bon-site{background:var(--bon-paper)}
-    #bon-parallax-homepage .bon-nav{position:sticky;top:0;z-index:40;display:flex;justify-content:space-between;align-items:center;gap:28px;min-height:66px;padding:0 34px;border-bottom:1px solid rgba(17,17,19,.14);background:rgba(247,244,237,.9);backdrop-filter:blur(14px)}
-    #bon-parallax-homepage .bon-scroll-progress{position:fixed;top:65px;right:0;left:0;z-index:39;height:3px;pointer-events:none}
-    #bon-parallax-homepage .bon-scroll-progress span{display:block;width:100%;height:100%;background:var(--bon-coral);transform:scaleX(var(--page-progress,0));transform-origin:left center}
-    #bon-parallax-homepage .bon-brand{display:flex;min-height:44px;gap:10px;align-items:center;font-size:13px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
-    #bon-parallax-homepage .bon-brand-mark{display:grid;width:28px;height:28px;place-items:center;border-radius:50%;color:var(--bon-ink);background:var(--bon-coral);font-size:11px}
-    #bon-parallax-homepage .bon-links{display:flex;gap:22px;align-items:center;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-    #bon-parallax-homepage .bon-links a{position:relative;padding:25px 0}
-    #bon-parallax-homepage .bon-links a::after{content:"";position:absolute;right:0;bottom:18px;left:0;height:2px;background:var(--bon-coral);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
-    #bon-parallax-homepage .bon-links a:hover::after,#bon-parallax-homepage .bon-links a[aria-current="location"]::after{transform:scaleX(1)}
-    #bon-parallax-homepage .bon-contact-link{display:inline-flex;min-height:44px;align-items:center;padding:10px 14px!important;border:1px solid var(--bon-ink)}
-    #bon-parallax-homepage .bon-contact-link::after{display:none}
-    #bon-parallax-homepage .bon-menu-button{display:none;min-width:44px;min-height:44px;padding:9px 12px;border:1px solid var(--bon-ink);color:var(--bon-ink);background:transparent;font:inherit;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
-    #bon-parallax-homepage a:focus-visible,#bon-parallax-homepage button:focus-visible{outline:3px solid var(--bon-violet);outline-offset:3px}
-    #bon-parallax-homepage [id^="bon-"]{scroll-margin-top:78px}
-
-    #bon-parallax-homepage .bon-hero{position:relative;min-height:630px;overflow:hidden;background:#faf7ef}
-    #bon-parallax-homepage .bon-hero-stage{position:relative;min-height:630px;overflow:hidden;background:#faf7ef}
-    #bon-parallax-homepage .bon-hero-art{position:absolute;inset:0;transform:translate3d(calc(var(--hero-scroll-x,0px) + var(--hero-x,0px)),calc(var(--hero-shift,0px) + var(--hero-y,0px)),0) scale(var(--hero-scale,1.025))}
-    #bon-parallax-homepage .bon-hero-art img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
-    #bon-parallax-homepage .bon-hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(250,247,239,.9) 0%,rgba(250,247,239,.05) 27%,rgba(250,247,239,0) 64%,rgba(250,247,239,.52) 100%)}
-    #bon-parallax-homepage .bon-hero-copy{position:relative;z-index:3;max-width:1180px;margin:0 auto;padding:58px 34px 0}
-    #bon-parallax-homepage .bon-kicker{margin-bottom:15px;color:var(--bon-coral-text);font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
-    #bon-parallax-homepage .bon-hero h1{max-width:790px;margin-bottom:17px;font-size:clamp(44px,5.4vw,74px);font-weight:800;line-height:1.01;letter-spacing:-.055em}
-    #bon-parallax-homepage .bon-hero-lead{max-width:590px;margin-bottom:22px;font-size:17px;line-height:1.55}
-    #bon-parallax-homepage .bon-hero-actions{display:flex;flex-wrap:wrap;gap:10px}
-    #bon-parallax-homepage .bon-hero-action{display:inline-flex;min-height:44px;gap:12px;align-items:center;padding:12px 17px;border:1px solid var(--bon-ink);background:rgba(255,253,249,.82);font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
-    #bon-parallax-homepage .bon-hero-action span{color:var(--bon-coral);font-size:17px}
-    #bon-parallax-homepage .bon-hero-action.primary{color:#fff;background:var(--bon-ink)}
-    #bon-parallax-homepage .bon-hero-exit{display:none;position:absolute;right:0;bottom:0;left:0;z-index:2;height:var(--hero-exit-height,0px);background:var(--bon-ink);clip-path:polygon(0 16%,100% 0,100% 100%,0 100%);pointer-events:none}
-    #bon-parallax-homepage .bon-hero-steps{display:none;position:absolute;right:34px;bottom:24px;left:34px;z-index:4;max-width:660px;margin:0 auto;padding:13px 18px 16px;border:1px solid var(--bon-ink);background:rgba(255,253,249,.94);box-shadow:5px 5px 0 var(--bon-ink);opacity:var(--hero-steps-opacity,0);transform:translateY(var(--hero-steps-y,18px));pointer-events:none}
-    #bon-parallax-homepage .bon-hero-steps::before,#bon-parallax-homepage .bon-hero-steps::after{content:"";position:absolute;right:18px;bottom:10px;left:18px;height:2px}
-    #bon-parallax-homepage .bon-hero-steps::before{background:var(--bon-line)}
-    #bon-parallax-homepage .bon-hero-steps::after{background:var(--bon-coral);transform:scaleX(var(--hero-story-progress,0));transform-origin:left center}
-    #bon-parallax-homepage .bon-hero-steps span{color:var(--bon-muted);font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:color .25s ease}
-    #bon-parallax-homepage .bon-hero-steps span.is-active{color:var(--bon-ink)}
-    #bon-parallax-homepage .bon-hero-steps b{color:var(--bon-coral-text);font-weight:700}
-    @media(min-width:901px){
-      #bon-parallax-homepage .bon-hero{min-height:680px}
-      #bon-parallax-homepage .bon-hero-stage{min-height:680px}
-      #bon-parallax-homepage .bon-hero-copy{width:min(610px,58vw);max-width:none;margin:0 5vw 0 auto;padding:36px 38px 38px;top:42px;border:1px solid var(--bon-ink);background:rgba(250,247,239,.97);box-shadow:10px 10px 0 rgba(17,17,19,.9)}
-      #bon-parallax-homepage .bon-hero h1{font-size:clamp(39px,4.1vw,59px)}
-      #bon-parallax-homepage .bon-hero-lead{font-size:15px}
-    }
-    @media(min-width:901px) and (min-height:700px) and (prefers-reduced-motion:no-preference) and (pointer:fine){
-      #bon-parallax-homepage.bon-js .bon-hero{height:140vh;min-height:0;overflow:visible}
-      #bon-parallax-homepage.bon-js .bon-hero-stage{position:sticky;top:66px;height:calc(100vh - 66px);height:calc(100svh - 66px);min-height:0}
-      #bon-parallax-homepage.bon-js .bon-hero-exit{display:block}
-      #bon-parallax-homepage.bon-js .bon-hero-steps{display:flex;justify-content:space-between;gap:12px}
-    }
-    #bon-parallax-homepage .bon-proof{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--bon-ink);border-bottom:1px solid var(--bon-ink);background:var(--bon-white)}
-    #bon-parallax-homepage .bon-proof a{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;min-height:112px;padding:22px 34px;border-right:1px solid var(--bon-line)}
-    #bon-parallax-homepage .bon-proof a:last-child{border-right:0}
-    #bon-parallax-homepage .bon-proof strong{font-family:"Archivo Black",sans-serif;font-size:29px;line-height:1;color:var(--bon-coral-text)}
-    #bon-parallax-homepage .bon-proof span{max-width:240px;font-size:12px;line-height:1.45}
-    #bon-parallax-homepage .bon-proof a:hover{background:var(--bon-coral-soft)}
-    #bon-parallax-homepage .bon-orb{position:absolute;z-index:2;width:13px;height:13px;border-radius:50%;background:var(--bon-coral);will-change:transform}
-    #bon-parallax-homepage .bon-orb.one{top:33%;left:42%}.bon-orb.two{top:54%;left:67%;width:20px;height:20px}.bon-orb.three{top:72%;left:82%;width:9px;height:9px}
-    #bon-parallax-homepage .bon-scroll-note{position:absolute;right:30px;bottom:30px;z-index:4;display:flex;gap:9px;align-items:center;font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;writing-mode:vertical-rl}
-    #bon-parallax-homepage .bon-scroll-note::after{content:"";width:1px;height:52px;background:var(--bon-ink)}
-
-    #bon-parallax-homepage .bon-manifesto{display:grid;grid-template-columns:1fr 1.25fr;gap:70px;align-items:center;min-height:410px;padding:70px max(34px,calc((100% - 1112px)/2));color:#fff;background:var(--bon-ink)}
-    #bon-parallax-homepage .bon-manifesto-guide{display:flex;min-width:0;height:100%;flex-direction:column;justify-content:space-between}
-    #bon-parallax-homepage .bon-manifesto-index{align-self:start;color:var(--bon-coral);font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
-    #bon-parallax-homepage .bon-manifesto-map{width:min(100%,450px);margin:48px 0 0;aspect-ratio:460/350}
-    #bon-parallax-homepage .bon-manifesto-map svg{display:block;width:100%;height:100%;overflow:visible}
-    #bon-parallax-homepage .bon-manifesto-map .bon-map-mobile{display:none}
-    #bon-parallax-homepage .bon-map-track,#bon-parallax-homepage .bon-map-route{fill:none;stroke-linecap:round;stroke-linejoin:round}
-    #bon-parallax-homepage .bon-map-track{stroke:#37343a;stroke-width:10}
-    #bon-parallax-homepage .bon-map-route{stroke:var(--bon-coral);stroke-width:3}
-    #bon-parallax-homepage .bon-map-stop{fill:var(--bon-ink);stroke:#f7f4ed;stroke-width:3}
-    #bon-parallax-homepage .bon-map-stop.is-coral{stroke:var(--bon-coral)}
-    #bon-parallax-homepage .bon-map-arrow{fill:none;stroke:var(--bon-coral);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
-    #bon-parallax-homepage .bon-manifesto h2{max-width:760px;margin-bottom:26px;font-size:clamp(38px,5.5vw,70px);line-height:.98;letter-spacing:-.055em}
-    #bon-parallax-homepage .bon-manifesto p{max-width:610px;margin-bottom:0;color:#b8b5b0;font-size:16px;line-height:1.65}
-
-    #bon-parallax-homepage .bon-section{max-width:1180px;margin:0 auto;padding:92px 34px}
-    #bon-parallax-homepage .bon-section-head{position:relative;display:grid;grid-template-columns:.7fr 1.3fr;gap:55px;margin-bottom:48px}
-    #bon-parallax-homepage .bon-section-head::after{content:"";position:absolute;right:0;bottom:-24px;left:0;height:2px;background:linear-gradient(90deg,var(--bon-coral) 0 18%,transparent 18% 100%)}
-    #bon-parallax-homepage .bon-section-head h2{margin-bottom:0;font-size:clamp(35px,5vw,62px);line-height:.97;letter-spacing:-.055em}
-    #bon-parallax-homepage .bon-section-head>p{max-width:580px;margin:23px 0 0;color:var(--bon-muted);font-size:14px;line-height:1.7}
-    #bon-parallax-homepage .bon-chapter{color:var(--bon-coral-text);font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
-    #bon-parallax-homepage #bon-approach{padding-top:76px;padding-bottom:76px}
-    #bon-parallax-homepage .bon-approach-head{grid-template-columns:minmax(0,1.55fr) minmax(270px,.8fr);gap:48px;align-items:end;margin-bottom:40px}
-    #bon-parallax-homepage .bon-approach-head h2{max-width:720px;font-size:clamp(42px,4.3vw,60px);line-height:1.01}
-    #bon-parallax-homepage .bon-approach-head>p{max-width:360px;margin:0 0 5px}
-
-    #bon-parallax-homepage .bon-method{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--bon-line)}
-    #bon-parallax-homepage .bon-method article{position:relative;min-height:255px;padding:26px;background:var(--bon-white)}
-    #bon-parallax-homepage .bon-method article::after{content:"";position:absolute;right:0;bottom:0;left:0;height:4px;background:var(--bon-coral);transform:scaleX(0);transform-origin:left center;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
-    #bon-parallax-homepage .bon-method article.is-visible::after{transform:scaleX(1)}
-    #bon-parallax-homepage .bon-method-num{display:grid;width:42px;height:42px;margin-bottom:38px;place-items:center;border:1px solid var(--bon-ink);border-radius:50%;font-size:11px;font-weight:900}
-    #bon-parallax-homepage .bon-method article:nth-child(2) .bon-method-num,#bon-parallax-homepage .bon-method article:nth-child(4) .bon-method-num{color:var(--bon-ink);border-color:var(--bon-coral);background:var(--bon-coral)}
-    #bon-parallax-homepage .bon-method h3{margin-bottom:12px;font-size:24px;letter-spacing:-.025em}
-    #bon-parallax-homepage .bon-method p{margin-bottom:0;color:var(--bon-muted);font-size:14px;line-height:1.6}
-    #bon-parallax-homepage .bon-method-line{position:absolute;top:47px;right:-1px;left:68px;height:1px;background:var(--bon-ink)}
-    #bon-parallax-homepage .bon-route-transition{position:relative;display:grid;min-height:128px;place-items:center;overflow:hidden;background:var(--bon-paper)}
-    #bon-parallax-homepage .bon-route-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-    #bon-parallax-homepage .bon-route-track{fill:none;stroke:#d8d3ca;stroke-width:3}
-    #bon-parallax-homepage .bon-route-path{fill:none;stroke:var(--bon-coral);stroke-width:4;stroke-linecap:round}
-    #bon-parallax-homepage .bon-route-dot{position:absolute;z-index:1;top:20%;left:4%;width:20px;height:20px;border:3px solid var(--bon-paper);border-radius:50%;background:var(--bon-coral);transform:translate(-50%,-50%);pointer-events:none}
-    #bon-parallax-homepage .bon-route-transition span{position:relative;z-index:1;padding:7px 10px;color:var(--bon-coral-text);background:var(--bon-paper);font-family:"IBM Plex Mono",monospace;font-size:9px;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
-
-    #bon-parallax-homepage .bon-work-wrap{padding:72px 0 90px;background:#e9e5dc}
-    #bon-parallax-homepage .bon-work-head{max-width:1180px;margin:0 auto 36px;padding:0 34px}
-    #bon-parallax-homepage .bon-work-head h2{max-width:850px;margin-bottom:18px;font-size:clamp(38px,5vw,64px);line-height:.98;letter-spacing:-.055em}
-    #bon-parallax-homepage .bon-work-head p{max-width:590px;margin-bottom:0;color:var(--bon-muted);font-size:14px;line-height:1.65}
-    #bon-parallax-homepage .bon-work-stack{position:relative;display:grid;gap:0;max-width:1180px;margin:0 auto;padding:0 34px}
-    #bon-parallax-homepage .bon-work-stack::before,#bon-parallax-homepage .bon-work-stack::after{content:"";position:absolute;top:70px;bottom:70px;left:18px;width:3px}
-    #bon-parallax-homepage .bon-work-stack::before{background:#c7c0b7}
-    #bon-parallax-homepage .bon-work-stack::after{background:var(--bon-coral);transform:scaleY(var(--case-progress,0));transform-origin:top center}
-    #bon-parallax-homepage .bon-case{position:relative;z-index:1;display:grid;grid-template-columns:.82fr 1.18fr;min-height:560px;padding:72px 0;border-top:1px solid var(--bon-ink);background:#e9e5dc}
-    #bon-parallax-homepage .bon-case:last-child{border-bottom:1px solid var(--bon-ink)}
-    #bon-parallax-homepage .bon-case:nth-child(even){grid-template-columns:1.18fr .82fr}
-    #bon-parallax-homepage .bon-case:nth-child(even) .bon-case-copy{order:2;padding-right:8px;padding-left:66px}
-    #bon-parallax-homepage .bon-case:nth-child(even) .bon-case-visual{order:1}
-    #bon-parallax-homepage .bon-case-copy{display:flex;flex-direction:column;padding:18px 60px 18px 8px;background:#e9e5dc}
-    #bon-parallax-homepage .bon-case-label{position:relative;margin-bottom:auto;padding-left:22px;color:var(--bon-coral-text);font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
-    #bon-parallax-homepage .bon-case-label::before{content:"";position:absolute;top:50%;left:0;width:10px;height:10px;border-radius:50%;background:var(--bon-coral);transform:translateY(-50%)}
-    #bon-parallax-homepage .bon-case h3{max-width:450px;margin-bottom:16px;font-size:clamp(31px,4vw,51px);line-height:1;letter-spacing:-.05em}
-    #bon-parallax-homepage .bon-case-copy p{max-width:470px;margin-bottom:18px;color:var(--bon-muted);font-size:15px;line-height:1.65}
-    #bon-parallax-homepage .bon-case-status{display:inline-block;margin-bottom:15px;padding:6px 9px;border:1px solid var(--bon-ink);font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
-    #bon-parallax-homepage .bon-case-role{font-size:13px!important;color:var(--bon-ink)!important}
-    #bon-parallax-homepage .bon-case-link{display:inline-flex;min-height:44px;align-items:center;gap:12px;width:max-content;margin-top:25px;padding:11px 0;border-bottom:2px solid var(--bon-coral);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.05em}
-    #bon-parallax-homepage .bon-case-link:hover{color:var(--bon-coral-text)}
-    #bon-parallax-homepage .bon-case-meta{display:flex;flex-wrap:wrap;gap:7px}
-    #bon-parallax-homepage .bon-case-meta span{padding:7px 9px;border:1px solid var(--bon-line);font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
-    #bon-parallax-homepage .bon-case-visual{position:relative;display:grid;place-items:center;overflow:hidden;min-height:430px;padding:28px;border:1px solid var(--bon-ink);background-color:var(--case-bg);box-shadow:10px 10px 0 var(--bon-ink);will-change:transform}
-    #bon-parallax-homepage .bon-case-visual .bon-preview{transition:opacity .8s ease,translate .9s cubic-bezier(.2,.7,.2,1)}
-    #bon-parallax-homepage .bon-case-visual::after{content:"";position:absolute;right:0;bottom:0;left:0;height:8px;background:var(--bon-coral)}
-    #bon-parallax-homepage .bon-case-mark{position:absolute;right:22px;bottom:8px;color:rgba(17,17,19,.1);font-size:92px;font-weight:900;letter-spacing:-.08em}
-    #bon-parallax-homepage .bon-preview{position:relative;z-index:1;width:100%;max-width:510px;min-height:330px;padding:18px;border:1px solid var(--bon-ink);background:var(--bon-white);box-shadow:6px 6px 0 rgba(17,17,19,.15);font-family:"IBM Plex Mono",monospace}
-    #bon-parallax-homepage .bon-preview-top{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:20px;padding-bottom:11px;border-bottom:1px solid var(--bon-line);font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
-    #bon-parallax-homepage .bon-preview-top b{color:var(--bon-coral-text)}
-    #bon-parallax-homepage .bon-flow-row{display:flex;align-items:center;gap:8px;margin-bottom:10px}
-    #bon-parallax-homepage .bon-flow-node{display:flex;min-height:70px;flex:1;align-items:center;padding:10px;border:1px solid var(--bon-ink);background:#fff;font-size:10px;font-weight:700;line-height:1.35}
-    #bon-parallax-homepage .bon-flow-node.human{border-top:6px solid var(--bon-violet)}
-    #bon-parallax-homepage .bon-flow-node.ai{border-top:6px solid #369d73}
-    #bon-parallax-homepage .bon-flow-node.risk{border-top:6px solid var(--bon-coral)}
-    #bon-parallax-homepage .bon-flow-arrow{color:var(--bon-coral);font-size:18px;font-weight:900}
-    #bon-parallax-homepage .bon-preview-foot{margin-top:18px;padding-top:12px;border-top:1px solid var(--bon-line);color:var(--bon-muted);font-size:9px;line-height:1.5;text-transform:uppercase;letter-spacing:.04em}
-    #bon-parallax-homepage .bon-fin-preview{display:grid;grid-template-columns:.85fr 1.15fr;gap:12px}
-    #bon-parallax-homepage .bon-receipt-card{min-height:215px;padding:14px;border:1px solid var(--bon-ink);background:#f9f7f0}
-    #bon-parallax-homepage .bon-receipt-card strong{display:block;margin:8px 0 15px;font-size:12px}
-    #bon-parallax-homepage .bon-receipt-line{display:flex;justify-content:space-between;gap:8px;margin:10px 0;padding-bottom:7px;border-bottom:1px dashed #c9c3ba;font-size:9px}
-    #bon-parallax-homepage .bon-score{margin-top:15px;padding:8px;color:#664300;background:#f5d995;font-size:10px;font-weight:900;text-align:center}
-    #bon-parallax-homepage .bon-dashboard{padding:14px;border:1px solid var(--bon-ink);background:#fff}
-    #bon-parallax-homepage .bon-dashboard strong{display:block;margin-bottom:18px;font-size:12px}
-    #bon-parallax-homepage .bon-budget-row{display:grid;grid-template-columns:72px 1fr;gap:7px;align-items:center;margin:15px 0;font-size:9px}
-    #bon-parallax-homepage .bon-budget-row i{display:block;height:9px;background:var(--bon-coral)}
-    #bon-parallax-homepage .bon-budget-row:nth-child(3) i{width:76%;background:#d8b65a}
-    #bon-parallax-homepage .bon-budget-row:nth-child(4) i{width:53%;background:#6d60bd}
-    #bon-parallax-homepage .bon-event-preview{display:grid;grid-template-columns:.78fr 1.22fr;gap:14px;align-items:stretch}
-    #bon-parallax-homepage .bon-event-pass{padding:16px;border:1px solid var(--bon-ink);background:#fff;text-align:center}
-    #bon-parallax-homepage .bon-event-pass strong{display:block;margin-bottom:18px;font-size:12px}
-    #bon-parallax-homepage .bon-qr{width:95px;height:95px;margin:0 auto 14px;border:7px solid #fff;background:repeating-conic-gradient(var(--bon-ink) 0 25%,#fff 0 50%) 50%/15px 15px;box-shadow:0 0 0 1px var(--bon-ink)}
-    #bon-parallax-homepage .bon-event-pass span{font-size:10px;font-weight:800}
-    #bon-parallax-homepage .bon-event-dash{padding:14px;border:1px solid var(--bon-ink);background:#fff}
-    #bon-parallax-homepage .bon-event-dash strong{display:block;margin-bottom:14px;font-size:12px}
-    #bon-parallax-homepage .bon-event-metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin-bottom:20px}
-    #bon-parallax-homepage .bon-event-metrics span{padding:8px;background:#f7f4ed;font-size:9px;text-align:center}
-    #bon-parallax-homepage .bon-event-metrics b{display:block;color:var(--bon-coral-text);font-size:20px}
-    #bon-parallax-homepage .bon-event-bar{height:12px;margin:9px 0;background:linear-gradient(90deg,var(--bon-coral) 0 75%,#eee 75% 100%)}
-    #bon-parallax-homepage .bon-event-bar:nth-of-type(2){background:linear-gradient(90deg,#6954d8 0 58%,#eee 58% 100%)}
-
-    #bon-parallax-homepage .bon-career{color:#fff;background:var(--bon-ink)}
-    #bon-parallax-homepage .bon-career .bon-chapter{color:var(--bon-coral)}
-    #bon-parallax-homepage .bon-career .bon-section{padding-top:82px;padding-bottom:90px}
-    #bon-parallax-homepage .bon-career .bon-section-head>p{color:#aaa6a0}
-    #bon-parallax-homepage .bon-career-head{grid-template-columns:minmax(0,1.5fr) minmax(270px,.8fr);gap:48px;align-items:end;margin-bottom:40px}
-    #bon-parallax-homepage .bon-career-head h2{max-width:710px;font-size:clamp(42px,4.3vw,60px);line-height:1.01}
-    #bon-parallax-homepage .bon-career-head>p{max-width:360px;margin:0 0 5px}
-    #bon-parallax-homepage .bon-career-map{position:relative;display:grid;grid-template-columns:180px 1fr;gap:40px}
-    #bon-parallax-homepage .bon-guide-note{position:sticky;top:110px;align-self:start;padding-top:6px}
-    #bon-parallax-homepage .bon-guide-dot{display:block;width:168px;height:250px;margin:0 0 20px -18px;border:1px solid #eee5d8;background-color:var(--bon-paper);background-image:url("hero-guide-journey-man.png");background-repeat:no-repeat;background-size:672px 376px;background-position:left top;filter:contrast(1.08);will-change:transform}
-    #bon-parallax-homepage .bon-guide-note strong{display:block;margin-bottom:6px;font-size:13px}
-    #bon-parallax-homepage .bon-guide-note p{margin-bottom:0;color:#918e89;font-size:11px;line-height:1.5}
-    #bon-parallax-homepage .bon-career-list{position:relative;display:grid}
-    #bon-parallax-homepage .bon-career-list::before,#bon-parallax-homepage .bon-career-list::after{content:"";position:absolute;top:30px;bottom:30px;left:116px;width:2px;pointer-events:none}
-    #bon-parallax-homepage .bon-career-list::before{background:#514c4a}
-    #bon-parallax-homepage .bon-career-list::after{background:var(--bon-coral);transform:scaleY(var(--career-progress,0));transform-origin:top center}
-    #bon-parallax-homepage .bon-career-item{position:relative;display:grid;grid-template-columns:105px 1fr;gap:24px;padding:30px 0;border-top:1px solid #37363b}
-    #bon-parallax-homepage .bon-career-item::before{content:"";position:absolute;top:33px;left:110px;z-index:1;width:14px;height:14px;border:2px solid var(--bon-coral);border-radius:50%;background:var(--bon-ink);transition:background .45s ease,box-shadow .45s ease}
-    #bon-parallax-homepage .bon-career-item.is-visible::before{background:var(--bon-coral);box-shadow:0 0 0 5px rgba(242,108,79,.17)}
-    #bon-parallax-homepage .bon-career-item:last-child{border-bottom:1px solid #37363b}
-    #bon-parallax-homepage .bon-career-item>span{color:var(--bon-coral);font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
-    #bon-parallax-homepage .bon-career-item h3{margin-bottom:9px;font-size:26px;letter-spacing:-.025em}
-    #bon-parallax-homepage .bon-career-item p{margin-bottom:0;color:#aaa6a0;font-size:14px;line-height:1.6}
-    #bon-parallax-homepage .bon-career-link{color:var(--bon-coral);text-decoration:underline;text-underline-offset:3px}
-    #bon-parallax-homepage .bon-career-link:hover{color:#fff}
-    #bon-parallax-homepage .bon-career-meta{display:block;margin-bottom:8px;color:#c9c4bd;font-family:"IBM Plex Mono",monospace;font-size:10px;line-height:1.5;text-transform:uppercase;letter-spacing:.04em}
-    #bon-parallax-homepage .bon-career-action{display:inline-flex;min-height:44px;align-items:center;margin-top:28px;padding:12px 16px;border:1px solid var(--bon-coral);color:#fff;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.05em}
-    #bon-parallax-homepage .bon-career-action:hover{color:var(--bon-ink);background:var(--bon-coral)}
-    #bon-parallax-homepage .bon-chronology{display:grid;grid-template-columns:repeat(2,1fr);gap:0 25px;margin-top:55px;border-top:1px solid #37363b}
-    #bon-parallax-homepage .bon-chronology h3{grid-column:1/-1;margin:25px 0 12px;font-size:24px}
-    #bon-parallax-homepage .bon-chronology p{margin:0;padding:12px 0;border-bottom:1px solid #37363b;color:#d5d0c9;font-size:12px;line-height:1.5}
-    #bon-parallax-homepage .bon-chronology span{display:block;margin-bottom:3px;color:var(--bon-coral);font-family:"IBM Plex Mono",monospace;font-size:10px}
-
-    #bon-parallax-homepage .bon-focus{padding:100px max(34px,calc((100% - 1112px)/2));background:var(--bon-white)}
-    #bon-parallax-homepage .bon-focus-head{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(270px,.85fr);gap:48px;align-items:end;margin-bottom:34px}
-    #bon-parallax-homepage .bon-focus h2{max-width:710px;margin-bottom:0;font-size:clamp(38px,4.4vw,60px);line-height:1;letter-spacing:-.055em}
-    #bon-parallax-homepage .bon-focus-head p{max-width:390px;margin:0 0 5px;color:var(--bon-muted);font-size:14px;line-height:1.65}
-    #bon-parallax-homepage .bon-focus-controls{display:grid;gap:18px;margin-bottom:24px;padding:22px;border:1px solid var(--bon-line);background:var(--bon-paper)}
-    #bon-parallax-homepage .bon-control-row{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:start}
-    #bon-parallax-homepage .bon-control-row>span{padding-top:8px;color:var(--bon-muted);font-size:9px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
-    #bon-parallax-homepage .bon-control-buttons{display:flex;flex-wrap:wrap;gap:7px}
-    #bon-parallax-homepage .bon-filter{min-height:44px;padding:10px 13px;border:1px solid var(--bon-line);border-radius:0;color:var(--bon-ink);background:var(--bon-white);font:inherit;font-family:"IBM Plex Mono",monospace;font-size:11px}
-    #bon-parallax-homepage .bon-filter[aria-pressed="true"]{color:var(--bon-ink);border-color:var(--bon-coral);background:var(--bon-coral);font-weight:700}
-    #bon-parallax-homepage .bon-focus-result{display:grid;grid-template-columns:1.2fr .8fr;min-height:340px;border:1px solid var(--bon-ink)}
-    #bon-parallax-homepage .bon-focus-main{padding:36px;background:linear-gradient(135deg,#24242a,#111113);color:#fff}
-    #bon-parallax-homepage .bon-focus-main span{display:block;margin-bottom:55px;color:var(--bon-coral);font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
-    #bon-parallax-homepage .bon-focus-main h3{max-width:650px;margin-bottom:14px;font-size:clamp(28px,4vw,46px);line-height:1.05;letter-spacing:-.04em}
-    #bon-parallax-homepage .bon-focus-main p{max-width:600px;margin-bottom:0;color:#aaa6a0;font-size:13px;line-height:1.6}
-    #bon-parallax-homepage .bon-focus-side{display:grid;grid-template-rows:repeat(3,1fr);background:var(--bon-line);gap:1px}
-    #bon-parallax-homepage .bon-focus-side article{padding:28px;background:var(--bon-white)}
-    #bon-parallax-homepage .bon-focus-side span{display:block;margin-bottom:20px;color:var(--bon-coral-text);font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
-    #bon-parallax-homepage .bon-focus-side p{margin-bottom:0;color:var(--bon-muted);font-size:13px;line-height:1.55}
-    #bon-parallax-homepage .bon-focus-context{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:12px;color:var(--bon-muted);font-family:"IBM Plex Mono",monospace;font-size:10px;line-height:1.4}
-    #bon-parallax-homepage .bon-focus-context a{display:inline-flex;min-height:44px;align-items:center;border-bottom:1px solid var(--bon-coral);color:var(--bon-ink)}
-    #bon-parallax-homepage .bon-visually-hidden{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-
-    #bon-parallax-homepage .bon-lab{padding:100px max(34px,calc((100% - 1112px)/2));background:#e9e5dc}
-    #bon-parallax-homepage .bon-lab-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}
-    #bon-parallax-homepage .bon-lab h2{max-width:760px;margin-bottom:0;font-size:clamp(38px,5vw,64px);line-height:.98;letter-spacing:-.055em}
-    #bon-parallax-homepage .bon-lab-head p{max-width:350px;margin-bottom:0;color:var(--bon-muted);font-size:14px;line-height:1.6}
-    #bon-parallax-homepage .bon-lab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bon-ink)}
-    #bon-parallax-homepage .bon-lab-card{position:relative;display:flex;min-height:310px;flex-direction:column;padding:30px;border:0;background:var(--bon-white)}
-    #bon-parallax-homepage .bon-lab-card::after{content:"→";position:absolute;top:28px;right:28px;color:var(--bon-coral);font-size:24px}
-    #bon-parallax-homepage .bon-lab-card:nth-child(2){color:#fff;background:var(--bon-ink)}
-    #bon-parallax-homepage .bon-lab-card>span{margin-bottom:auto;color:var(--bon-coral-text);font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
-    #bon-parallax-homepage .bon-lab-card h3{margin-bottom:12px;font-size:27px;letter-spacing:-.03em}
-    #bon-parallax-homepage .bon-lab-card p{margin-bottom:0;color:var(--bon-muted);font-size:14px;line-height:1.6}
-    #bon-parallax-homepage .bon-lab-card:nth-child(2) p{color:#aaa6a0}
-    #bon-parallax-homepage .bon-lab-card:hover{box-shadow:inset 0 0 0 3px var(--bon-coral)}
-    #bon-parallax-homepage .bon-lab-card em{display:block;margin-top:20px;color:var(--bon-coral-text);font-size:11px;font-style:normal;font-weight:900;text-transform:uppercase;letter-spacing:.06em}
-    #bon-parallax-homepage .bon-lab-card:nth-child(2)>span,#bon-parallax-homepage .bon-lab-card:nth-child(2) em{color:var(--bon-coral)}
-
-    #bon-parallax-homepage .bon-footer{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:end;padding:90px max(34px,calc((100% - 1112px)/2));color:#fff;background:var(--bon-coral-deep)}
-    #bon-parallax-homepage .bon-footer h2{max-width:800px;margin-bottom:0;font-size:clamp(44px,7vw,86px);line-height:.9;letter-spacing:-.065em}
-    #bon-parallax-homepage .bon-footer-side p{margin-bottom:24px;font-size:14px;line-height:1.6}
-    #bon-parallax-homepage .bon-footer-side a{display:inline-flex;min-height:44px;align-items:center;padding:12px 16px;border:1px solid #fff;color:#fff;background:transparent;font:inherit;font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
-    #bon-parallax-homepage .bon-footer-side a:hover{color:var(--bon-coral-deep);background:#fff}
-
-    #bon-parallax-homepage.bon-js .bon-reveal{opacity:0;transform:translate3d(0,54px,0);transition:opacity .85s ease,transform 1s cubic-bezier(.16,1,.3,1)}
-    #bon-parallax-homepage.bon-js .bon-reveal.is-visible,#bon-parallax-homepage.bon-js .bon-reveal:focus-within{opacity:1;transform:translate3d(0,0,0)}
-    #bon-parallax-homepage.bon-js .bon-method article:nth-child(2),#bon-parallax-homepage.bon-js .bon-lab-card:nth-child(2){transition-delay:.12s}
-    #bon-parallax-homepage.bon-js .bon-method article:nth-child(3),#bon-parallax-homepage.bon-js .bon-lab-card:nth-child(3){transition-delay:.24s}
-    #bon-parallax-homepage.bon-js .bon-method article:nth-child(4){transition-delay:.36s}
-    #bon-parallax-homepage.bon-js .bon-case.bon-reveal .bon-preview{opacity:0;translate:0 28px}
-    #bon-parallax-homepage.bon-js .bon-case.bon-reveal.is-visible .bon-preview,#bon-parallax-homepage.bon-js .bon-case.bon-reveal:focus-within .bon-preview{opacity:1;translate:0 0}
-    #bon-parallax-homepage.bon-js .bon-section-head::after{transform:scaleX(0);transform-origin:left center;transition:transform 1s cubic-bezier(.16,1,.3,1) .2s}
-    #bon-parallax-homepage.bon-js .bon-section-head.is-visible::after{transform:scaleX(1)}
-    #bon-parallax-homepage.bon-js .bon-map-route{stroke-dasharray:100;stroke-dashoffset:100;transition:stroke-dashoffset 1.6s cubic-bezier(.16,1,.3,1) .25s}
-    #bon-parallax-homepage.bon-js .bon-manifesto-map.is-visible .bon-map-route{stroke-dashoffset:0}
-    @media(prefers-reduced-motion:reduce){
-      #bon-parallax-homepage.bon-js .bon-reveal{opacity:1;transform:none;transition:none}
-      #bon-parallax-homepage .bon-hero-art,#bon-parallax-homepage .bon-orb,#bon-parallax-homepage [data-scene-speed]{transform:none!important}
-      #bon-parallax-homepage.bon-js .bon-case.bon-reveal .bon-preview{opacity:1;translate:none;transition:none}
-      #bon-parallax-homepage.bon-js .bon-section-head::after{transform:none;transition:none}
-      #bon-parallax-homepage .bon-method article::after{transform:scaleX(1);transition:none}
-      #bon-parallax-homepage .bon-work-stack::after,#bon-parallax-homepage .bon-career-list::after{transform:scaleY(1)}
-      #bon-parallax-homepage.bon-js .bon-map-route{stroke-dashoffset:0;transition:none}
-    }
-    @media(min-width:651px) and (max-width:900px){
-      #bon-parallax-homepage .bon-hero{min-height:680px}
-      #bon-parallax-homepage .bon-hero-stage{min-height:680px}
-      #bon-parallax-homepage .bon-hero-copy{width:min(540px,62vw);max-width:none;margin:0 4vw 0 auto;padding:32px;top:38px;border:1px solid var(--bon-ink);background:rgba(250,247,239,.97);box-shadow:8px 8px 0 rgba(17,17,19,.9)}
-      #bon-parallax-homepage .bon-hero h1{font-size:clamp(37px,4.5vw,48px)}
-      #bon-parallax-homepage .bon-hero-lead{font-size:14px}
-    }
-    @media(max-width:900px){
-      #bon-parallax-homepage .bon-menu-button{display:block}
-      #bon-parallax-homepage .bon-links{position:absolute;top:66px;right:0;left:0;display:none;flex-direction:column;align-items:stretch;gap:0;padding:10px 18px 18px;border-bottom:1px solid var(--bon-ink);background:var(--bon-paper)}
-      #bon-parallax-homepage .bon-links.is-open{display:flex}
-      #bon-parallax-homepage .bon-links a{min-height:44px;padding:13px 4px;font-size:13px}
-      #bon-parallax-homepage .bon-contact-link{width:max-content;margin-top:9px}
-      #bon-parallax-homepage .bon-proof{grid-template-columns:repeat(3,1fr)}
-      #bon-parallax-homepage .bon-proof a{padding:18px;gap:9px}
-      #bon-parallax-homepage .bon-proof strong{font-size:22px}
-      #bon-parallax-homepage .bon-method{grid-template-columns:1fr 1fr}
-      #bon-parallax-homepage .bon-approach-head{grid-template-columns:1fr;gap:18px}
-      #bon-parallax-homepage .bon-approach-head>p{max-width:690px;margin:0}
-      #bon-parallax-homepage .bon-career-head,#bon-parallax-homepage .bon-focus-head{grid-template-columns:1fr;gap:18px}
-      #bon-parallax-homepage .bon-career-head>p,#bon-parallax-homepage .bon-focus-head>p{max-width:690px;margin:0}
-      #bon-parallax-homepage .bon-case,#bon-parallax-homepage .bon-case:nth-child(even){grid-template-columns:1fr}
-      #bon-parallax-homepage .bon-case-copy,#bon-parallax-homepage .bon-case:nth-child(even) .bon-case-copy{order:1;padding:28px 12px}
-      #bon-parallax-homepage .bon-case-visual,#bon-parallax-homepage .bon-case:nth-child(even) .bon-case-visual{order:2}
-      #bon-parallax-homepage .bon-case-visual{min-height:390px}
-      #bon-parallax-homepage .bon-lab-grid{grid-template-columns:1fr}
-      #bon-parallax-homepage:not(.bon-js) .bon-menu-button{display:none}
-      #bon-parallax-homepage:not(.bon-js) .bon-nav{flex-wrap:wrap}
-      #bon-parallax-homepage:not(.bon-js) .bon-links{position:static;display:flex;flex-direction:row;flex-wrap:wrap;width:100%;padding:0 0 12px;border:0}
-    }
-    @media(max-width:650px){
-      #bon-parallax-homepage .bon-nav{padding:0 18px}
-      #bon-parallax-homepage .bon-hero{min-height:700px}
-      #bon-parallax-homepage .bon-hero-stage{min-height:700px}
-      #bon-parallax-homepage .bon-hero-art img{object-position:5% center}
-      #bon-parallax-homepage .bon-hero-shade{background:linear-gradient(180deg,#faf7ef 0%,rgba(250,247,239,.98) 45%,rgba(250,247,239,.78) 68%,rgba(250,247,239,.12) 100%)}
-      #bon-parallax-homepage .bon-hero-copy{padding:38px 18px 0}
-      #bon-parallax-homepage .bon-hero h1{max-width:520px;font-size:clamp(37px,9vw,48px)}
-      #bon-parallax-homepage .bon-hero-lead{max-width:380px;font-size:15px}
-      #bon-parallax-homepage .bon-proof{grid-template-columns:1fr}
-      #bon-parallax-homepage .bon-proof a{min-height:80px;border-right:0;border-bottom:1px solid var(--bon-line)}
-      #bon-parallax-homepage .bon-proof a:last-child{border-bottom:0}
-      #bon-parallax-homepage .bon-manifesto,#bon-parallax-homepage .bon-section-head,#bon-parallax-homepage .bon-focus-head,#bon-parallax-homepage .bon-footer{grid-template-columns:1fr;gap:26px}
-      #bon-parallax-homepage .bon-manifesto{padding:64px 18px;min-height:auto}
-      #bon-parallax-homepage .bon-manifesto-guide{height:auto}
-      #bon-parallax-homepage .bon-manifesto-map{width:100%;height:84px;margin:18px 0 0;aspect-ratio:auto}
-      #bon-parallax-homepage .bon-manifesto-map .bon-map-desktop{display:none}
-      #bon-parallax-homepage .bon-manifesto-map .bon-map-mobile{display:block}
-      #bon-parallax-homepage .bon-section{padding:70px 18px}
-      #bon-parallax-homepage #bon-approach{padding-top:62px;padding-bottom:62px}
-      #bon-parallax-homepage .bon-approach-head{gap:14px;margin-bottom:36px}
-      #bon-parallax-homepage .bon-approach-head h2{font-size:clamp(37px,9vw,46px)}
-      #bon-parallax-homepage .bon-method{grid-template-columns:1fr}
-      #bon-parallax-homepage .bon-method article{min-height:220px}
-      #bon-parallax-homepage .bon-method-num{margin-bottom:48px}
-      #bon-parallax-homepage .bon-route-transition{min-height:86px}
-      #bon-parallax-homepage .bon-work-wrap{padding-top:64px;padding-bottom:70px}
-      #bon-parallax-homepage .bon-work-head{margin-bottom:28px}
-      #bon-parallax-homepage .bon-work-stack,#bon-parallax-homepage .bon-work-head{padding-right:18px;padding-left:18px}
-      #bon-parallax-homepage .bon-work-stack::before,#bon-parallax-homepage .bon-work-stack::after{left:7px}
-      #bon-parallax-homepage .bon-case-copy,#bon-parallax-homepage .bon-case:nth-child(even) .bon-case-copy{order:1;padding:28px 6px}
-      #bon-parallax-homepage .bon-case-visual,#bon-parallax-homepage .bon-case:nth-child(even) .bon-case-visual{order:2;min-height:340px;width:100%;padding:12px;box-shadow:5px 5px 0 var(--bon-ink)}
-      #bon-parallax-homepage .bon-preview{min-height:300px;padding:10px}
-      #bon-parallax-homepage .bon-flow-node{min-height:61px;padding:5px;font-size:8px}
-      #bon-parallax-homepage .bon-flow-row{gap:3px}
-      #bon-parallax-homepage .bon-flow-arrow{font-size:13px}
-      #bon-parallax-homepage .bon-career-map{grid-template-columns:1fr}
-      #bon-parallax-homepage .bon-guide-note{position:static;display:grid;grid-template-columns:auto 1fr;gap:14px}
-      #bon-parallax-homepage .bon-career-list::before,#bon-parallax-homepage .bon-career-list::after,#bon-parallax-homepage .bon-career-item::before{display:none}
-      #bon-parallax-homepage .bon-career-item{grid-template-columns:1fr;gap:8px}
-      #bon-parallax-homepage .bon-chronology{grid-template-columns:1fr}
-      #bon-parallax-homepage .bon-career .bon-section{padding-top:70px;padding-bottom:70px}
-      #bon-parallax-homepage .bon-career-head{gap:14px;margin-bottom:36px}
-      #bon-parallax-homepage .bon-career-head h2,#bon-parallax-homepage .bon-focus h2{font-size:clamp(37px,9vw,46px)}
-      #bon-parallax-homepage .bon-focus,#bon-parallax-homepage .bon-lab,#bon-parallax-homepage .bon-footer{padding:70px 18px}
-      #bon-parallax-homepage .bon-control-row{grid-template-columns:1fr}
-      #bon-parallax-homepage .bon-focus-result{grid-template-columns:1fr}
-      #bon-parallax-homepage .bon-lab-head{display:grid}
-      #bon-parallax-homepage .bon-lab-card{min-height:250px;padding:26px}
-    }
-    @media(max-width:650px) and (prefers-reduced-motion:no-preference){
-      #bon-parallax-homepage.bon-js .bon-reveal{transform:none;transition:opacity .5s ease}
-      #bon-parallax-homepage.bon-js .bon-method article,#bon-parallax-homepage.bon-js .bon-lab-card{transition-delay:0s}
-    }
-    @media(max-width:360px){#bon-parallax-homepage .bon-fin-preview,#bon-parallax-homepage .bon-event-preview{grid-template-columns:1fr}#bon-parallax-homepage .bon-preview{min-height:auto}}
-  </style>
+  <style>/* Shared layout and motion live in site.css. */</style>
 </head>
 <body>
   <a class="site-skip" href="#main-content">Skip to content</a>
-<div id="bon-parallax-homepage">
-
-
-  <div class="bon-site">
-    <nav class="bon-nav" aria-label="Portfolio navigation"><a class="bon-brand" href="#bon-top"><span class="bon-brand-mark">B</span><span>Bon</span></a><button class="bon-menu-button" type="button" aria-controls="bon-nav-links" aria-expanded="false">Menu</button><div class="bon-links" id="bon-nav-links"><a href="#bon-work">Work</a><a href="#bon-journey">Journey</a><a href="#bon-focus">Digital Focus</a><a href="#bon-lab">AI Guides</a><a href="Sittan_Charoensuwan_AI_Implementation_Solutions_Master_CV.pdf" target="_blank" rel="noopener">CV</a><a class="bon-contact-link" href="#bon-contact">Contact</a></div></nav>
-    <div class="bon-scroll-progress" aria-hidden="true"><span></span></div>
-
-    <main id="main-content">
-    <header class="bon-hero" id="bon-top">
-      <div class="bon-hero-stage">
-        <div class="bon-hero-art" data-parallax="18"><img src="hero-guide-journey-man.png" alt="A stylized male guide leading viewers through strategy, product, AI and adoption platforms"></div>
-        <div class="bon-hero-shade"></div>
-        <span class="bon-orb one" data-parallax="-32"></span><span class="bon-orb two" data-parallax="46"></span><span class="bon-orb three" data-parallax="-58"></span>
-        <div class="bon-hero-exit" aria-hidden="true"></div>
-        <div class="bon-hero-copy"><p class="bon-kicker">Sittan (Bon) Charoensuwan · AI Implementation &amp; Solutions · Creative Strategy</p><h1>Turning emerging technology into creative solutions people use.</h1><p class="bon-hero-lead">I bring together AI, strategy, branding, marketing and product thinking to take ideas from discovery through delivery and adoption.</p><div class="bon-hero-actions"><a class="bon-hero-action primary" href="#bon-work">Explore selected work <span>→</span></a><a class="bon-hero-action" href="#bon-intro">Follow the journey <span>↓</span></a></div></div>
-        <div class="bon-hero-steps" aria-hidden="true"><span><b>01</b> Human need</span><span><b>02</b> Creative idea</span><span><b>03</b> Pilot</span><span><b>04</b> Adoption</span></div>
-        <div class="bon-scroll-note">Scroll with me</div>
+  <header class="site-header"><a class="site-brand" href="index.html?v=2148e03c6f" aria-label="Bon — portfolio home"><span class="site-brand-mark">B</span><span>BON</span></a><button class="site-menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">Menu</button><nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="ai-product-solutions.html">AI & Product</a><a href="technology-experience.html">Technology</a><a href="creative-experiences.html">Creative</a><a href="ai-knowledge.html">AI Knowledge</a><a href="journey.html">Journey</a><a href="Sittan_Charoensuwan_AI_Implementation_Solutions_Master_CV.pdf" target="_blank" rel="noopener">CV ↗</a><a class="site-nav-contact" href="#site-contact">Contact</a></nav></header><div class="site-progress" aria-hidden="true"><span></span></div>
+<main id="main-content" class="portfolio-page overview-page">
+  <section class="overview-hero" aria-labelledby="overview-title">
+    <div class="overview-stage">
+    <div class="overview-art" aria-hidden="true"><img src="hero-guide-journey-man.png" alt="" fetchpriority="high"></div>
+    <div class="wrap overview-layout">
+      <div class="overview-panel">
+        <p class="eyeline">Sittan (Bon) Charoensuwan · AI implementation &amp; creative strategy</p>
+        <h1 id="overview-title"><span class="overview-headline">Turning emerging technology into creative solutions people use.</span></h1>
+        <p>I connect use-case discovery, strategy, product thinking and human adoption—then test whether the idea works in practice.</p>
+        <a class="hero-evidence" href="genai-workflow-case-study.html"><span>Controlled GenAI campaign pilot</span><strong>Standard production: ~2 weeks → ~1 week</strong><span class="hero-evidence-arrow" aria-hidden="true">↗</span></a>
+        <div class="button-row"><a class="button button-dark" href="ai-product-solutions.html">Explore AI &amp; product <span class="arrow" aria-hidden="true">→</span></a><a class="button button-light" href="#fields">Choose a work field <span class="arrow" aria-hidden="true">↓</span></a></div>
       </div>
-    </header>
+    </div>
+    <a class="overview-scroll-cue" href="#fields"><span>Scroll to explore</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2v15m-5-5 5 5 5-5"/></svg><i aria-hidden="true"></i></a>
+    <button class="overview-motion-toggle" type="button" aria-label="Reduce homepage motion" aria-pressed="false" hidden><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3v10M11 3v10"/></svg><span>Motion on</span></button>
+    </div>
+  </section>
 
-    <div class="bon-proof" aria-label="Selected outcomes"><a href="#bon-case-ai"><strong>2 → 1 week</strong><span>Controlled pilot: standard campaign production took roughly two weeks traditionally versus one with AI assistance.</span></a><a href="#bon-role-jk"><strong>3,000</strong><span>Registered users in eight weeks for the G-fashion mobile CRM launch.</span></a><a href="#bon-role-tohklom"><strong>4 B2B</strong><span>AI and digital solutions shaped while leading a five-person unit.</span></a></div>
-
-    <section class="bon-manifesto" id="bon-intro"><div class="bon-manifesto-guide"><span class="bon-manifesto-index">00 · Your guide</span><div class="bon-manifesto-map bon-reveal" aria-hidden="true"><svg class="bon-map-desktop" viewBox="0 0 460 350"><path class="bon-map-track" d="M 36 24 C 140 18 150 84 125 113 C 89 155 65 146 82 198 C 103 260 198 209 250 232 C 316 261 313 310 434 320"/><path class="bon-map-route" pathLength="100" d="M 36 24 C 140 18 150 84 125 113 C 89 155 65 146 82 198 C 103 260 198 209 250 232 C 316 261 313 310 434 320"/><circle class="bon-map-stop is-coral" cx="36" cy="24" r="10"/><circle class="bon-map-stop" cx="125" cy="113" r="7"/><circle class="bon-map-stop" cx="82" cy="198" r="7"/><circle class="bon-map-stop" cx="250" cy="232" r="7"/><circle class="bon-map-stop is-coral" cx="434" cy="320" r="10"/><path class="bon-map-arrow" d="M 417 306 L 434 320 L 414 330"/></svg><svg class="bon-map-mobile" viewBox="0 0 450 90"><path class="bon-map-track" d="M 20 46 C 105 10 147 70 225 44 S 362 17 430 46"/><path class="bon-map-route" pathLength="100" d="M 20 46 C 105 10 147 70 225 44 S 362 17 430 46"/><circle class="bon-map-stop is-coral" cx="20" cy="46" r="8"/><circle class="bon-map-stop" cx="225" cy="44" r="7"/><circle class="bon-map-stop is-coral" cx="430" cy="46" r="8"/><path class="bon-map-arrow" d="M 414 32 L 430 46 L 411 57"/></svg></div></div><div class="bon-reveal"><h2>Come with me. We’ll follow an idea from a human need to a solution people adopt.</h2><p>Each stop shows the choices, experiments and people behind the outcome. The route continues through selected work, the experience that shaped it and the ideas I’m exploring now.</p></div></section>
-
-    <section class="bon-section" id="bon-approach">
-      <div class="bon-section-head bon-approach-head bon-reveal"><div><span class="bon-chapter">01 · How I work</span><h2>Ideas become useful through a clear journey.</h2></div><p>Design thinking, project management and agile delivery help me connect communication, branding, product strategy and AI implementation.</p></div>
-      <div class="bon-method"><article class="bon-reveal"><span class="bon-method-num">01</span><i class="bon-method-line"></i><h3>Imagine</h3><p>Listen to users, connect their needs to a business goal and reframe the brief.</p></article><article class="bon-reveal"><span class="bon-method-num">02</span><i class="bon-method-line"></i><h3>Shape</h3><p>Give the idea a journey, value proposition, product concept and delivery plan.</p></article><article class="bon-reveal"><span class="bon-method-num">03</span><i class="bon-method-line"></i><h3>Prove</h3><p>Prototype, compare options and let measured feedback reshape the solution.</p></article><article class="bon-reveal"><span class="bon-method-num">04</span><h3>Adopt</h3><p>Align owners, approval rules, communication and training before scaling.</p></article></div>
-    </section>
-
-    <div class="bon-route-transition" aria-hidden="true"><svg class="bon-route-svg" viewBox="0 0 1000 190" preserveAspectRatio="none"><path class="bon-route-track" d="M 40 38 C 255 38 240 155 495 150 S 785 38 960 92"/><path class="bon-route-path" d="M 40 38 C 255 38 240 155 495 150 S 785 38 960 92"/></svg><i class="bon-route-dot"></i><span>Follow the idea into the work</span></div>
-
-    <section class="bon-work-wrap" id="bon-work">
-      <div class="bon-work-head bon-reveal"><span class="bon-chapter">02 · Selected solutions</span><h2>Three ways I turn complexity into action.</h2><p>Explore a delivered AI rollout, a tested finance pilot and a QR product licensed for market learning.</p></div>
-      <div class="bon-work-stack">
-        <article class="bon-case bon-reveal" id="bon-case-ai"><div class="bon-case-copy"><span class="bon-case-label">Case 01 · AI implementation</span><div><span class="bon-case-status">Delivered rollout</span><h3>Faster campaign creation, with people responsible for the final call.</h3><p>I identified the opportunity, built an n8n proof of concept and ran a controlled pilot across two AI-enabled and two comparison locations. Human approval and GDPR data minimization supported rollout to four DACH locations.</p><p class="bon-case-role">Pilot comparison: standard campaign production took roughly two weeks traditionally versus one with AI assistance.</p><div class="bon-case-meta"><span>2 AI + 2 comparison locations</span><span>7-person workshop</span><span>Human approval</span></div><a class="bon-case-link" href="genai-workflow-case-study.html">Explore the case →</a></div></div><a class="bon-case-visual ai" data-scene-speed="18" style="--case-bg:#e1dbea" href="genai-workflow-case-study.html" aria-label="Explore the GenAI campaign case study"><div class="bon-preview"><div class="bon-preview-top"><span>Campaign workflow / human gates</span><b>01</b></div><div class="bon-flow-row"><div class="bon-flow-node human">Campaign brief</div><span class="bon-flow-arrow">→</span><div class="bon-flow-node ai">Structure &amp; explore</div><span class="bon-flow-arrow">→</span><div class="bon-flow-node ai">Creative directions</div></div><div class="bon-flow-row"><div class="bon-flow-node human">Select &amp; comment</div><span class="bon-flow-arrow">→</span><div class="bon-flow-node risk">Risk &amp; brand review</div><span class="bon-flow-arrow">→</span><div class="bon-flow-node human">Final approval</div></div><div class="bon-preview-foot">Detailed creative route is a workflow design; the controlled pilot and rollout are the observed result.</div></div><span class="bon-case-mark">01</span></a></article>
-        <article class="bon-case bon-reveal" id="bon-case-finance"><div class="bon-case-copy"><span class="bon-case-label">Case 02 · Finance operations</span><div><span class="bon-case-status">Internal pilot + product concept</span><h3>Turn receipt evidence into decisions a finance team can trust.</h3><p>At Tohklom, I interviewed more than 30 SME finance users, tested OCR extraction on more than 500 receipts and designed confidence-based human review. The broader concept connects capture, matching, exceptions and budget visibility.</p><p class="bon-case-role">Pilot evidence: OCR testing and confidence routing. Dashboard screens show the proposed product experience.</p><div class="bon-case-meta"><span>30+ user interviews</span><span>500+ receipts</span><span>Human review</span></div><a class="bon-case-link" href="finance-ai-case-study.html">Explore the case →</a></div></div><a class="bon-case-visual finance" data-scene-speed="-16" style="--case-bg:#f6df9f" href="finance-ai-case-study.html" aria-label="Explore the finance AI case study"><div class="bon-preview"><div class="bon-preview-top"><span>Receipt to decision / concept UI</span><b>02</b></div><div class="bon-fin-preview"><div class="bon-receipt-card"><strong>Receipt capture</strong><div class="bon-receipt-line"><span>Vendor</span><span>Matched</span></div><div class="bon-receipt-line"><span>Amount</span><span>Review</span></div><div class="bon-receipt-line"><span>Transaction</span><span>Linked</span></div><div class="bon-score">91% · HUMAN REVIEW</div></div><div class="bon-dashboard"><strong>Budget view</strong><div class="bon-budget-row"><span>Campaigns</span><i></i></div><div class="bon-budget-row"><span>Operations</span><i></i></div><div class="bon-budget-row"><span>Events</span><i></i></div><div class="bon-preview-foot">Uncertain items remain with finance.</div></div></div></div><span class="bon-case-mark">02</span></a></article>
-        <article class="bon-case bon-reveal" id="bon-case-events"><div class="bon-case-copy"><span class="bon-case-label">Case 03 · Audience experience</span><div><span class="bon-case-status">Internal pilot + market licenses</span><h3>Connect the audience experience to measurable engagement.</h3><p>QR Event Management moved from an internal pilot to licenses with five market competitors. Their usage data informed product improvements.</p><p class="bon-case-role">Beyond the QR product, I explore CRM, live streaming, gamification and rewards as a flexible toolkit for different client goals.</p><div class="bon-case-meta"><span>5 market licenses</span><span>Usage-led iteration</span><span>QR engagement</span></div><a class="bon-case-link" href="event-engagement-case-study.html">Explore the case →</a></div></div><a class="bon-case-visual event" data-scene-speed="20" style="--case-bg:#f7d8e4" href="event-engagement-case-study.html" aria-label="Explore the event engagement case study"><div class="bon-preview"><div class="bon-preview-top"><span>Check-in to insight / concept UI</span><b>03</b></div><div class="bon-event-preview"><div class="bon-event-pass"><strong>Event pass</strong><div class="bon-qr" aria-hidden="true"></div><span>Checked in ✓</span></div><div class="bon-event-dash"><strong>Engagement view</strong><div class="bon-event-metrics"><span><b>QR</b>Entry</span><span><b>CRM</b>Follow-up</span></div><div class="bon-event-bar"></div><div class="bon-event-bar"></div><div class="bon-preview-foot">Physical action → digital record → useful insight</div></div></div></div><span class="bon-case-mark">03</span></a></article>
-      </div>
-    </section>
-
-    <section class="bon-career" id="bon-journey"><div class="bon-section">
-      <div class="bon-section-head bon-career-head bon-reveal"><div><span class="bon-chapter">03 · Career journey</span><h2>A career built across strategy, communication, products and adoption.</h2></div><p>These chapters show how the work connects. The complete roles and dates are listed below, with my CV available to open.</p></div>
-      <div class="bon-career-map"><aside class="bon-guide-note"><span class="bon-guide-dot" data-scene-speed="12"></span><div><strong>I’ll connect the dots.</strong><p>Follow the capability built at each stage.</p></div></aside>
-        <div class="bon-career-list">
-          <article class="bon-career-item bon-reveal"><span>Now</span><div><h3>Independent AI experiments</h3><span class="bon-career-meta">Builder / Product Lead · Mar 2026–present</span><p>Building practical tools and guides, including <a class="bon-career-link" href="https://bierpreis.beer/" target="_blank" rel="noopener">bierpreis.beer ↗</a>, an MVP using a dataset of 181 Munich venues.</p></div></article>
-          <article class="bon-career-item bon-reveal" id="bon-role-jk"><span>AI adoption</span><div><h3>AI implementation &amp; enterprise adoption</h3><span class="bon-career-meta">JK-Fashion · Product Marketing Manager · May 2022–Feb 2026</span><p>Use-case discovery, controlled pilots, human approval and four-location rollout. I also led the G-fashion mobile CRM launch, reaching 3,000 registered users in eight weeks.</p></div></article>
-          <article class="bon-career-item bon-reveal" id="bon-role-tohklom"><span>Products</span><div><h3>Digital products &amp; solution building</h3><span class="bon-career-meta">Tohklom · Innovation Product Lead · Oct 2020–Apr 2022</span><p>Led a five-person AI and digital unit that shaped four B2B solutions, alongside design thinking, agile delivery and commercialisation.</p></div></article>
-          <article class="bon-career-item bon-reveal"><span>Foundation</span><div><h3>Communication, marketing, branding &amp; audience experience</h3><span class="bon-career-meta">Merit · Enterprise Account &amp; Strategy Executive · Aug 2016–Aug 2018</span><p>Connecting technology choices to customers, communication strategy, brand meaning and business goals.</p></div></article>
-        </div>
-      </div>
-      <div class="bon-chronology"><h3>Full chronology</h3><p><span>Mar 2026–present</span>Independent AI Product Development · Builder / Product Lead</p><p><span>May 2022–Feb 2026</span>JK-Fashion · Product Marketing Manager</p><p><span>Oct 2020–Apr 2022</span>Tohklom · Innovation Product Lead</p><p><span>Jan–Apr 2020</span>Design AI · AI Business Developer Intern</p><p><span>Oct–Dec 2019</span>QYOBO · Growth Strategist Intern</p><p><span>Jul–Sep 2019</span>Prospeum · B2B Marketing &amp; Brand Communication Intern</p><p><span>Apr–Jun 2019</span>SCHUNK · IIoT &amp; Innovation Researcher Intern</p><p><span>May 2017–May 2018</span>PAD-SED-SAM-SUAN-SEE · Co-founder &amp; CEO</p><p><span>Aug 2016–Aug 2018</span>Merit · Enterprise Account &amp; Strategy Executive</p></div>
-      <a class="bon-career-action" href="Sittan_Charoensuwan_AI_Implementation_Solutions_Master_CV.pdf" target="_blank" rel="noopener">Open my CV ↗</a>
-    </div></section>
-
-    <section class="bon-focus" id="bon-focus">
-      <div class="bon-focus-head bon-reveal"><div><span class="bon-chapter">04 · Digital Focus</span><h2>Where technology, business and human behaviour meet.</h2></div><p>Choose an industry and a lens. Each combination shows an opportunity I would investigate, the risk to manage and a practical test. These are my viewpoints, not delivered client cases.</p></div>
-      <div class="bon-focus-controls"><div class="bon-control-row"><span>Industry</span><div class="bon-control-buttons" data-group="industry" role="group" aria-label="Choose an industry"><button class="bon-filter" type="button" aria-pressed="true" data-value="Retail & Fashion">Retail &amp; Fashion</button><button class="bon-filter" type="button" aria-pressed="false" data-value="Agencies">Agencies</button><button class="bon-filter" type="button" aria-pressed="false" data-value="Events">Events</button><button class="bon-filter" type="button" aria-pressed="false" data-value="Finance Ops">Finance Ops</button><button class="bon-filter" type="button" aria-pressed="false" data-value="Manufacturing">Manufacturing</button></div></div><div class="bon-control-row"><span>Perspective</span><div class="bon-control-buttons" data-group="perspective" role="group" aria-label="Choose a perspective"><button class="bon-filter" type="button" aria-pressed="true" data-value="Strategy">Strategy</button><button class="bon-filter" type="button" aria-pressed="false" data-value="Branding">Branding</button><button class="bon-filter" type="button" aria-pressed="false" data-value="Marketing">Marketing</button><button class="bon-filter" type="button" aria-pressed="false" data-value="Product">Product</button><button class="bon-filter" type="button" aria-pressed="false" data-value="Innovation">Innovation to watch</button></div></div></div>
-      <p class="bon-visually-hidden" id="bon-focus-announcement" role="status" aria-live="polite"></p><div class="bon-focus-result"><div class="bon-focus-main"><span id="bon-focus-label">My viewpoint · Retail &amp; Fashion · Strategy</span><h3 id="bon-focus-title">Sense demand before seasonal plans lock.</h3><p id="bon-focus-copy">Bring store feedback, customer behaviour and product performance into one decision about what to stock, adjust or test next.</p></div><div class="bon-focus-side"><article><span>Why it matters</span><p id="bon-focus-why">Earlier signals could reduce guesswork while preserving creative judgment.</p></article><article><span>Risk to manage</span><p id="bon-focus-risk">Customer data and local context can be flattened into misleading averages.</p></article><article><span>What I would test</span><p id="bon-focus-test">Compare one category decision made with and without frontline evidence.</p></article></div></div><div class="bon-focus-context"><span>Working viewpoint · Written October 2026</span><a id="bon-focus-related" href="genai-workflow-case-study.html">Related work: GenAI campaign case ↗</a></div>
-    </section>
-
-    <section class="bon-lab" id="bon-lab"><div class="bon-lab-head bon-reveal"><div><span class="bon-chapter">05 · AI Guides &amp; Experiments</span><h2>Learn the rules. Question the choices. Build better with AI.</h2></div><p>Three independent projects you can explore now—each designed to make a different part of AI more understandable and usable.</p></div><div class="bon-lab-grid"><a class="bon-lab-card bon-reveal" href="https://sittanbon.github.io/ai-legal-layers/" target="_blank" rel="noopener"><span>Responsibility toolkit · Live</span><div><h3>AI at Work: The Legal Layers</h3><p>Explore six layers of legal and organizational responsibility, then use a launch checklist to examine an AI idea.</p><em>Open the guide ↗</em></div></a><a class="bon-lab-card bon-reveal" href="https://sittanbon.github.io/ethical-ai-now/" target="_blank" rel="noopener"><span>Ethical practice · Live</span><div><h3>Ethical AI Now</h3><p>Twelve practical actions across deciding, designing, deploying and monitoring AI.</p><em>Explore the actions ↗</em></div></a><a class="bon-lab-card bon-reveal" href="https://sittanbon.github.io/prompt-smash/" target="_blank" rel="noopener"><span>Prompt learning · Live</span><div><h3>Prompt Smash!</h3><p>Build better prompts with seven layers across everyday, engineering, image and code journeys.</p><em>Start building ↗</em></div></a></div></section>
-    </main>
-
-    <footer class="bon-footer" id="bon-contact"><h2>Have a problem worth rethinking?</h2><div class="bon-footer-side"><p>Let’s find the human need, shape the right solution and make it useful in practice.</p><div class="bon-hero-actions"><a href="mailto:sittan.siri@gmail.com">Email Bon →</a><a href="https://www.linkedin.com/in/sittan-charoensuwan/" target="_blank" rel="noopener">LinkedIn ↗</a></div></div></footer>
+  <div class="proof-strip" aria-label="Selected evidence">
+    <a href="genai-workflow-case-study.html"><strong>2 → 1 week</strong><span><b>Standard campaign production.</b> I built the n8n proof of concept and designed the controlled pilot.</span></a>
+    <a href="journey.html#g-fashion"><strong>3,000</strong><span><b>G-fashion mobile CRM.</b> I led the launch; this is the registered-user count after eight weeks.</span></a>
+    <a href="event-engagement-case-study.html"><strong>5 licenses</strong><span><b>QR event product.</b> I piloted it internally and licensed it for market learning.</span></a>
   </div>
+  <p class="proof-source">Project figures are reported from my work and CV; raw pilot and licensing records are not published here. Each linked case explains what is observed and what is proposed.</p>
 
+  <section class="section wrap overview-fields" id="fields" aria-labelledby="fields-title">
+    <div class="section-head"><h2 id="fields-title">Choose the work you want to explore.</h2><p>Four connected fields, one approach: understand the need, shape the experience, test the solution and make adoption possible. Every page separates delivered work from research, prototypes and viewpoints.</p></div>
+    <div class="field-grid">
+      <a class="field-card" href="ai-product-solutions.html"><span class="field-top"><span>AI implementation · product building</span><span class="field-number">01</span></span><h3>AI &amp; Product Solutions</h3><p>Use-case discovery, controlled pilots, human-in-the-loop decisions, rollout and independent tools.</p><span class="field-arrow">Explore the work ↗</span></a>
+      <a class="field-card" href="technology-experience.html"><span class="field-top"><span>Technical foundation</span><span class="field-number">02</span></span><h3>Technology Experience</h3><p>IIoT research and roadmap, nanotechnology research and hands-on microcontroller prototypes.</p><span class="field-arrow">Explore the work ↗</span></a>
+      <a class="field-card" href="creative-experiences.html"><span class="field-top"><span>Communication · interaction</span><span class="field-number">03</span></span><h3>Creative Experiences</h3><p>Campaigns and events that turn brand messages into participation, with selected project visuals and audience journeys.</p><span class="field-arrow">Explore the work ↗</span></a>
+      <a class="field-card" href="ai-knowledge.html"><span class="field-top"><span>Guides · industry viewpoints</span><span class="field-number">04</span></span><h3>AI Knowledge</h3><p>Three live practical guides plus ideas for how AI could be tested across industries and disciplines.</p><span class="field-arrow">Explore the work ↗</span></a>
+    </div>
+  </section>
 
-</div>
-<script>
-    (()=>{
-      const root=document.getElementById('bon-parallax-homepage');
-      root.classList.add('bon-js');
-      const hero=root.querySelector('.bon-hero');
-      const heroStage=root.querySelector('.bon-hero-stage');
-      const art=root.querySelector('.bon-hero-art');
-      const heroStepBar=root.querySelector('.bon-hero-steps');
-      const heroSteps=[...heroStepBar.querySelectorAll('span')];
-      const layers=[...root.querySelectorAll('[data-parallax]')];
-      const sceneLayers=[...root.querySelectorAll('[data-scene-speed]')];
-      const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const clamp=(value)=>Math.max(0,Math.min(1,value));
-      const route=root.querySelector('.bon-route-transition');
-      const routePath=root.querySelector('.bon-route-path');
-      const routeDot=root.querySelector('.bon-route-dot');
-      const routeLength=routePath.getTotalLength();
-      const routeViewBox=routePath.ownerSVGElement.viewBox.baseVal;
-      const caseStack=root.querySelector('.bon-work-stack');
-      const careerList=root.querySelector('.bon-career-list');
-      const navSections=[...root.querySelectorAll('.bon-links a[href^="#bon-"]')].map(link=>({link,target:root.querySelector(link.getAttribute('href'))})).filter(item=>item.target);
-      if(!reduce){routePath.style.strokeDasharray=String(routeLength);routePath.style.strokeDashoffset=String(routeLength);}
-      const menuButton=root.querySelector('.bon-menu-button');
-      const menu=root.querySelector('.bon-links');
-      const closeMenu=()=>{
-        menuButton.setAttribute('aria-expanded','false');
-        menu.classList.remove('is-open');
-      };
-      menuButton.addEventListener('click',()=>{
-        const open=menuButton.getAttribute('aria-expanded')!=='true';
-        menuButton.setAttribute('aria-expanded',String(open));
-        menu.classList.toggle('is-open',open);
-      });
-      menu.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
-      root.querySelector('.bon-nav').addEventListener('keydown',event=>{
-        if(event.key==='Escape'&&menuButton.getAttribute('aria-expanded')==='true'){
-          closeMenu();
-          menuButton.focus();
-        }
-      });
+  <div class="route-band overview-route" aria-hidden="true"><svg viewBox="0 0 1440 85" preserveAspectRatio="none"><path class="overview-route-track" d="M-20 48 C220 5 280 85 505 48 S810 2 1010 53 S1260 72 1460 22"/><path class="overview-route-ink" pathLength="1" d="M-20 48 C220 5 280 85 505 48 S810 2 1010 53 S1260 72 1460 22"/></svg><span class="overview-route-dot"></span></div>
 
-      let frame=0;
-      const updateScenes=()=>{
-        frame=0;
-        const viewport=window.innerHeight;
-        const scrollRange=Math.max(1,document.documentElement.scrollHeight-viewport);
-        root.style.setProperty('--page-progress',String(clamp(window.scrollY/scrollRange)));
-
-        const current=[...navSections].reverse().find(item=>item.target.getBoundingClientRect().top<=viewport*.38);
-        navSections.forEach(item=>{
-          if(item===current)item.link.setAttribute('aria-current','location');
-          else item.link.removeAttribute('aria-current');
-        });
-
-        if(reduce)return;
-        const routeRect=route.getBoundingClientRect();
-        const routeProgress=clamp((viewport*.85-routeRect.top)/(viewport*.7+routeRect.height));
-        routePath.style.strokeDashoffset=String(routeLength*(1-routeProgress));
-        const point=routePath.getPointAtLength(routeLength*routeProgress);
-        routeDot.style.left=`${((point.x-routeViewBox.x)/routeViewBox.width)*100}%`;
-        routeDot.style.top=`${((point.y-routeViewBox.y)/routeViewBox.height)*100}%`;
-
-        const progressLine=(element,property)=>{
-          const rect=element.getBoundingClientRect();
-          element.style.setProperty(property,String(clamp((viewport*.62-rect.top)/Math.max(rect.height,1))));
-        };
-        progressLine(caseStack,'--case-progress');
-        progressLine(careerList,'--career-progress');
-
-        const desktop=window.innerWidth>650&&window.matchMedia('(pointer:fine)').matches;
-        const heroStory=window.matchMedia('(min-width:901px) and (min-height:700px) and (pointer:fine)').matches;
-        const heroRect=hero.getBoundingClientRect();
-        const heroProgress=heroStory?clamp((66-heroRect.top)/Math.max(heroRect.height-heroStage.getBoundingClientRect().height,1)):clamp(-heroRect.top/Math.max(heroRect.height,1));
-        art.style.setProperty('--hero-shift',`${desktop?(heroStory?heroProgress*22:heroProgress*70):0}px`);
-        art.style.setProperty('--hero-scroll-x',`${heroStory?heroProgress*24:0}px`);
-        art.style.setProperty('--hero-scale',String(desktop?1.025+heroProgress*(heroStory ? .045 : .055):1.025));
-        heroStage.style.setProperty('--hero-story-progress',String(heroProgress));
-        const stepsOpacity=heroStory?clamp((heroProgress-.06)/.14):0;
-        heroStage.style.setProperty('--hero-steps-opacity',String(stepsOpacity));
-        heroStage.style.setProperty('--hero-steps-y',`${(1-stepsOpacity)*18}px`);
-        heroStage.style.setProperty('--hero-exit-height',`${heroStory?clamp((heroProgress-.76)/.24)*(heroStepBar.offsetHeight+48):0}px`);
-        heroSteps.forEach((step,index)=>step.classList.toggle('is-active',heroProgress>=index/3-.02));
-        layers.forEach(layer=>{
-          if(layer===art)return;
-          layer.style.transform=desktop?`translate3d(0,${heroProgress*Number(layer.dataset.parallax||0)*(heroStory?2.2:1.6)}px,0)`:'';
-        });
-        sceneLayers.forEach(layer=>{
-          if(!desktop){layer.style.transform='';return;}
-          const rect=layer.getBoundingClientRect();
-          const position=(viewport/2-(rect.top+rect.height/2))/Math.max(viewport,600);
-          const limited=Math.max(-1,Math.min(1,position));
-          layer.style.transform=`translate3d(0,${limited*Number(layer.dataset.sceneSpeed||0)}px,0)`;
-        });
-      };
-      const scheduleScenes=()=>{if(!frame)frame=requestAnimationFrame(updateScenes)};
-      window.addEventListener('scroll',scheduleScenes,{passive:true});
-      window.addEventListener('resize',scheduleScenes,{passive:true});
-      window.addEventListener('pageshow',scheduleScenes);
-      window.addEventListener('hashchange',scheduleScenes);
-      scheduleScenes();
-
-      if(!reduce&&window.matchMedia('(pointer:fine)').matches){
-        hero.addEventListener('pointermove',(event)=>{
-          if(window.innerWidth<=650)return;
-          const r=hero.getBoundingClientRect();
-          const x=(event.clientX-r.left)/r.width-.5;
-          const y=(event.clientY-r.top)/r.height-.5;
-          art.style.setProperty('--hero-x',`${x*-12}px`);
-          art.style.setProperty('--hero-y',`${y*-8}px`);
-        });
-        hero.addEventListener('pointerleave',()=>{art.style.setProperty('--hero-x','0px');art.style.setProperty('--hero-y','0px')});
-      }
-
-      if('IntersectionObserver' in window && !reduce){
-        const observer=new IntersectionObserver((entries)=>entries.forEach((entry)=>{
-          if(entry.isIntersecting)entry.target.classList.add('is-visible');
-          else if(entry.boundingClientRect.top>=window.innerHeight-25)entry.target.classList.remove('is-visible');
-        }),{threshold:.08,rootMargin:'0px 0px -25px 0px'});
-        root.querySelectorAll('.bon-reveal').forEach((item)=>observer.observe(item));
-      }else{
-        root.querySelectorAll('.bon-reveal').forEach(item=>item.classList.add('is-visible'));
-      }
-
-      const f=(title,copy,why,risk,test)=>({title,copy,why,risk,test});
-      const focus={
-        'Retail & Fashion':{
-          Strategy:f('Sense demand before seasonal plans lock.','Bring store feedback, customer behaviour and product performance into one decision about what to stock, adjust or test next.','Earlier signals could reduce guesswork while preserving creative judgment.','Customer data and local context can be flattened into misleading averages.','Compare one category decision made with and without frontline evidence.'),
-          Branding:f('Keep a recognisable voice across AI-assisted content.','Create a brand system that gives local teams examples, boundaries and a human review path for AI-supported communications.','Customers should feel one coherent brand across channels and locations.','Fast content production can dilute distinctiveness or introduce rights issues.','Review a small set of local messages against a shared brand rubric.'),
-          Marketing:f('Make local campaigns quicker and more relevant.','Use the campaign brief and local insight to propose creative directions, then let marketers select, edit and approve the work.','Teams can spend more time on the idea and less on repetitive preparation.','Trend signals can be shallow, outdated or wrong for the brand.','Pilot one campaign category with approval rate, rework and cycle time tracked.'),
-          Product:f('Give CRM members a reason to return.','Connect offers, useful reminders and store experiences to a clear customer task rather than adding more messages.','An app earns attention when it helps customers make a decision.','Over-personalisation or poor consent can erode trust.','Test one opt-in journey and measure repeat use alongside complaints.'),
-          Innovation:f('Explore AI-guided product discovery with restraint.','Prototype an assistant that helps shoppers compare fit, use and care information while clearly signalling uncertainty.','Useful guidance could remove friction before purchase.','Inaccurate advice could increase returns and damage confidence.','Test a narrow product category against ordinary search and human assistance.')
-        },
-        Agencies:{
-          Strategy:f('Make repeatable client work easier to deliver well.','Map where briefs, research and approvals are repeatedly recreated, then choose one workflow with a clear owner.','The team can protect creative time and make delivery more consistent.','Automation across unclear responsibilities can amplify confusion.','Compare one brief-to-concept process with the current baseline.'),
-          Branding:f('Preserve each client’s distinctive point of view.','Build a shared reference for tone, claims and visual principles before AI creates options for a client brand.','Consistency matters when many specialists touch the same campaign.','A generic model output can make different clients look alike.','Ask brand leads to rate distinctiveness and accuracy across two concept rounds.'),
-          Marketing:f('Turn research into stronger campaign choices.','Combine sourced audience and trend signals with the client brief, then present multiple routes for human selection.','Planners can challenge assumptions while creative teams keep ownership.','Unsourced trends and synthetic insights can look more certain than they are.','Run one pitch with dated sources and record which signals changed a decision.'),
-          Product:f('Treat the brief as a living product input.','Give account, creative and delivery teams one structured place to clarify objectives, constraints, decisions and feedback.','Less context is lost when a project moves between teams.','A rigid form can flatten useful conversation.','Prototype a progressive brief with one team and count clarification loops.'),
-          Innovation:f('Test agent workflows with named approvals.','Explore specialist AI steps for research, drafting and checking while leaving client-facing choices with accountable people.','Modular tools may improve speed without hiding responsibility.','Autonomous steps can pass an error from one stage to the next.','Audit one narrow workflow for error recovery, ownership and time saved.')
-        },
-        Events:{
-          Strategy:f('Connect participation to a meaningful next step.','Map the path from invitation and entry to interaction, follow-up and measurable client value.','A physical moment can continue as a useful relationship.','Counting scans alone can mistake activity for value.','Define one post-event action before choosing the technology.'),
-          Branding:f('Make the experience feel unmistakably like the brand.','Use the event story, interaction and follow-up to express a consistent promise across physical and digital touchpoints.','Memorable experiences strengthen brand meaning when every step fits together.','Novel technology can distract from the audience and the message.','Test recall and sentiment after two alternative interaction concepts.'),
-          Marketing:f('Learn which moments lead to engagement.','Connect consented QR activity, content participation and follow-up so teams see where interest becomes action.','Better insight can improve the next campaign and the attendee journey.','Tracking can feel intrusive without clear value and consent.','Measure one opt-in journey from check-in to relevant follow-up.'),
-          Product:f('Give attendees one simple event identity.','Prototype a single QR pass for entry, booth actions and rewards with clear status after every scan.','A consistent identity reduces friction for attendees and staff.','Crowded venues and poor connectivity can break the flow.','Run a small event pilot measuring scan time, duplicate errors and support requests.'),
-          Innovation:f('Explore live content that responds to the room.','Prototype a moderated feed that connects audience questions, live media and on-site moments to the event narrative.','Responsive content could make large events feel more participatory.','Unmoderated output could create safety and brand problems.','Test one moderated moment with a clear fallback to human control.')
-        },
-        'Finance Ops':{
-          Strategy:f('Put human review where uncertainty is highest.','Map receipt capture, matching and exceptions so specialists spend time on ambiguous or material decisions.','Finance teams can reduce routine reconciliation without losing accountability.','A score can mask poor data or unfamiliar expense patterns.','Compare review workload and error rates across one receipt type.'),
-          Branding:f('Make financial transparency visible to clients.','Show how spend, evidence and approval connect in a client-facing summary that an account team can explain.','Clearer reporting can support trust in agency relationships.','Premature or inaccurate figures can damage that trust.','Test a monthly summary with finance and one account team before sharing.'),
-          Marketing:f('Give campaign teams timely budget signals.','Translate reconciled spend into simple alerts that show when a campaign is nearing a decision point.','Teams can adjust a plan while there is still time to act.','Noisy alerts may cause unnecessary changes or false confidence.','Pilot one alert rule against actual campaign decisions and missed exceptions.'),
-          Product:f('Design the exception screen first.','Let reviewers see the receipt, transaction candidates, confidence evidence and reason for escalation in one place.','Trust grows when people can understand and correct a proposed match.','A single percentage without evidence is hard to challenge.','Observe finance users resolving uncertain matches and record correction time.'),
-          Innovation:f('Explore multimodal evidence with an audit trail.','Test whether receipt images, transaction data and policy text together improve exception handling.','Richer evidence may reduce back-and-forth for difficult items.','More data can introduce privacy, retention and security obligations.','Evaluate a de-identified sample against the existing OCR-only route.')
-        },
-        Manufacturing:{
-          Strategy:f('Start with one frontline decision.','Identify a costly or slow handoff where operational data and worker knowledge can be brought together.','A narrow use case makes value and adoption easier to measure.','Plant context varies; a broad rollout could miss local constraints.','Compare one site workflow on speed, quality and worker confidence.'),
-          Branding:f('Turn product evidence into credible claims.','Connect verified quality, provenance and service information to a story buyers can inspect.','Specific proof can strengthen industrial trust.','AI-generated claims may overstate what the data supports.','Review one product claim set with engineering, legal and customers.'),
-          Marketing:f('Translate technical complexity into buyer value.','Use product and application knowledge to create tailored explanations for distinct industrial buyer questions.','Buyers can understand relevance without losing technical accuracy.','Simplification can hide critical specifications.','Test one content set with sales engineers and target buyers.'),
-          Product:f('Put trusted knowledge near the task.','Prototype a searchable guide for one maintenance or quality procedure with source citations and escalation paths.','Workers can find the right instruction faster at the moment of need.','Outdated instructions could create operational harm.','Run a supervised pilot on one procedure and track retrieval accuracy.'),
-          Innovation:f('Explore assisted inspection with worker control.','Test whether vision and language tools can flag anomalies for a trained operator to verify.','An assistant could surface patterns without replacing expert judgment.','False positives and missed defects can both be expensive.','Compare suggestions with expert review on a labelled sample.')
-        }
-      };
-      const relatedByIndustry={
-        'Retail & Fashion':['genai-workflow-case-study.html','Related work: GenAI campaign case'],
-        Agencies:['finance-ai-case-study.html','Related work: agency finance case'],
-        Events:['event-engagement-case-study.html','Related work: event platform case'],
-        'Finance Ops':['finance-ai-case-study.html','Related work: finance AI case']
-      };
-      const state={industry:'Retail & Fashion',perspective:'Strategy'};
-      const label=root.querySelector('#bon-focus-label');
-      const title=root.querySelector('#bon-focus-title');
-      const copy=root.querySelector('#bon-focus-copy');
-      const why=root.querySelector('#bon-focus-why');
-      const risk=root.querySelector('#bon-focus-risk');
-      const test=root.querySelector('#bon-focus-test');
-      const related=root.querySelector('#bon-focus-related');
-      const announcement=root.querySelector('#bon-focus-announcement');
-      const render=(announce=false)=>{
-        const item=focus[state.industry][state.perspective];
-        label.textContent=`My viewpoint · ${state.industry} · ${state.perspective==='Innovation'?'Innovation to watch':state.perspective}`;
-        title.textContent=item.title;
-        copy.textContent=item.copy;
-        why.textContent=item.why;
-        risk.textContent=item.risk;
-        test.textContent=item.test;
-        const relatedItem=relatedByIndustry[state.industry];
-        related.hidden=!relatedItem;
-        if(relatedItem){related.href=relatedItem[0];related.textContent=`${relatedItem[1]} ↗`;}
-        if(announce)announcement.textContent=`${label.textContent}. ${item.title}`;
-      };
-      root.querySelectorAll('.bon-filter').forEach((button)=>button.addEventListener('click',()=>{
-        const group=button.closest('[data-group]').dataset.group;
-        button.parentElement.querySelectorAll('.bon-filter').forEach((item)=>item.setAttribute('aria-pressed','false'));
-        button.setAttribute('aria-pressed','true');
-        state[group]=button.dataset.value;
-        render(true);
-      }));
-      render();
-    })();
-  </script>
+  <section class="wrap overview-bridge" aria-labelledby="journey-title">
+    <h2 id="journey-title">The career behind the work is part of the story.</h2>
+    <div class="overview-bridge-copy"><p>My path runs from communication and branding through interactive products to AI implementation. The dated timeline shows where each capability developed—and the CV keeps the complete record.</p><div class="button-row"><a class="button button-dark" href="journey.html">Follow the journey <span class="arrow" aria-hidden="true">→</span></a><a class="button button-light" href="Sittan_Charoensuwan_AI_Implementation_Solutions_Master_CV.pdf" target="_blank" rel="noopener">Open CV ↗</a></div></div>
+  </section>
+</main>
+  <footer class="site-footer" id="site-contact"><div><p class="site-footer-lead">Have a problem worth rethinking?</p><p>Let’s find the human need, shape the right solution and make it useful in practice.</p></div><div class="site-footer-links"><a href="mailto:sittan.siri@gmail.com">Email Bon ↗</a><a href="https://www.linkedin.com/in/sittan-charoensuwan/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="Sittan_Charoensuwan_AI_Implementation_Solutions_Master_CV.pdf" target="_blank" rel="noopener">Open CV ↗</a></div></footer>
+  <script src="site.js?v=2148e03c6f" defer></script>
 </body>
 </html>

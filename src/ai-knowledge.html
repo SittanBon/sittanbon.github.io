@@ -1,0 +1,85 @@
+<style>/* Shared layout and motion live in site.css. */</style>
+<main id="main-content" class="portfolio-page">
+  <header class="field-hero"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><b>AI Knowledge</b></nav><div class="field-hero-inner"><div><p class="eyeline">Practical guides · industry viewpoints</p><h1>Learn the rules. <em>Question the choices.</em></h1></div><p>These independent resources make AI easier to understand and use. Below them, Digital Focus lets you examine an industry from five lenses. Those are working viewpoints and suggested tests—not delivered client cases.</p></div></div></header>
+
+  <section class="section wrap" aria-labelledby="guides-title"><div class="section-head reveal"><h2 id="guides-title">Three live AI guides.</h2><p>Each tackles a different part of responsible practice: organizational and legal layers, ethical choices, and better prompts.</p></div><div class="guide-grid"><a class="guide-card reveal" href="https://sittanbon.github.io/ai-legal-layers/" target="_blank" rel="noopener"><span class="status">Responsibility toolkit · Live</span><h3>AI at Work: The Legal Layers</h3><p>Explore six layers of legal and organizational responsibility and use a launch checklist to examine an AI idea.</p><span class="text-link">Open the guide ↗</span></a><a class="guide-card reveal" href="https://sittanbon.github.io/ethical-ai-now/" target="_blank" rel="noopener"><span class="status">Ethical practice · Live</span><h3>Ethical AI Now</h3><p>Twelve practical actions across deciding, designing, deploying and monitoring AI.</p><span class="text-link">Explore the actions ↗</span></a><a class="guide-card reveal" href="https://sittanbon.github.io/prompt-smash/" target="_blank" rel="noopener"><span class="status">Prompt learning · Live</span><h3>Prompt Smash!</h3><p>Build better prompts with seven layers across everyday, engineering, image and code journeys.</p><span class="text-link">Start building ↗</span></a></div></section>
+
+  <section class="section" style="background:#e9e5dc" id="digital-focus"><div class="wrap"><div class="section-head reveal"><h2>Digital Focus: choose the industry and the lens.</h2><p>Every combination changes the opportunity, reason, risk and test. The ideas are current working perspectives, not measured results or client commitments.</p></div>
+    <div class="focus-controls reveal"><fieldset><legend>Industry</legend><div class="focus-options" data-group="industry"><button type="button" aria-pressed="true" data-value="Retail & Fashion">Retail &amp; Fashion</button><button type="button" aria-pressed="false" data-value="Agencies">Agencies</button><button type="button" aria-pressed="false" data-value="Events">Events</button><button type="button" aria-pressed="false" data-value="Finance Ops">Finance Ops</button><button type="button" aria-pressed="false" data-value="Manufacturing">Manufacturing</button></div></fieldset><fieldset><legend>Perspective</legend><div class="focus-options" data-group="perspective"><button type="button" aria-pressed="true" data-value="Strategy">Strategy</button><button type="button" aria-pressed="false" data-value="Branding">Branding</button><button type="button" aria-pressed="false" data-value="Marketing">Marketing</button><button type="button" aria-pressed="false" data-value="Product">Product</button><button type="button" aria-pressed="false" data-value="Innovation">Innovation to watch</button></div></fieldset></div>
+    <div class="focus-result reveal" aria-labelledby="focus-title"><div class="focus-result-main"><span class="eyeline" id="focus-label">Retail &amp; Fashion · Strategy</span><h3 id="focus-title">Sense demand before seasonal plans lock.</h3><p id="focus-copy">Bring store feedback, customer behaviour and product performance into one decision about what to stock, adjust or test next.</p></div><div class="focus-result-side"><article><b>Why it matters</b><p id="focus-why">Earlier signals could reduce guesswork while preserving creative judgment.</p></article><article><b>Risk to manage</b><p id="focus-risk">Customer data and local context can be flattened into misleading averages.</p></article><article><b>What I would test</b><p id="focus-test">Compare one category decision made with and without frontline evidence.</p></article></div></div>
+    <p class="visually-hidden" id="focus-announcement" role="status" aria-live="polite"></p><div class="focus-context"><span>Working viewpoint · Written October 2026</span><a id="focus-related" href="genai-workflow-case-study.html">Related work: GenAI campaign case ↗</a></div>
+  </div></section>
+
+  <section class="section wrap"><div class="callout reveal"><h2>Want to see a tested workflow instead of a viewpoint?</h2><div><p>The AI &amp; Product field separates controlled pilots and delivered rollouts from concepts and independent experiments.</p><a class="text-link" href="ai-product-solutions.html">Explore the evidence ↗</a></div></div></section>
+</main>
+<script>
+(()=>{
+  const f=(title,copy,why,risk,test)=>({title,copy,why,risk,test});
+  const focus={
+    'Retail & Fashion':{
+      Strategy:f('Sense demand before seasonal plans lock.','Bring store feedback, customer behaviour and product performance into one decision about what to stock, adjust or test next.','Earlier signals could reduce guesswork while preserving creative judgment.','Customer data and local context can be flattened into misleading averages.','Compare one category decision made with and without frontline evidence.'),
+      Branding:f('Keep a recognisable voice across AI-assisted content.','Create a brand system that gives local teams examples, boundaries and a human review path for AI-supported communications.','Customers should feel one coherent brand across channels and locations.','Fast content production can dilute distinctiveness or introduce rights issues.','Review a small set of local messages against a shared brand rubric.'),
+      Marketing:f('Make local campaigns quicker and more relevant.','Use the campaign brief and local insight to propose creative directions, then let marketers select, edit and approve the work.','Teams can spend more time on the idea and less on repetitive preparation.','Trend signals can be shallow, outdated or wrong for the brand.','Pilot one campaign category with approval rate, rework and cycle time tracked.'),
+      Product:f('Give CRM members a reason to return.','Connect offers, useful reminders and store experiences to a clear customer task rather than adding more messages.','An app earns attention when it helps customers make a decision.','Over-personalisation or poor consent can erode trust.','Test one opt-in journey and measure repeat use alongside complaints.'),
+      Innovation:f('Explore AI-guided product discovery with restraint.','Prototype an assistant that helps shoppers compare fit, use and care information while clearly signalling uncertainty.','Useful guidance could remove friction before purchase.','Inaccurate advice could increase returns and damage confidence.','Test a narrow product category against ordinary search and human assistance.')
+    },
+    Agencies:{
+      Strategy:f('Make repeatable client work easier to deliver well.','Map where briefs, research and approvals are repeatedly recreated, then choose one workflow with a clear owner.','The team can protect creative time and make delivery more consistent.','Automation across unclear responsibilities can amplify confusion.','Compare one brief-to-concept process with the current baseline.'),
+      Branding:f('Preserve each client’s distinctive point of view.','Build a shared reference for tone, claims and visual principles before AI creates options for a client brand.','Consistency matters when many specialists touch the same campaign.','A generic model output can make different clients look alike.','Ask brand leads to rate distinctiveness and accuracy across two concept rounds.'),
+      Marketing:f('Turn research into stronger campaign choices.','Combine sourced audience and trend signals with the client brief, then present multiple routes for human selection.','Planners can challenge assumptions while creative teams keep ownership.','Unsourced trends and synthetic insights can look more certain than they are.','Run one pitch with dated sources and record which signals changed a decision.'),
+      Product:f('Treat the brief as a living product input.','Give account, creative and delivery teams one structured place to clarify objectives, constraints, decisions and feedback.','Less context is lost when a project moves between teams.','A rigid form can flatten useful conversation.','Prototype a progressive brief with one team and count clarification loops.'),
+      Innovation:f('Test agent workflows with named approvals.','Explore specialist AI steps for research, drafting and checking while leaving client-facing choices with accountable people.','Modular tools may improve speed without hiding responsibility.','Autonomous steps can pass an error from one stage to the next.','Audit one narrow workflow for error recovery, ownership and time saved.')
+    },
+    Events:{
+      Strategy:f('Connect participation to a meaningful next step.','Map the path from invitation and entry to interaction, follow-up and measurable client value.','A physical moment can continue as a useful relationship.','Counting scans alone can mistake activity for value.','Define one post-event action before choosing the technology.'),
+      Branding:f('Make the experience feel unmistakably like the brand.','Use the event story, interaction and follow-up to express a consistent promise across physical and digital touchpoints.','Memorable experiences strengthen brand meaning when every step fits together.','Novel technology can distract from the audience and the message.','Test recall and sentiment after two alternative interaction concepts.'),
+      Marketing:f('Learn which moments lead to engagement.','Connect consented QR activity, content participation and follow-up so teams see where interest becomes action.','Better insight can improve the next campaign and the attendee journey.','Tracking can feel intrusive without clear value and consent.','Measure one opt-in journey from check-in to relevant follow-up.'),
+      Product:f('Give attendees one simple event identity.','Prototype a single QR pass for entry, booth actions and rewards with clear status after every scan.','A consistent identity reduces friction for attendees and staff.','Crowded venues and poor connectivity can break the flow.','Run a small event pilot measuring scan time, duplicate errors and support requests.'),
+      Innovation:f('Explore live content that responds to the room.','Prototype a moderated feed that connects audience questions, live media and on-site moments to the event narrative.','Responsive content could make large events feel more participatory.','Unmoderated output could create safety and brand problems.','Test one moderated moment with a clear fallback to human control.')
+    },
+    'Finance Ops':{
+      Strategy:f('Put human review where uncertainty is highest.','Map receipt capture, matching and exceptions so specialists spend time on ambiguous or material decisions.','Finance teams can reduce routine reconciliation without losing accountability.','A score can mask poor data or unfamiliar expense patterns.','Compare review workload and error rates across one receipt type.'),
+      Branding:f('Make financial transparency visible to clients.','Show how spend, evidence and approval connect in a client-facing summary that an account team can explain.','Clearer reporting can support trust in agency relationships.','Premature or inaccurate figures can damage that trust.','Test a monthly summary with finance and one account team before sharing.'),
+      Marketing:f('Give campaign teams timely budget signals.','Translate reconciled spend into simple alerts that show when a campaign is nearing a decision point.','Teams can adjust a plan while there is still time to act.','Noisy alerts may cause unnecessary changes or false confidence.','Pilot one alert rule against actual campaign decisions and missed exceptions.'),
+      Product:f('Design the exception screen first.','Let reviewers see the receipt, transaction candidates, confidence evidence and reason for escalation in one place.','Trust grows when people can understand and correct a proposed match.','A single percentage without evidence is hard to challenge.','Observe finance users resolving uncertain matches and record correction time.'),
+      Innovation:f('Explore multimodal evidence with an audit trail.','Test whether receipt images, transaction data and policy text together improve exception handling.','Richer evidence may reduce back-and-forth for difficult items.','More data can introduce privacy, retention and security obligations.','Evaluate a de-identified sample against the existing OCR-only route.')
+    },
+    Manufacturing:{
+      Strategy:f('Start with one frontline decision.','Identify a costly or slow handoff where operational data and worker knowledge can be brought together.','A narrow use case makes value and adoption easier to measure.','Plant context varies; a broad rollout could miss local constraints.','Compare one site workflow on speed, quality and worker confidence.'),
+      Branding:f('Turn product evidence into credible claims.','Connect verified quality, provenance and service information to a story buyers can inspect.','Specific proof can strengthen industrial trust.','AI-generated claims may overstate what the data supports.','Review one product claim set with engineering, legal and customers.'),
+      Marketing:f('Translate technical complexity into buyer value.','Use product and application knowledge to create tailored explanations for distinct industrial buyer questions.','Buyers can understand relevance without losing technical accuracy.','Simplification can hide critical specifications.','Test one content set with sales engineers and target buyers.'),
+      Product:f('Put trusted knowledge near the task.','Prototype a searchable guide for one maintenance or quality procedure with source citations and escalation paths.','Workers can find the right instruction faster at the moment of need.','Outdated instructions could create operational harm.','Run a supervised pilot on one procedure and track retrieval accuracy.'),
+      Innovation:f('Explore assisted inspection with worker control.','Test whether vision and language tools can flag anomalies for a trained operator to verify.','An assistant could surface patterns without replacing expert judgment.','False positives and missed defects can both be expensive.','Compare suggestions with expert review on a labelled sample.')
+    }
+  };
+  const related={
+    'Retail & Fashion':['genai-workflow-case-study.html','Related work: GenAI campaign case'],
+    Agencies:['finance-ai-case-study.html','Related work: agency finance case'],
+    Events:['event-engagement-case-study.html','Related work: event platform case'],
+    'Finance Ops':['finance-ai-case-study.html','Related work: finance AI case']
+  };
+  const state={industry:'Retail & Fashion',perspective:'Strategy'};
+  const node=id=>document.getElementById(id);
+  const render=(announce=false)=>{
+    const item=focus[state.industry][state.perspective];
+    node('focus-label').textContent=`${state.industry} · ${state.perspective==='Innovation'?'Innovation to watch':state.perspective}`;
+    node('focus-title').textContent=item.title;
+    node('focus-copy').textContent=item.copy;
+    node('focus-why').textContent=item.why;
+    node('focus-risk').textContent=item.risk;
+    node('focus-test').textContent=item.test;
+    const link=node('focus-related');
+    link.hidden=!related[state.industry];
+    if(related[state.industry]){link.href=related[state.industry][0];link.textContent=`${related[state.industry][1]} ↗`;}
+    if(announce)node('focus-announcement').textContent=`${node('focus-label').textContent}. ${item.title}`;
+  };
+  document.querySelectorAll('.focus-options button').forEach(button=>button.addEventListener('click',()=>{
+    const group=button.closest('[data-group]').dataset.group;
+    button.parentElement.querySelectorAll('button').forEach(other=>other.setAttribute('aria-pressed','false'));
+    button.setAttribute('aria-pressed','true');
+    state[group]=button.dataset.value;
+    render(true);
+  }));
+  render();
+})();
+</script>
