@@ -9,6 +9,7 @@ This repository serves the portfolio at `https://sittanbon.github.io/`. The site
 - `technology-experience.html` — IIoT research/roadmap, academic nanotechnology research and microcontroller prototypes.
 - `creative-experiences.html` — client-facing creative and interactive work, with industry-only client labels. It links to the canonical QR product case rather than duplicating it.
 - `ai-knowledge.html` — three live guides plus the interactive Digital Focus viewpoint matrix.
+- `skills.html` — a visual, evidence-linked summary of AI workflows, product engineering, data systems and adoption.
 - `journey.html` — dated career chronology and CV route. Employer names appear here and in the CV, not on project/client pages.
 
 The shared navigation reaches every field, Journey, CV and Contact. Case breadcrumbs return to AI & Product. `src/home.html` is the preserved earlier long-homepage fragment; `src/overview.html` is now the homepage source.
