@@ -46,6 +46,12 @@ const pages = [
     description: 'Practical AI guides and Bon’s industry-by-industry Digital Focus viewpoints.',
   },
   {
+    source: 'skills.html',
+    output: 'skills.html',
+    title: 'Skills in Practice | Sittan (Bon) Charoensuwan',
+    description: 'Explore Bon’s AI workflow, product engineering, data and adoption skills through real projects and public code.',
+  },
+  {
     source: 'journey.html',
     output: 'journey.html',
     title: 'Career Journey | Sittan (Bon) Charoensuwan',
@@ -96,9 +102,10 @@ for (const page of pages) {
     : page.output === 'ai-product-solutions.html' || page.output.endsWith('case-study.html') ? 'ai'
     : page.output === 'technology-experience.html' ? 'technology'
     : page.output === 'creative-experiences.html' ? 'creative'
-    : page.output === 'ai-knowledge.html' ? 'knowledge' : 'journey';
+    : page.output === 'ai-knowledge.html' ? 'knowledge'
+    : page.output === 'skills.html' ? 'skills' : 'journey';
   const navItem = (href, label, key) => `<a href="${href}"${current === key ? ' aria-current="page"' : ''}>${label}</a>`;
-  const siteHeader = `<header class="site-header"><a class="site-brand" href="${homeHref}" aria-label="Bon — portfolio home"><span class="site-brand-mark">B</span><span>BON</span></a><button class="site-menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">Menu</button><nav class="site-nav" id="site-nav" aria-label="Main navigation">${navItem('ai-product-solutions.html', 'AI & Product', 'ai')}${navItem('technology-experience.html', 'Technology', 'technology')}${navItem('creative-experiences.html', 'Creative', 'creative')}${navItem('ai-knowledge.html', 'AI Knowledge', 'knowledge')}${navItem('journey.html', 'Journey', 'journey')}<a href="Sittan_Charoensuwan_AI_Implementation_One_Page_CV.pdf" target="_blank" rel="noopener">CV ↗</a><a class="site-nav-contact" href="#site-contact">Contact</a></nav></header><div class="site-progress" aria-hidden="true"><span></span></div>`;
+  const siteHeader = `<header class="site-header"><a class="site-brand" href="${homeHref}" aria-label="Bon — portfolio home"><span class="site-brand-mark">B</span><span>BON</span></a><button class="site-menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">Menu</button><nav class="site-nav" id="site-nav" aria-label="Main navigation">${navItem('ai-product-solutions.html', 'AI & Product', 'ai')}${navItem('technology-experience.html', 'Technology', 'technology')}${navItem('creative-experiences.html', 'Creative', 'creative')}${navItem('ai-knowledge.html', 'AI Knowledge', 'knowledge')}${navItem('skills.html', 'Skills', 'skills')}${navItem('journey.html', 'Journey', 'journey')}<a href="Sittan_Charoensuwan_AI_Implementation_One_Page_CV.pdf" target="_blank" rel="noopener">CV ↗</a><a class="site-nav-contact" href="#site-contact">Contact</a></nav></header><div class="site-progress" aria-hidden="true"><span></span></div>`;
   const siteFooter = `<footer class="site-footer" id="site-contact"><div><p class="site-footer-lead">Have a problem worth rethinking?</p><p>Let’s find the human need, shape the right solution and make it useful in practice.</p></div><div class="site-footer-links"><a href="mailto:sittan.siri@gmail.com">Email Bon ↗</a><a href="https://www.linkedin.com/in/sittan-charoensuwan/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="Sittan_Charoensuwan_AI_Implementation_One_Page_CV.pdf" target="_blank" rel="noopener">Open CV ↗</a></div></footer>`;
   const html = `<!doctype html>
 <html lang="en">
