@@ -10,6 +10,7 @@ const pages = [
   'technology-experience.html',
   'creative-experiences.html',
   'ai-knowledge.html',
+  'skills.html',
   'journey.html',
   'genai-workflow-case-study.html',
   'finance-ai-case-study.html',
