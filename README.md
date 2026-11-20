@@ -4,7 +4,7 @@ This repository serves the portfolio at `https://sittanbon.github.io/`. The site
 
 ## Site map
 
-- `index.html` — short overview, verified-project routes, and four field doors.
+- `index.html` — short overview, a "Selected work" wall with real screenshots of live products, prototypes and client case studies, then four field doors.
 - `ai-product-solutions.html` — delivered GenAI rollout, finance and QR pilots/concepts, independent builds. This is the parent for the three detailed case-study pages.
 - `technology-experience.html` — IIoT research/roadmap, academic nanotechnology research and microcontroller prototypes.
 - `creative-experiences.html` — client-facing creative and interactive work, with industry-only client labels. It links to the canonical QR product case rather than duplicating it.
