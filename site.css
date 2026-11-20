@@ -399,3 +399,4 @@ a{color:inherit}
   .work-tag{top:10px;left:10px;font-size:10px}
 }
 @media(prefers-reduced-motion:reduce){.work-media,.work-media img,.work-copy h3 a{transition:none!important}.work-item:hover .work-media img{scale:1}}
+.tfa-figure>a{background:#fff;padding:clamp(6px,1vw,14px)}
